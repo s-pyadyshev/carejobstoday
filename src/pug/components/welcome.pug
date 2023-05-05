@@ -1,0 +1,36 @@
+section.welcome
+  .welcome__list.swiper.js-welcome-slider
+    .swiper-wrapper
+      .swiper-slide
+        .welcome__background
+          img(src="images/welcome-bg-1.jpg" title="" alt="")
+        .welcome__wrap.container
+          h1.h1.text-white
+            | Be the one
+            span
+              | who teaches Paul the skills to live in the community.
+          a.button.button--primary(href="/")
+            | Discover jobs
+      .swiper-slide
+        .welcome__background
+          img(src="images/welcome-bg-2.jpg" title="" alt="")
+        .welcome__wrap.container
+          h1.h1.text-white
+            | Be the one
+            span
+              | who gets Zoe back into education.
+          a.button.button--primary(href="/")
+            | Discover jobs
+      .swiper-slide
+        .welcome__background
+          img(src="images/welcome-bg-3.jpg" title="" alt="")
+        .welcome__wrap.container
+          h1.h1.text-white
+            | Be the one
+            span
+              | who helps Jodie trust adults again.
+          a.button.button--primary(href="/")
+            | Discover jobs
+    .swiper-pagination.js-welcome-slider-pagination
+  button(data-scrollto="#caring").welcome__mouse
+    +svg('mouse')

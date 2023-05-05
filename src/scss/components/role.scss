@@ -1,0 +1,123 @@
+.role {
+  padding: 40px 0;
+  text-align: center;
+
+  @include tablet {
+    padding: 40px 0 80px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 40px 80px 80px;
+    text-align: left;
+  }
+
+  @include desktop {
+    padding: 68px 110px 136px;
+  }
+
+  @include desktop-l {
+    padding: 68px 200px 136px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__image {
+    display: block;
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      width: 240px;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 960px) {
+      width: 358px;
+    }
+
+    @include desktop {
+      width: 420px;
+    }
+
+    @include desktop-l {
+      width: 500px;
+    }
+
+    @media (min-width: 1800px) {
+      width: 621px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__info {
+    @media (min-width: 768px) {
+      width: calc(100% - 240px);
+      padding-left: 24px;
+    }
+
+    @media (min-width: 960px) {
+      width: calc(100% - 358px);
+      padding-left: 44px;
+    }
+
+    @include desktop {
+      width: calc(100% - 420px);
+    }
+
+    @include desktop-l {
+      width: calc(100% - 500px);
+      padding-left: 40px;
+    }
+
+    @media (min-width: 1800px) {
+      width: calc(100% - 621px);
+      padding-left: 120px;
+    }
+  }
+
+  p {
+    white-space: pre-line;
+    margin-bottom: 40px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  .button {
+    margin: 0 0 10px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      min-width: 185px;
+      margin: 0 16px 16px 0;
+
+      &:last-child {
+        margin: 0 0 16px;
+      }
+    }
+
+    @include desktop {
+      min-width: 260px;
+    }
+  }
+}

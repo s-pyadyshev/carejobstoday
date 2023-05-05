@@ -1,0 +1,20 @@
+.caring {
+  text-align: center;
+
+  p {
+    max-width: 654px;
+    margin: 0 auto;
+
+    @include desktop {
+      max-width: 812px;
+    }
+  }
+
+  .button {
+    margin-top: 40px;
+
+    @include desktop {
+      min-width: 500px;
+    }
+  }
+}

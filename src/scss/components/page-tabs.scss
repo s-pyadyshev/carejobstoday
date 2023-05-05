@@ -1,0 +1,7 @@
+.page-tabs {
+  margin-top: -40px;
+
+  @include desktop-l {
+    margin-top: -50px;
+  }
+}

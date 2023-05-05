@@ -1,0 +1,70 @@
+.providers {
+  padding: 40px 0 46px;
+  text-align: center;
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  @media (min-width: 768px) {
+    padding: 40px 110px;
+  }
+
+  @include desktop {
+    padding: 65px 110px 90px;
+  }
+
+  @include desktop-l {
+    padding: 65px 200px 90px;
+  }
+
+  .h2 {
+    @include desktop {
+      margin-bottom: 10px;
+    }
+  }
+
+  p {
+    margin-bottom: 36px;
+
+    @include desktop {
+      margin-bottom: 72px;
+    }
+  }
+
+  &__list {
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+    padding: 0 20px;
+    position: relative;
+
+    @include desktop {
+      width: calc(100% + 64px);
+      margin: 0 -32px;
+      padding: 0 32px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 175px;
+    background-color: $color-white;
+    position: relative;
+    padding: 20px;
+
+    @include desktop {
+      height: 260px;
+      padding: 22px;
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,83 @@
+.navbar {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  width: 100vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-duration;
+  -webkit-overflow-scrolling: touch;
+  z-index: -1;
+
+  @include desktop {
+    position: static;
+    width: auto;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+
+  &__link {
+    display: block;
+    font-family: $font-secondary;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 25px;
+      color: $color-secondary;
+      border-bottom: none;
+      padding: 0;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $color-primary;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+
+    @include desktop {
+      flex-direction: row;
+      gap: 60px;
+    }
+
+    li {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: $color-secondary;
+      border-bottom: 2px solid $color-gray;
+
+      @include desktop {
+        width: auto;
+        background-color: transparent;
+        border-bottom: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.mobile-menu-active {
+  .navbar {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,43 @@
+mixin tabs
+  ul.tabs(data-tabs="tabs")
+    li
+      button.tab-button.is-active(data-tab="tab1") Tab 1
+    li
+      button.tab-button(data-tab="tab2") Tab 1
+
+  .tab-content(data-tabs-content="tabs")
+    .is-active(data-tab-content="tab1")
+      div Tab 1
+    div(data-tab-content="tab2")
+      div Tab 2
+
+mixin tabs-custom(tabs)
+  .container
+    ul.tabs(data-tabs="tabs")
+      each data in tabs
+        if data.active 
+          li
+            a(href=data.href).button.button--secondary.tab-button.is-active= data.name
+        else
+          li
+            a(href=data.href).button.button--secondary.tab-button= data.name
+
+  //- .tab-content(data-tabs-content="tabs")
+  //-   each data in tabs
+      //- if data.active 
+      //-   .is-active(data-tab-content=data.id)
+      //-     div= data.content
+      // Hardcoded because pug doesn't support dynamic includes
+      //- if data.name === 'Overview'
+      //-   .is-active(data-tab-content=data.id)
+      //-     include ../components/procare-wales-overview.pug
+      //- if data.name === 'Jobs'
+      //-   div(data-tab-content=data.id)
+      //-     include ../components/procare-wales-jobs.pug
+      //- if data.name === 'Interview Process'
+      //-   div(data-tab-content=data.id)
+      //-     include ../components/procare-wales-interview.pug
+      //- else
+      //-   div(data-tab-content=data.id)
+      //-     div= data.content
+

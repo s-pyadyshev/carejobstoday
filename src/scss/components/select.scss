@@ -1,0 +1,21 @@
+.fsb-select,
+.fsb-original-select {
+  border-color: $color-muted;
+}
+
+.fsb-button {
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-secondary !important;
+  padding: 14px 40px 14px 20px !important;
+
+  @include desktop {
+    font-size: 16px;
+  }
+
+  &::after {
+    right: 20px;
+    border-color: $color-secondary;
+    border-width: 0 2px 2px 0;
+  }
+}

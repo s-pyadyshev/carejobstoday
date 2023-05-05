@@ -1,0 +1,9 @@
+.section {
+  &--procare-overview h2 {
+    margin-bottom: 20px;
+
+    @include desktop {
+      margin-bottom: 27px;
+    }
+  }
+}

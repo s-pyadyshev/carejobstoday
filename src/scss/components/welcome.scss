@@ -1,0 +1,155 @@
+.welcome {
+  position: relative;
+  padding: 0;
+
+  @include desktop {
+    padding: 0;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: auto;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 540px;
+      background: linear-gradient(to bottom, transparent, $color-black);
+      opacity: 0.5;
+      z-index: 1;
+
+      @include tablet {
+        height: 388px;
+      }
+
+      @include desktop {
+        height: 540px;
+      }
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+  }
+
+  h1 span {
+    display: block;
+    max-width: 520px;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 26px;
+
+    @include desktop {
+      max-width: 980px;
+      font-size: 40px;
+      line-height: 48px;
+      margin: 0 0 65px;
+    }
+  }
+
+  &__mouse {
+    display: none;
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    margin: 0 auto;
+    width: 36px;
+    height: 84px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    z-index: 3;
+
+    @include desktop {
+      display: block;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: $color-white;
+      color: $color-white;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 733px;
+
+    @include tablet {
+      height: 640px;
+    }
+
+    @include desktop {
+      height: 889px;
+    }
+  }
+
+  .swiper-pagination {
+    text-align: right;
+    bottom: 30px;
+    padding: 0 20px;
+    z-index: 3;
+
+    @include tablet {
+      padding: 0 112px;
+    }
+
+    @include desktop {
+      bottom: 40px;
+      padding: 0 136px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    color: $color-white;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0;
+    margin: 0 5px 10px !important;
+    opacity: 1;
+    cursor: pointer;
+    transition: $transition-duration;
+
+    &.swiper-pagination-bullet-active {
+      border-color: $color-white;
+    }
+
+    @include desktop {
+      &:hover {
+        border-color: $color-white;
+      }
+    }
+  }
+}

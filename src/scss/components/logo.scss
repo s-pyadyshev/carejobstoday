@@ -1,0 +1,35 @@
+.logo {
+  position: relative;
+  height: 40px;
+
+  @include desktop {
+    height: 60px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    .logo__image {
+      transform: rotate(-90deg);
+      transition-property: transform;
+      transition-duration: $transition-duration;
+      transition-timing-function: ease-in-out;
+    }
+  }
+}
+
+.logo__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  transition-property: transform;
+  transition-duration: $transition-duration;
+  transition-timing-function: ease-in-out;
+
+  @include desktop {
+    width: 58.782px;
+    height: 58.782px;
+  }
+}

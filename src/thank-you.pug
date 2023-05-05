@@ -1,0 +1,16 @@
+extends pug/base
+
+prepend vars
+  - title = 'Jobs'
+
+append vars
+  //-
+
+block content
+  +page-header-secondary('Thank you', 'for your application', 'We will be in touch with you soon to update you on your application', '../images/thank-you.jpg')
+  section.section.background-muted
+    .container.text-center
+      h2.h2.text-secondary In the meantime…
+      p Why not read up on all things ProCare Wales on our business profile page
+
+      a.button.button--primary(href="#") Learn More

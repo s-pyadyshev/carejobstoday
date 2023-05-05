@@ -1,0 +1,79 @@
+$button-background-color: transparent;
+$button-background-color-hover: $color-black;
+$button-border-color: $color-black;
+$button-color: $color-black;
+$button-color-hover: $color-white;
+$button-color-active: $color-white;
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-secondary;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid $button-border-color;
+  padding: 15px 20px;
+  outline: none;
+  border-radius: 5px;
+  appearance: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $button-background-color;
+  color: $button-color;
+
+  @media (min-width: 332px) {
+    min-width: 260px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $button-background-color-hover;
+    color: $button-color-hover;
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $color-secondary;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%);
+  }
+}

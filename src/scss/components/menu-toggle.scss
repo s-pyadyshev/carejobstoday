@@ -1,0 +1,29 @@
+.menu-toggle-close {
+  display: none;
+  padding: 0;
+  background: none;
+  border: 0;
+
+  @include desktop {
+    display: none !important;
+  }
+
+  .mobile-menu-active & {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.menu-toggle-open {
+  padding: 0;
+  background: none;
+  border: 0;
+
+  @include desktop {
+    display: none;
+  }
+
+  .mobile-menu-active & {
+    display: none;
+  }
+}

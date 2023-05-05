@@ -1,0 +1,18 @@
+extends pug/base
+
+prepend vars
+  - title = 'Homepage'
+
+append vars
+  //-
+
+include ./pug/mixins/search
+
+block content
+  +search("advanced")
+  include ./pug/components/welcome
+  include ./pug/components/caring
+  include ./pug/components/providers
+  include ./pug/components/role
+  include ./pug/components/quiz-offer.pug
+  include ./pug/components/explore

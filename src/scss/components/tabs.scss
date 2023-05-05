@@ -1,0 +1,49 @@
+$tab-active-background-color: $color-primary;
+$tab-active-color: $color-white;
+$tab-border-color: $color-secondary;
+
+.tabs {
+  display: flex;
+  gap: 2px;
+  list-style-type: none;
+
+  @include desktop-l {
+    gap: 16px;
+  }
+
+  li:not(:last-child) {
+    button {
+      border-right: 0;
+    }
+  }
+}
+
+a.tab-button {
+  min-width: auto;
+  height: 40px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+
+  @include desktop-l {
+    min-width: 260px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active,
+  &.is-active {
+    background-color: $color-white;
+    border-color: $color-white;
+    color: $color-secondary;
+  }
+}
+
+[data-tab-content] {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

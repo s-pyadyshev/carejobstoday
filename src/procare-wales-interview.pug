@@ -1,0 +1,69 @@
+extends pug/base
+
+prepend vars
+  - title = 'ProCare Wales Interview Process'
+
+append vars
+  //-
+
+block content
+  +page-header-logo('../images/procare-wales.jpg', 'images/procare-wales-logo.svg')
+  .page-tabs
+    +tabs-custom(
+      [
+        {
+          name: 'Overview',
+          id: 'tab1',
+          href: 'procare-wales-overview.html'
+        },
+        {
+          name: 'Jobs',
+          id: 'tab2',
+          href: 'procare-wales-jobs.html'
+        },
+        {
+          name: 'Interview Process',
+          active: true,
+          id: 'tab3',
+          href: 'procare-wales-interview.html'
+        }
+      ]
+    )
+  section.section 
+    .container.text-center
+      .row 
+        .col-md-10.offset-md-1
+          h2.h2 Interview process
+
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam non nisi est sit amet. Turpis egestas sed tempus urna et pharetra pharetra. Augue eget arcu dictum varius duis at consectetur lorem. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Sed vulputate odio ut enim blandit. Eget nullam non nisi est. Vitae auctor eu augue ut lectus arcu. Volutpat est velit egestas dui id ornare. Facilisis volutpat est velit egestas dui id ornare.
+  section.section.background-secondary
+    .container
+      .row 
+        .col-md-8.offset-md-2.col-xl-6.offset-xl-3
+          h2.h2.text-center Your journey
+          +timeline([
+            {
+              title: "Enquiry",
+              text: "If you're interested in finding out more, fill out the enquiry form to request a call back."
+            },
+            {
+              title: "Call back",
+              text: "Our team will contact you for a friendly chat to tell you more about the roles and answer any questions you have."
+            },
+            {
+              title: "Meet and greet",
+              text: "We'll invite you for a face-to-face visit to meet the team and see our care home(s), so both you and our team can see if you'd be a good fit."
+            },
+            {
+              title: "Conditional offer",
+              text: "We'll send a conditional offer to you for the role and let you know the next steps, subject to the usual background checks including qualifications and Disclosure and Barring Service."
+            },
+            {
+              title: "Your first day",
+              text: "We can't wait to welcome you to the team."
+            },
+            {
+              title: "",
+              text: ""
+            }
+          ])

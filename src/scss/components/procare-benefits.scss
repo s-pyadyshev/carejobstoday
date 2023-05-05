@@ -1,0 +1,57 @@
+.procare-benefits {
+  @include desktop {
+    padding: 35px 0 90px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include desktop {
+      margin-bottom: 26px;
+    }
+  }
+
+  ul {
+    padding-left: 18px;
+
+    @include tablet {
+      column-count: 2;
+      max-width: 788px;
+      margin: 0 auto;
+      padding-left: 0;
+    }
+
+    @include desktop {
+      column-count: 3;
+      max-width: 1600px;
+    }
+  }
+
+  li {
+    break-inside: avoid-column;
+    color: $color-primary;
+
+    @include tablet {
+      margin: 0 18px;
+    }
+
+    @include desktop {
+      color: $color-secondary;
+      margin: 0 24px;
+    }
+
+    @include desktop-l {
+      margin: 0 80px;
+    }
+
+    @media (min-width: 1600px) {
+      margin: 0 136px;
+    }
+
+    p {
+      margin-bottom: 0;
+      color: $color-gray;
+    }
+  }
+}

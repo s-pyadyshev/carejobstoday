@@ -1,0 +1,72 @@
+$radio-border-width: 2px;
+$radio-size: 19px;
+$radio-size-desktop: 24px;
+$radio-color: $color-white;
+$radio-focus-shadow: 0 0 0 1px $color-black;
+
+.radio {
+  display: flex;
+}
+
+.radio-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.radio-input ~ .radio-box {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: relative;
+    top: 0;
+    flex-shrink: 0;
+    width: $radio-size;
+    height: $radio-size;
+    margin-right: 16px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: transparent;
+    border: $radio-border-width solid $radio-color;
+
+    @include desktop {
+      width: $radio-size-desktop;
+      height: $radio-size-desktop;
+    }
+  }
+
+  &__label {
+    font-size: 14px;
+    line-height: 22px;
+
+    @include desktop {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.radio-input:focus + .radio-box::before {
+  box-shadow: $radio-focus-shadow;
+}
+
+.radio-input:checked ~ .radio-box::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: $color-primary;
+
+  @include desktop {
+    width: 16px;
+    height: 16px;
+  }
+}

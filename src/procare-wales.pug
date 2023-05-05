@@ -1,0 +1,33 @@
+extends pug/base
+
+prepend vars
+  - title = 'ProCare Wales'
+
+append vars
+  //-
+
+block content
+  +page-header-logo('../images/procare-wales.jpg', 'images/procare-wales-logo.svg')
+  .page-tabs
+    +tabs-custom(
+      [
+        {
+          name: 'Overview',
+          active: true,
+          id: 'tab1',
+          href: 'procare-wales-overview.html'
+        },
+        {
+          name: 'Jobs',
+          id: 'tab2',
+          content: 'aaa',
+          href: 'procare-wales-jobs.html'
+        },
+        {
+          name: 'Interview Process',
+          id: 'tab3',
+          content: 'aaa',
+          href: 'procare-wales-interview.html'
+        }
+      ]
+    )

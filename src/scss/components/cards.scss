@@ -1,0 +1,108 @@
+.card-care {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+}
+
+.card-care__image {
+  position: relative;
+}
+
+.card-care__background {
+  height: 175px;
+  width: 100%;
+  @include desktop {
+    height: auto;
+  }
+}
+.card-care__logo {
+  position: absolute;
+  z-index: 10;
+  margin: auto;
+  width: 240px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.card-care__text h3 {
+  font-family: "Baloo2";
+  font-size: 30px;
+  line-height: 36px;
+  color: $color-secondary;
+  text-align: center;
+  margin-bottom: 14px;
+  @include desktop {
+    text-align: left;
+  }
+}
+
+.card-care__text {
+  padding: 20px;
+  @include desktop {
+    padding: 36px 16px 30px 16px;
+  }
+}
+
+.card-care__text p {
+  margin-bottom: 20px;
+
+  @include desktop {
+    margin-bottom: 30px;
+  }
+}
+
+.card-care__button {
+  width: 100%;
+  background-color: $color-secondary;
+  color: $color-white;
+  font-size: 16px;
+
+  @include desktop {
+    min-width: auto;
+  }
+}
+
+.card-care__button-wrap a:not(:last-child) {
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+}
+
+.card-care__button-wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.section-businesses {
+  background-color: $color-muted;
+}
+
+.section-businesses .row {
+  row-gap: 20px;
+  @include desktop {
+    row-gap: 16px;
+  }
+}
+
+.card-care__image::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}

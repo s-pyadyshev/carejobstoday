@@ -1,0 +1,49 @@
+include ../mixins/card-job
+
+section.explore.background-muted
+  .container
+    h2.h2.text-secondary
+      | Explore jobs
+    .explore__list
+      .swiper.js-explore-slider
+        .swiper-wrapper
+          .swiper-slide
+            +cardJob({
+              "src": "images/providers/dimensions-care-logo.png",
+              "title": "Health Care Supporter",
+              "luggage": "Dimensions",
+              "destination": "Reading, Berkshire",
+              "time": "Full-time (45 hours)",
+              "money": "£10.42 an hour",
+              "people": "Hiring multiple candidates",
+              "text": "A typical day in the life of a Care Assistant will help support our customers in a variety of ways depending on their needs, this could include, providing personal care, medication management, light domestic duties, meal preparation, shopping and companionship.",
+              "button": "DISCOVER MORE & APPLY",
+            })
+          .swiper-slide
+            +cardJob({
+              "src": "images/providers/premier-logo.png",
+              "title": "Assistant Health Care Supporter",
+              "luggage": "Premier Care Management",
+              "destination": "Kingswood, Bristol",
+              "time": "Full-time (45 hours)",
+              "money": "£10.42 an hour",
+              "people": "Hiring multiple candidates",
+              "text": "A typical day in the life of a Care Assistant will help support our customers in a variety of ways depending on their needs, this could include, providing personal care, medication management, light domestic duties, meal preparation, shopping and companionship.",
+              "button": "DISCOVER MORE & APPLY",
+            })
+          .swiper-slide
+            +cardJob({
+              "src": "images/providers/beyond-limits-logo.png",
+              "title": "Care Worker",
+              "luggage": "Beyond Limits",
+              "destination": "Plymouth, Devon",
+              "time": "Full-time (45 hours)",
+              "money": "£10.42 an hour",
+              "people": "Hiring multiple candidates",
+              "text": "A typical day in the life of a Care Assistant will help support our customers in a variety of ways depending on their needs, this could include, providing personal care, medication management, light domestic duties, meal preparation, shopping and companionship.",
+              "button": "DISCOVER MORE & APPLY",
+            })
+      button.swiper-button-prev.js-explore-slider-prev
+      button.swiper-button-next.js-explore-slider-next
+    a(href="#").button.button--secondary
+      | View all jobs
