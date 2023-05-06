@@ -19,7 +19,7 @@
 }
 
 .quiz__intro {
-  @include desktop {
+  @include laptop {
     text-align: center;
   }
 
@@ -31,7 +31,7 @@
     line-height: 36px;
     margin-bottom: 10px;
 
-    @include desktop {
+    @include laptop {
       font-size: 30px;
       line-height: 36px;
       letter-spacing: 0;
@@ -47,18 +47,46 @@
     display: block;
     margin: 0 auto 40px;
 
-    @include desktop {
+    @include laptop {
       margin-bottom: 80px;
     }
   }
 }
 
+.quiz__prev {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+
+  @include laptop {
+    display: inline-block;
+    margin-right: 16px;
+  }
+}
+
+.quiz__next {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include laptop {
+    display: inline-block;
+  }
+}
+
 .quiz__progress {
   margin-top: auto;
+  padding-top: 20px;
+
+  @include laptop {
+    padding-top: 0;
+  }
 }
 
 .quiz__question-wrap {
   display: none;
+  list-style-type: none;
 
   &.active {
     display: block;
@@ -67,16 +95,20 @@
 
 .quiz__question {
   display: none;
+  opacity: 0;
 
   &.active {
     display: block;
+    animation: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
   }
 
   h3 {
     letter-spacing: -1px;
     margin-bottom: 20px;
 
-    @include desktop-l {
+    @include desktop {
       margin-bottom: 5px;
     }
   }
@@ -92,7 +124,7 @@
     border-right: 2px solid $color-white;
   }
 
-  @include desktop {
+  @include laptop {
     padding-right: 40px;
   }
 }
@@ -106,7 +138,7 @@
     padding-left: 20px;
   }
 
-  @include desktop {
+  @include laptop {
     padding-left: 40px;
   }
 }

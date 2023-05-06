@@ -1,0 +1,51 @@
+.jobs {
+  padding: 20px 0 35px;
+
+  @include tablet {
+    padding: 20px 0 40px;
+  }
+
+  @include laptop {
+    padding: 40px 0 163px;
+  }
+
+  &__wrap {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      width: calc(100% + 16px);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    @include laptop {
+      max-width: 1800px;
+    }
+  }
+
+  .job-list {
+    @include tablet {
+      width: calc(50% - 16px);
+      margin: 0 8px;
+    }
+
+    @include laptop {
+      width: calc(41% - 16px);
+    }
+  }
+
+  .job-info {
+    display: none;
+
+    @include tablet {
+      display: block;
+      width: calc(50% - 16px);
+      margin: 0 8px;
+    }
+
+    @include laptop {
+      width: calc(59% - 16px);
+    }
+  }
+}

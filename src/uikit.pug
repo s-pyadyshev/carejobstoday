@@ -50,7 +50,7 @@ block content
             .row 
               .col-12
                 div(id="typo")
-                  h1 Typography
+                  h2.h2 Typography
 
                   h3.h3 Text
 
@@ -64,7 +64,7 @@ block content
                   h4.h4 Heading4
                   h5.h5 Heading5
                   h6.h6 Heading6
-
+                  br
                   h3.h3 Lists
 
                   ul.ul
@@ -91,15 +91,16 @@ block content
                     li
                       p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, veritatis.
                 div(id="container")
-                  h1 Container 
+                  h2.h2 Container 
                   
-                  //- .container.background-primary .container
+                  .container.background-primary .container
                   //- .container-sm.background-primary .container-sm
                   //- .container-md.background-primary .container-md
                   //- .container-lg.background-primary .container-lg
                   //- .container-xl.background-primary .container-xl
+                br
                 div(id="grid")
-                  h1 Grid
+                  h2.h2 Grid
                   .row
                     .col-md-2
                       .background-primary .col-2
@@ -113,22 +114,23 @@ block content
                       .background-primary .col-2
                     .col-md-2
                       .background-primary .col-2
+                br
                 div(id="accordion")
-                  h1 Accordion
+                  h2.h2 Accordion
                   +accordion("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ")
                   +accordion("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ")
                   //- h3 Native accordions
                   //- +accordion-native("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ")
                   //- +accordion-native("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ", true)
-
+                br
                 div(id="background")
-                  h1 Background
+                  h2.h2 Background
                   .background-primary .background-primary
                   .background-secondary .background-secondary
                   .background-muted .background-muted
-
+                br
                 div(id="navbar")
-                  h1 Navbar
+                  h2.h2 Navbar
                   +navbar(
                     [
                       {
@@ -143,14 +145,16 @@ block content
                       }
                     ]
                   )
-
+                br
                 div(id="pagination")
-                  h1 Pagination
+                  h2.h2 Pagination
                   +pagination(4)
-
+                  .background-primary 
+                    +pagination(4)
+                br
                 div(id="tabs")
-                  h1 Tabs
-                  .background-muted
+                  h2.h2 Tabs
+                  .background-primary
                     +tabs-custom(
                       [
                         {
@@ -171,10 +175,10 @@ block content
 
                 div(id="sliders")
                   .container
-                    h1 Slider
+                    h2.h2 Slider
                     +slider
 
-                    h1 Slider with pagination
+                    h2.h2 Slider with pagination
                     +slider-pagination
 
                     //- h1 Slider with thumbnails (works as multiple instances)
@@ -182,7 +186,7 @@ block content
                     //- +slider-thumbs
 
                 div(id="forms")
-                  h1 Forms
+                  h2.h2 Forms
 
                   h3 Input
                   .form-group
@@ -259,12 +263,42 @@ block content
                   .form-group
                     button.button(type="button") Default
                     br
+                    .background-primary
+                      p
+                      button.button.button--inverse(type="button") Inverse
+                      p
+                    br
                     button.button.button--primary(type="button") Primary
                     br
                     button.button.button--secondary(type="button") Secondary
                     br
                     button.button(type="button" disabled) Disabled
                   h3 Buttons with icons
+                  .form-group
+                    button.button.icon-start(type="button")
+                      span Default
+                      +svg('chevron-right')
+                    br
+                    .background-primary
+                      p
+                      button.button.button--inverse.text-left(type="button")
+                        span Default
+                        +svg('reset')
+                      p
+                    br
+                    button.button.button--primary.text-left(type="button")
+                      span Primary
+                      +svg('chevron-right')
+                    br
+                    button.button.button--secondary.text-right.icon-start(type="button")
+                     span Secondary
+                      +svg('chevron-right')
+                    br
+                    button.button(type="button" disabled)
+                     span Disabled
+                      +svg('chevron-right')
+
+                  h3 Buttons with icons and direction
                   .form-group
                     button.button(type="button")
                       span Default
@@ -285,15 +319,15 @@ block content
                   h2 Toggle
                   button.toggle.button(data-collapse-target="content1")
                     span Is caring right for me?
-                    +svg('chevron-right')
+                    +svg('chevron-down')
 
                   div(data-collapse-content="content1") Is caring right for me?
                 div(id="video")
-                  h2 Video 
+                  h2.h2 Video 
                   +videoVimeo
 
                 div(id="timeline")
-                  h2 Timeline
+                  h2.h2 Timeline
                   .background-secondary
                     +timeline([
                       {
@@ -318,7 +352,7 @@ block content
                       }
                     ])
                 div(id="icons")
-                  h2 Icons
+                  h2.h2 Icons
                   <style>.svg-icons{display: flex; flex-wrap: wrap;}.svg-icons svg{ width: 50px; height: 50px;}</style>
                   div(class="svg-icons")
                     +svg('chevron-down')
@@ -326,38 +360,15 @@ block content
                     +svg('chevron-right')
                     +svg('mouse')
                     +svg('play')
-                //- div(id="social")
-                //-   h1 Social links
-                //-   +social-links([
-                //-     {
-                //-       href: "#",
-                //-       src: "#"
-                //-     },{
-                //-       href: "#",
-                //-       src: "#"
-                //-     }]
-                //-   )
-                //- div(id="charts")
-                //-   h1 Charts
-
-                //-   h3 Bar chart
-
-                //-   .bar-chart-container
-                //-     canvas#bar-chart
-
-                //-   h3 Pie chart
-
-                //-   div
-                //-     canvas#pie-chart
                 div(id="scrollto")
-                  h1 Scroll To anchors
+                  h2.h2 Scroll To anchors
 
-                  button(data-scrollto="#section1") Anchor to section1
+                  button.button(data-scrollto="#section1") Anchor to section1
                   div(style="height:100vh")
                   #section1.background-primary(style="height:100vh") #section1
 
                 div(id="cards")
-                  h2 Card
+                  h2.h2 Cards
                   +cardCare({
                     image: "images/card-image.jpg",
                     logo: "images/procare-wales-logo.svg",

@@ -1,12 +1,12 @@
 .container {
-  @include desktop-l {
+  @include desktop {
     padding-right: 80px;
     padding-left: 80px;
   }
 }
 
 .container-md {
-  @include desktop-l {
+  @include desktop {
     max-width: 1440px;
   }
 }

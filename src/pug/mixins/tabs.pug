@@ -12,8 +12,10 @@ mixin tabs
       div Tab 2
 
 mixin tabs-custom(tabs)
-  .container
-    ul.tabs(data-tabs="tabs")
+  .tabs
+    button.tabs__prev
+      +svg("chevron-left")
+    ul.tabs__list(data-tabs="tabs")
       each data in tabs
         if data.active 
           li
@@ -21,23 +23,6 @@ mixin tabs-custom(tabs)
         else
           li
             a(href=data.href).button.button--secondary.tab-button= data.name
-
-  //- .tab-content(data-tabs-content="tabs")
-  //-   each data in tabs
-      //- if data.active 
-      //-   .is-active(data-tab-content=data.id)
-      //-     div= data.content
-      // Hardcoded because pug doesn't support dynamic includes
-      //- if data.name === 'Overview'
-      //-   .is-active(data-tab-content=data.id)
-      //-     include ../components/procare-wales-overview.pug
-      //- if data.name === 'Jobs'
-      //-   div(data-tab-content=data.id)
-      //-     include ../components/procare-wales-jobs.pug
-      //- if data.name === 'Interview Process'
-      //-   div(data-tab-content=data.id)
-      //-     include ../components/procare-wales-interview.pug
-      //- else
-      //-   div(data-tab-content=data.id)
-      //-     div= data.content
+    button.tabs__next
+      +svg("chevron-right")
 

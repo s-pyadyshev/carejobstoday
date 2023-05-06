@@ -8,24 +8,30 @@ append vars
 
 block content
   +page-header-logo('../images/procare-wales.jpg', 'images/procare-wales-logo.svg')
-  .page-tabs
-    +tabs-custom(
-      [
-        {
-          name: 'Overview',
-          id: 'tab1',
-          href: 'procare-wales-overview.html'
-        },
-        {
-          name: 'Jobs',
-          active: true,
-          id: 'tab2',
-          href: 'procare-wales-jobs.html'
-        },
-        {
-          name: 'Interview Process',
-          id: 'tab3',
-          href: 'procare-wales-interview.html'
-        }
-      ]
-    )
+  .tabs-wrap
+    .container
+      +tabs-custom(
+        [
+          {
+            name: 'Overview',
+            id: 'tab1',
+            href: 'procare-wales-overview.html'
+          },
+          {
+            name: 'Jobs',
+            active: true,
+            id: 'tab2',
+            href: 'procare-wales-jobs.html'
+          },
+          {
+            name: 'Interview Process',
+            id: 'tab3',
+            href: 'procare-wales-interview.html'
+          },
+          {
+            name: 'Blog',
+            id: 'tab4',
+            href: 'procare-wales-blog.html'
+          }
+        ]
+      )

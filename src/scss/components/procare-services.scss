@@ -7,7 +7,7 @@
     padding: 255px 0 40px;
   }
 
-  @include desktop {
+  @include laptop {
     background-color: transparent;
     padding: 352px 0 40px;
 
@@ -32,7 +32,7 @@
     max-width: 788px;
     margin: 0 auto 40px;
 
-    @include desktop {
+    @include laptop {
       max-width: 1088px;
       margin-bottom: 80px;
     }
@@ -42,7 +42,7 @@
     max-width: 788px;
     margin: 0 auto;
 
-    @include desktop {
+    @include laptop {
       max-width: 1500px;
     }
   }
@@ -58,7 +58,7 @@
       width: calc(50% - 30px);
     }
 
-    @include desktop {
+    @include laptop {
       width: calc(50% - 60px);
     }
 
@@ -70,7 +70,7 @@
         margin-bottom: 0;
       }
 
-      @include desktop {
+      @include laptop {
         margin-right: 60px;
       }
     }
@@ -80,7 +80,7 @@
         margin-left: 30px;
       }
 
-      @include desktop {
+      @include laptop {
         margin-left: 60px;
       }
     }
@@ -92,7 +92,7 @@
     p {
       margin-bottom: 0;
 
-      @include desktop {
+      @include laptop {
         color: $color-gray;
       }
     }
@@ -107,7 +107,7 @@
     padding: 16px;
     position: relative;
 
-    @include desktop {
+    @include laptop {
       height: 420px;
       margin-bottom: 40px;
     }

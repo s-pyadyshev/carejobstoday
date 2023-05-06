@@ -6,7 +6,7 @@
     padding: 40px 0;
   }
 
-  @include desktop {
+  @include laptop {
     padding: 80px 0 60px;
   }
 
@@ -16,7 +16,7 @@
       margin: 0 auto;
     }
 
-    @include desktop {
+    @include laptop {
       max-width: 1800px;
     }
   }
@@ -24,7 +24,7 @@
   h2 {
     margin-bottom: 40px;
 
-    @include desktop {
+    @include laptop {
       margin-bottom: 50px;
     }
   }
@@ -45,7 +45,7 @@
   .button {
     margin-top: 40px;
 
-    @include desktop {
+    @include laptop {
       margin-top: 64px;
     }
   }

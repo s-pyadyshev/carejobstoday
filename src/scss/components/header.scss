@@ -12,7 +12,7 @@ $mobile-menu-background-color: #ccc;
   background-color: $color-white;
   box-shadow: 0 0 4px #aaa;
 
-  @include desktop {
+  @include laptop {
     padding: 20px 0;
   }
 }
@@ -54,7 +54,7 @@ $mobile-menu-background-color: #ccc;
 .header__menu-toggle {
   height: 40px;
 
-  @include desktop {
+  @include laptop {
     display: none;
   }
 }

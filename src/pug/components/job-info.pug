@@ -1,0 +1,127 @@
+.job-info
+  .job-info__header.background-secondary
+    .job-info__image
+      img(src="images/job-info.jpg" title="" alt="")
+    .job-info__wrap
+      .job-info__inner
+        a(href="#").card-job__logo
+          img(src="images/procare-wales-logo.svg" title="" alt="")
+        h3.h3.text-white
+          | Live in carer
+        ul.card-job__list
+          li.card-job__item
+            .card-job__icon
+              +svg('case')
+            .card-job__info
+              a(href="#")
+                | ProCare Wales
+          li.card-job__item
+            .card-job__icon
+              +svg('pin')
+            .card-job__info
+              | Rhyl, Denbighshire
+          li.card-job__item
+            .card-job__icon
+              +svg('time')
+            .card-job__info
+              | Full-time (45 hours)
+          li.card-job__item
+            .card-job__icon
+              +svg('money')
+            .card-job__info
+              | £10.42 an hour
+          li.card-job__item
+            .card-job__icon
+              +svg('people')
+            .card-job__info
+              | Hiring multiple candidates
+      .job-info__aside
+        button(type="button" data-scrollto="#job-apply").button.button--primary
+          | Apply now
+        .job-info__callback
+          | Or 
+          button(type="button" data-scrollto="#job-callback")
+            | request a call back
+  .job-info__content
+    h4.h4
+      | Job Overview
+    p
+      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam non nisi est sit amet. Turpis egestas sed tempus urna et pharetra pharetra. Augue eget arcu dictum varius duis at consectetur lorem. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Sed vulputate odio ut enim blandit. Eget nullam non nisi est. Vitae auctor eu augue ut lectus arcu. Volutpat est velit egestas dui id ornare. 
+      | 
+      | Facilisis volutpat est velit egestas dui id ornare. Pretium quam vulputate dignissim suspendisse in est. Porttitor rhoncus dolor purus non enim praesent. Interdum velit laoreet id donec ultrices tincidunt arcu non sodales. Venenatis lectus magna fringilla urna porttitor rhoncus dolor. 
+      | Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Sem nulla pharetra diam sit amet nisl suscipit adipiscing. Facilisi cras fermentum odio eu feugiat. 
+    h4.h4
+      | What’s on Offer
+    ul
+      li
+        | £13.00 per hour Monday - Friday
+      li
+        | £14.00 per hour Saturday & Sunday
+      li
+        | Car Provided - T&C's Apply
+      li
+        | 35p per mile
+      li
+        | £500 welcome bonus up to £500 refer a friend bonus (per referral)
+      li
+        | Fully funded training and career development
+      li
+        | Blue Light discount package (superb discounts on travel, leisure, entertainment and more)
+      li
+        | EAP - Employee Assistance Program (offering support for employees and their families)
+      li
+        | Company pension scheme
+      li
+        | Staff appreciation incentives
+    h4.h4
+      | About the Role
+    p
+      | Et netus et malesuada fames. Nulla facilisi nullam vehicula ipsum a arcu cursus. Blandit massa enim nec dui. Pretium viverra suspendisse potenti nullam ac. Amet nulla facilisi morbi tempus iaculis urna id volutpat lacus. Purus faucibus ornare suspendisse sed nisi. Dolor sit amet consectetur adipiscing elit ut. Purus faucibus ornare suspendisse sed nisi lacus. Ut porttitor leo a diam sollicitudin tempor id eu.
+    h4.h4
+      | About You
+    p
+      | Habitant morbi tristique senectus et netus et malesuada fames. Tempus egestas sed sed risus pretium quam vulputate dignissim. Porta non pulvinar neque laoreet suspendisse interdum consectetur libero id. Orci phasellus egestas tellus rutrum tellus pellentesque. 
+      | 
+      | Consectetur libero id faucibus nisl tincidunt eget nullam non. Non odio euismod lacinia at quis. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Egestas sed tempus urna et. Ultricies mi quis hendrerit dolor magna eget est lorem ipsum.
+    ul
+      li
+        | No experience necessary - We provide comprehensive training, free of charge.
+      li
+        | Good people skills and the ability to show strong empathy, with a caring and compassionate nature
+      li
+        | A positive & professional
+      li
+        | Team working ethos
+      li
+        | Aligned to our company values
+  .job-info__footer.background-secondary
+    form(action="").job-info__form#job-apply
+      h2.h2.text-white
+        | Apply Now
+      p
+        | Please fill in your details below.
+      .job-info__form-wrap
+        input.input#job-apply-first-name(type="text" name="job-apply-first-name" placeholder="First Name")
+        input.input#job-apply-last-name(type="text" name="job-apply-last-name" placeholder="Last Name")
+        input.input#job-apply-email(type="text" name="job-apply-email" placeholder="Email Address")
+        label.input.input-file(for="job-apply-file")
+          +svg('upload')
+          span Upload CV
+          input#job-apply-file(type="file" name="job-apply-file")
+      +checkbox("I acknowledge and give permission for my data to be held by Care Jobs Today and WeLove9am in accordance with the General Data Protection Regulation")
+      +checkbox("I have read and agree to the privacy policy")
+      button(type="submit").button.button--primary
+        | Submit
+    form(action="").job-info__form#job-callback
+      h2.h2.text-white
+        | Request a callback
+      p
+        | If you’d like to find out more, simply request a call back using the form below.
+      .job-info__form-wrap
+        input.input#job-callback-first-name(type="text" name="job-callback-first-name" placeholder="First Name")
+        input.input#job-callback-last-name(type="text" name="job-callback-last-name" placeholder="Last Name")
+        input.input#job-callback-email(type="text" name="job-callback-email" placeholder="Email Address")
+      +checkbox("I acknowledge and give permission for my data to be held by Care Jobs Today and WeLove9am in accordance with the General Data Protection Regulation")
+      +checkbox("I have read and agree to the privacy policy")
+      button(type="submit").button.button--primary
+        | Request a callback

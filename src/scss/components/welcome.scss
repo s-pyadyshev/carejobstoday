@@ -2,7 +2,7 @@
   position: relative;
   padding: 0;
 
-  @include desktop {
+  @include laptop {
     padding: 0;
   }
 
@@ -38,7 +38,7 @@
         height: 388px;
       }
 
-      @include desktop {
+      @include laptop {
         height: 540px;
       }
     }
@@ -53,14 +53,18 @@
     z-index: 2;
   }
 
-  h1 span {
+  h1 span:nth-child(1) {
+    display: block;
+  }
+
+  h1 span:nth-child(2) {
     display: block;
     max-width: 520px;
     font-size: 30px;
     line-height: 36px;
     margin-bottom: 26px;
 
-    @include desktop {
+    @include laptop {
       max-width: 980px;
       font-size: 40px;
       line-height: 48px;
@@ -83,7 +87,7 @@
     padding: 0;
     z-index: 3;
 
-    @include desktop {
+    @include laptop {
       display: block;
     }
 
@@ -106,7 +110,7 @@
       height: 640px;
     }
 
-    @include desktop {
+    @include laptop {
       height: 889px;
     }
   }
@@ -121,7 +125,7 @@
       padding: 0 112px;
     }
 
-    @include desktop {
+    @include laptop {
       bottom: 40px;
       padding: 0 136px;
     }
@@ -146,10 +150,38 @@
       border-color: $color-white;
     }
 
-    @include desktop {
-      &:hover {
+    @include laptop {
+      &:focus,
+      &:hover,
+      &:active {
         border-color: $color-white;
       }
+    }
+  }
+}
+
+.page-loaded {
+  .welcome-slider {
+    h1 {
+      span:nth-child(1) {
+        animation: fadeInUp;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+      }
+    }
+    h1 {
+      span:nth-child(2) {
+        animation: fadeIn;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+        animation-delay: 0.5s;
+      }
+    }
+    .button {
+      animation: fadeIn;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-delay: 2.5s;
     }
   }
 }

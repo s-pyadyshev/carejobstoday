@@ -47,12 +47,12 @@ mixin search(advanced)
                 option(value="Company 7") Sportfit
               button.toggle.button(type="button" data-collapse-target="quiz")
                 span Is caring right for me?
-                +svg('chevron-right')
+                +svg('chevron-down')
           .search__row
             button(type="submit").button.button--primary
               | Search jobs
             button.toggle.button(type="button" data-collapse-target="quiz")
               span Is caring right for me?
-              +svg('chevron-right')
+              +svg('chevron-down')
   .search__quiz-form(data-collapse-content="quiz")
     include ../components/quiz.pug

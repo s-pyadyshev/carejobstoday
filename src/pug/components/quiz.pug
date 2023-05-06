@@ -1,22 +1,24 @@
 section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8), rgba(16,39,58,0.8)), url(./images/procare-wales.jpg)`)
-  form(action="" method="post") 
+  form#quiz-form(name="quiz-form" action="" method="post") 
     .quiz__intro
       .container
         .row 
           .col-md-8.offset-md-2.col-xl-4.offset-xl-4
             h2.h2 Working in social care is incredibly rewarding, but it’s not for everyone.
             p Take our short quiz to find out whether you’re suited to life as a carer.
-            button.button.button--primary.js-quiz-start(type="button") Start
+            button.button.button--primary.js-quiz-start(type="button")
+              span Start
+              +svg('chevron-right')
 
-    .quiz__question-wrap
-      .quiz__question
+    ul.quiz__question-wrap
+      li.quiz__question
         .container
           .row
             .col-md-6
               .quiz__question-text
                 h3.h3.text-primary
                   span.quiz__question-number
-                  |&nbsp;Confidence
+                  span Confidence
                 p Young people and adults with mental health conditions or learning disabilities often need support with medical appointments, housing options and claiming benefits. Part of a carer’s role is to advocate on their behalf to ensure they can live a comfortable and healthy life.
 
             .col-md-6
@@ -25,24 +27,24 @@ section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8), rgba(1
                 p
                   b How confident are you speaking up in meetings and appointments?
                 .form-group
-                  +radio('Speaking to people in authority is my worst nightmare', 'radio1', true)
+                  +radio("Speaking to people in authority is my worst nightmare", "radio1", "value1", true)
                 .form-group
-                  +radio('Very. I’m always happy to make myself heard', 'radio1')
+                  +radio("Very. I’m always happy to make myself heard", "radio1", "value2")
                 .form-group
-                  +radio('Not too bad, but I know I need to be more confident', 'radio1')
+                  +radio("Not too bad, but I know I need to be more confident", "radio1", "value3")
                 
-                button.button.button--primary.quiz__next(type="button")
+                button.button.button--primary.text-left.quiz__next(type="button")
                   span Next question
-                  +svg('chevron-right')
+                  +svg("chevron-right")
 
-      .quiz__question
+      li.quiz__question
         .container
           .row
             .col-md-6
               .quiz__question-text
                 h3.h3.text-primary
                   span.quiz__question-number
-                  |&nbsp;Confidence
+                  span Confidence
                 p Young people and adults with mental health conditions or learning disabilities often need support with medical appointments, housing options and claiming benefits. Part of a carer’s role is to advocate on their behalf to ensure they can live a comfortable and healthy life.
 
             .col-md-6
@@ -51,27 +53,27 @@ section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8), rgba(1
                 p
                   b How confident are you speaking up in meetings and appointments?
                 .form-group
-                  +radio('Speaking to people in authority is my worst nightmare', 'radio2', true)
+                  +radio("Speaking to people in authority is my worst nightmare", "radio2", "value1", true)
                 .form-group
-                  +radio('Very. I’m always happy to make myself heard', 'radio2')
+                  +radio("Very. I’m always happy to make myself heard", "radio2", "value2")
                 .form-group
-                  +radio('Not too bad, but I know I need to be more confident', 'radio2')
+                  +radio("Not too bad, but I know I need to be more confident", "radio2", "value3")
 
-                button.button.button--primary.quiz__prev(type="button")
-                  +svg('chevron-left')
+                button.button.button--primary.text-right.icon-left.quiz__prev(type="button")
+                  +svg("chevron-right")
                   span Previous question
-                button.button.button--primary.quiz__next(type="button")
+                button.button.button--primary.text-left.quiz__next(type="button")
                   span Next question
-                  +svg('chevron-right')
+                  +svg("chevron-right")
 
-      .quiz__question
+      li.quiz__question
         .container
           .row
             .col-md-6
               .quiz__question-text
                 h3.h3.text-primary
                   span.quiz__question-number
-                  |&nbsp;Confidence
+                  span Confidence
                 p Young people and adults with mental health conditions or learning disabilities often need support with medical appointments, housing options and claiming benefits. Part of a carer’s role is to advocate on their behalf to ensure they can live a comfortable and healthy life.
 
             .col-md-6
@@ -80,18 +82,19 @@ section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8), rgba(1
                 p
                   b How confident are you speaking up in meetings and appointments?
                 .form-group
-                  +radio('Speaking to people in authority is my worst nightmare', 'radio3', true)
+                  +radio("Speaking to people in authority is my worst nightmare", "radio3", "value1", true)
                 .form-group
-                  +radio('Very. I’m always happy to make myself heard', 'radio3')
+                  +radio("Very. I’m always happy to make myself heard", "radio3", "value2")
                 .form-group
-                  +radio('Not too bad, but I know I need to be more confident', 'radio3')
+                  +radio("Not too bad, but I know I need to be more confident", "radio3", "value3")
 
-                button.button.button--primary.quiz__prev(type="button")
-                  +svg('chevron-left')
+                button.button.button--primary.text-right.icon-left.quiz__prev(type="button")
+                  +svg("chevron-right")
                   span Previous question
-                button.button.button--primary.quiz__next(type="button")
-                  span Next question
-                  +svg('chevron-right')
+                button.button.button--primary.text-left.quiz__submit(type="submit")
+                  span Submit
+                  +svg("chevron-right")
+
   .quiz__end 
     .container 
       h3.h3 Great!

@@ -7,7 +7,7 @@ html {
   font-size: $font-size;
   line-height: $line-height;
 
-  @include desktop {
+  @include laptop {
     font-size: $font-size-desktop;
   }
 
@@ -97,7 +97,7 @@ video {
 section {
   padding: 40px 0;
 
-  @include desktop {
+  @include laptop {
     padding: 75px 0 90px;
   }
 }

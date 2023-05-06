@@ -9,7 +9,7 @@
   -webkit-overflow-scrolling: touch;
   z-index: -1;
 
-  @include desktop {
+  @include laptop {
     position: static;
     width: auto;
     opacity: 1;
@@ -28,7 +28,7 @@
     text-transform: uppercase;
     padding: 20px;
 
-    @include desktop {
+    @include laptop {
       font-size: 16px;
       line-height: 25px;
       color: $color-secondary;
@@ -49,7 +49,7 @@
     align-items: center;
     list-style-type: none;
 
-    @include desktop {
+    @include laptop {
       flex-direction: row;
       gap: 60px;
     }
@@ -61,7 +61,7 @@
       background-color: $color-secondary;
       border-bottom: 2px solid $color-gray;
 
-      @include desktop {
+      @include laptop {
         width: auto;
         background-color: transparent;
         border-bottom: none;

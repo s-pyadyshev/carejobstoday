@@ -7,12 +7,9 @@ $button-color-active: $color-white;
 
 .button {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   font-family: $font-secondary;
   font-size: 14px;
-  text-align: center;
   border: 1px solid $button-border-color;
   padding: 15px 20px;
   outline: none;
@@ -28,7 +25,7 @@ $button-color-active: $color-white;
     min-width: 260px;
   }
 
-  @include desktop {
+  @include laptop {
     font-size: 16px;
   }
 
@@ -37,11 +34,48 @@ $button-color-active: $color-white;
   &:active {
     background-color: $button-background-color-hover;
     color: $button-color-hover;
+
+    svg {
+      stroke: $color-white;
+    }
   }
 
   &[disabled] {
     opacity: 0.3;
     pointer-events: none;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    stroke: $color-secondary;
+  }
+
+  &.icon-left {
+    svg {
+      left: 18px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &--inverse {
+    background-color: transparent;
+    border-color: $color-white;
+    color: $color-white;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $color-secondary;
+    }
+
+    svg {
+      stroke: $color-white;
+    }
   }
 
   &--primary {
@@ -53,6 +87,10 @@ $button-color-active: $color-white;
     &:hover,
     &:active {
       border-color: $color-secondary;
+    }
+
+    svg {
+      stroke: $color-white;
     }
   }
 
@@ -66,14 +104,9 @@ $button-color-active: $color-white;
       background-color: $color-primary;
       border-color: $color-primary;
     }
-  }
 
-  svg {
-    position: absolute;
-    top: 50%;
-    right: 18px;
-    width: 10px;
-    height: 10px;
-    transform: translateY(-50%);
+    svg {
+      stroke: $color-white;
+    }
   }
 }

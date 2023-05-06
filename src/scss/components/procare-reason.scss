@@ -20,7 +20,7 @@
         align-items: flex-end;
       }
 
-      @include desktop {
+      @include laptop {
         padding: 167px 80px 164px;
       }
 
@@ -35,7 +35,7 @@
           max-width: 333px;
         }
 
-        @include desktop {
+        @include laptop {
           max-width: 755px;
           line-height: 55px;
         }
@@ -52,7 +52,7 @@
         padding: 20px 51px;
       }
 
-      @include desktop {
+      @include laptop {
         margin: 52px 0;
         padding: 92px 61px 94px;
       }
@@ -74,7 +74,7 @@
           text-align: left;
         }
 
-        @include desktop {
+        @include laptop {
           max-width: 759px;
         }
       }

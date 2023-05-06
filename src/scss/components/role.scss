@@ -11,11 +11,11 @@
     text-align: left;
   }
 
-  @include desktop {
+  @include laptop {
     padding: 68px 110px 136px;
   }
 
-  @include desktop-l {
+  @include desktop {
     padding: 68px 200px 136px;
   }
 
@@ -42,11 +42,11 @@
       width: 358px;
     }
 
-    @include desktop {
+    @include laptop {
       width: 420px;
     }
 
-    @include desktop-l {
+    @include desktop {
       width: 500px;
     }
 
@@ -70,11 +70,11 @@
       padding-left: 44px;
     }
 
-    @include desktop {
+    @include laptop {
       width: calc(100% - 420px);
     }
 
-    @include desktop-l {
+    @include desktop {
       width: calc(100% - 500px);
       padding-left: 40px;
     }
@@ -116,7 +116,7 @@
       }
     }
 
-    @include desktop {
+    @include laptop {
       min-width: 260px;
     }
   }

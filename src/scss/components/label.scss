@@ -12,7 +12,7 @@ $label-font-size-desktop: 30px;
     color: $color-white;
   }
 
-  @include desktop {
+  @include laptop {
     font-size: $label-font-size-desktop;
   }
 }

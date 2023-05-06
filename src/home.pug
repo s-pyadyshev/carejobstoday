@@ -6,10 +6,8 @@ prepend vars
 append vars
   //-
 
-include ./pug/mixins/search
-
 block content
-  +search("advanced")
+  +search()
   include ./pug/components/welcome
   include ./pug/components/caring
   include ./pug/components/providers

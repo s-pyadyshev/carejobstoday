@@ -2,7 +2,7 @@
   &--procare-overview h2 {
     margin-bottom: 20px;
 
-    @include desktop {
+    @include laptop {
       margin-bottom: 27px;
     }
   }

@@ -1,7 +1,7 @@
 .procare-about {
   padding: 0 0 40px;
 
-  @include desktop {
+  @include laptop {
     padding: 5px 0 80px;
   }
 
@@ -9,7 +9,7 @@
     max-width: 788px;
     margin: 0 auto;
 
-    @include desktop {
+    @include laptop {
       max-width: 1364px;
     }
   }

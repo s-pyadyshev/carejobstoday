@@ -3,13 +3,14 @@
   line-height: 0;
   height: 430px;
 
-  @include desktop-l {
+  @include desktop {
     height: 545px;
   }
 
   iframe {
     width: 100%;
     height: 100%;
+    opacity: 0;
   }
 
   &__overlay {
@@ -18,11 +19,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
+    background-position: 50%;
+    background-repeat: no-repeat;
   }
 
   &__play {
-    z-index: 1;
+    z-index: 5;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,16 +39,15 @@
     &:focus,
     &:hover,
     &:active {
-      background-color: $color-white;
       color: $color-black;
     }
 
     svg {
-      width: 80px;
+      width: 78px;
       height: 80px;
 
-      @include desktop-l {
-        width: 100px;
+      @include desktop {
+        width: 98px;
         height: 100px;
       }
     }

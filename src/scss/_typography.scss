@@ -1,22 +1,22 @@
 $h1-font-size: 65px;
 $h2-font-size: 30px;
 $h3-font-size: 20px;
-$h4-font-size: 12px;
+$h4-font-size: 14px;
 $h5-font-size: 10px;
 $h6-font-size: 8px;
 $h1-font-size-desktop: 120px;
 $h2-font-size-desktop: 40px;
 $h3-font-size-desktop: 30px;
-$h4-font-size-desktop: 24px;
-$h5-font-size-desktop: 20px;
-$h6-font-size-desktop: 16px;
+$h4-font-size-desktop: 16px;
+$h5-font-size-desktop: 12px;
+$h6-font-size-desktop: 10px;
 
 .h1 {
   font-family: $font-secondary;
   font-size: $h1-font-size;
   line-height: $h1-font-size;
 
-  @include desktop {
+  @include laptop {
     font-size: $h1-font-size-desktop;
     line-height: $h1-font-size-desktop;
   }
@@ -38,7 +38,7 @@ $h6-font-size-desktop: 16px;
     color: $color-secondary;
   }
 
-  @include desktop {
+  @include laptop {
     font-size: $h2-font-size-desktop;
     line-height: 64px;
     letter-spacing: -2px;
@@ -51,7 +51,7 @@ $h6-font-size-desktop: 16px;
   font-size: $h3-font-size;
   line-height: 28px;
 
-  @include desktop {
+  @include laptop {
     font-size: $h3-font-size-desktop;
     line-height: 44px;
   }
@@ -59,16 +59,18 @@ $h6-font-size-desktop: 16px;
 
 .h4 {
   font-size: $h4-font-size;
+  line-height: 22px;
 
-  @include desktop {
+  @include laptop {
     font-size: $h4-font-size-desktop;
+    line-height: 24px;
   }
 }
 
 .h5 {
   font-size: $h5-font-size;
 
-  @include desktop {
+  @include laptop {
     font-size: $h5-font-size-desktop;
   }
 }
@@ -76,7 +78,7 @@ $h6-font-size-desktop: 16px;
 .h6 {
   font-size: $h6-font-size;
 
-  @include desktop {
+  @include laptop {
     font-size: $h6-font-size-desktop;
   }
 }
@@ -90,7 +92,7 @@ p {
   line-height: 22px;
   margin-bottom: 20px;
 
-  @include desktop {
+  @include laptop {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 40px;

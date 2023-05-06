@@ -1,7 +1,7 @@
 .quiz-offer {
   overflow: hidden;
 
-  @include desktop-l {
+  @include desktop {
     overflow: visible;
   }
 }
@@ -42,7 +42,7 @@
     width: 100%;
   }
 
-  @include desktop-l {
+  @include desktop {
     position: absolute;
     bottom: 0;
     left: -16px;
@@ -63,7 +63,7 @@
   transition-timing-function: ease-in-out;
   transform: scale(1.2);
 
-  @include desktop-l {
+  @include desktop {
     top: auto;
     bottom: 50px;
     left: -42px;
@@ -84,7 +84,7 @@
     text-align: right;
   }
 
-  @include desktop-l {
+  @include desktop {
     padding-top: 130px;
     padding-right: 64px;
     padding-bottom: 120px;
@@ -105,7 +105,7 @@
       min-width: 185px;
     }
 
-    @include desktop {
+    @include laptop {
       min-width: 260px;
     }
   }

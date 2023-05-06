@@ -2,18 +2,14 @@
   text-align: center;
 
   p {
-    max-width: 654px;
-    margin: 0 auto;
-
-    @include desktop {
-      max-width: 812px;
-    }
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .button {
-    margin-top: 40px;
+    display: inline-block;
 
-    @include desktop {
+    @include laptop {
       min-width: 500px;
     }
   }

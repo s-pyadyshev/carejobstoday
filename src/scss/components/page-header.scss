@@ -8,8 +8,9 @@
   background-size: cover;
   padding-top: 70px;
   padding-bottom: 70px;
+  background-color: $color-primary;
 
-  @include desktop {
+  @include laptop {
     padding-top: 90px;
     padding-bottom: 90px;
   }
@@ -20,7 +21,7 @@
     line-height: 36px;
     letter-spacing: -1.5px;
 
-    @include desktop {
+    @include laptop {
       font-size: 70px;
       line-height: 55px;
       letter-spacing: -3.5px;
@@ -32,7 +33,7 @@
     font-size: 14px;
     line-height: 18px;
 
-    @include desktop {
+    @include laptop {
       font-size: 30px;
       line-height: 55px;
     }
@@ -41,7 +42,7 @@
   img {
     height: 41px;
 
-    @include desktop {
+    @include laptop {
       height: 84px;
     }
   }
@@ -51,11 +52,11 @@
   padding-top: 70px;
   padding-bottom: 70px;
 
-  @include desktop {
+  @include laptop {
     min-height: 660px;
   }
 
-  @include desktop-l {
+  @include desktop {
     min-height: auto;
   }
 
@@ -63,7 +64,7 @@
     font-size: 65px;
     line-height: 1.3;
 
-    @include desktop-l {
+    @include desktop {
       font-size: 120px;
       line-height: 1.1;
     }
@@ -74,7 +75,7 @@
     line-height: 1;
     margin-bottom: 30px;
 
-    @include desktop {
+    @include laptop {
       margin-bottom: 20px;
     }
   }

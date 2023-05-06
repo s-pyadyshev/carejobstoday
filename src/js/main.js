@@ -5,7 +5,6 @@ import { mobileMenu } from "./components/mobile-menu";
 import { slider } from "./components/slider";
 import { sliderPagination } from "./components/sliderPagination";
 // import { sliderThumbs } from "./components/sliderThumbs";
-// import {tabs} from './components/tabs';
 import "./components/scrollto";
 // import "./components/gsap-animations";
 import { welcomeSlider } from "./components/welcome-slider";
@@ -19,17 +18,21 @@ import { quiz } from "./components/quiz";
 // import { barChart } from "./components/bar-chart";
 // import { pieChart } from "./components/pie-chart";
 
-$(() => {
-  accordion.init();
-  mobileMenu.init();
-  slider.init();
-  sliderPagination.init();
-  // tabs.init();
-  welcomeSlider.init();
-  providersSlider.init();
-  exploreSlider.init();
-  toggle.init();
-  searchSelect.init();
-  videoVimeo.init();
-  quiz.init();
-});
+window.addEventListener(
+  "load",
+  function () {
+    accordion.init();
+    mobileMenu.init();
+    slider.init();
+    sliderPagination.init();
+    welcomeSlider.init();
+    providersSlider.init();
+    exploreSlider.init();
+    toggle.init();
+    searchSelect.init();
+    videoVimeo.init();
+    quiz.init();
+    document.querySelector("body").classList.add("page-loaded");
+  },
+  false
+);

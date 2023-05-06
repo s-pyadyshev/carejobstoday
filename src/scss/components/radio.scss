@@ -34,7 +34,7 @@ $radio-focus-shadow: 0 0 0 1px $color-black;
     background-color: transparent;
     border: $radio-border-width solid $radio-color;
 
-    @include desktop {
+    @include laptop {
       width: $radio-size-desktop;
       height: $radio-size-desktop;
     }
@@ -44,7 +44,7 @@ $radio-focus-shadow: 0 0 0 1px $color-black;
     font-size: 14px;
     line-height: 22px;
 
-    @include desktop {
+    @include laptop {
       font-size: 16px;
       line-height: 24px;
     }
@@ -65,7 +65,7 @@ $radio-focus-shadow: 0 0 0 1px $color-black;
   border-radius: 50%;
   background-color: $color-primary;
 
-  @include desktop {
+  @include laptop {
     width: 16px;
     height: 16px;
   }

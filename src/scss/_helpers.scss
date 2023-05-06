@@ -8,7 +8,7 @@
   padding: 0;
   transform: translate(0, -50%);
 
-  @include desktop {
+  @include laptop {
     width: 16px;
     height: 16px;
 
@@ -71,11 +71,35 @@
       background-color: $color-black;
     }
   }
+
+  input {
+    color: $color-black;
+  }
 }
 
 .background-secondary {
   background-color: $color-secondary;
   color: $color-white;
+
+  .checkbox-input ~ .checkbox-box {
+    &:before {
+      background-color: $color-secondary;
+      border: 1px solid $color-white;
+    }
+
+    .checkbox-box__label {
+      color: $color-white;
+    }
+
+    svg {
+      fill: $color-white;
+      color: $color-white;
+    }
+  }
+
+  input {
+    color: $color-black;
+  }
 }
 
 .text-primary {
@@ -91,7 +115,15 @@
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
 }
 
 .clearfix {

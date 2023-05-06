@@ -2,7 +2,7 @@
   position: relative;
   height: 40px;
 
-  @include desktop {
+  @include laptop {
     height: 60px;
   }
 
@@ -28,7 +28,7 @@
   transition-duration: $transition-duration;
   transition-timing-function: ease-in-out;
 
-  @include desktop {
+  @include laptop {
     width: 58.782px;
     height: 58.782px;
   }

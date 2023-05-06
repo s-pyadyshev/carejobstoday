@@ -4,7 +4,7 @@
   text-align: left;
   padding: 30px 20px;
 
-  @include desktop {
+  @include laptop {
     padding: 36px 40px;
   }
 
@@ -13,7 +13,7 @@
     height: 30px;
     margin-bottom: 6px;
 
-    @include desktop {
+    @include laptop {
       margin-bottom: 36px;
     }
 
@@ -26,7 +26,7 @@
   h3 {
     margin-bottom: 22px;
 
-    @include desktop {
+    @include laptop {
       margin-bottom: 36px;
     }
   }
@@ -34,7 +34,7 @@
   &__list {
     margin-bottom: 12px;
 
-    @include desktop {
+    @include laptop {
       margin-bottom: 26px;
     }
   }
@@ -45,7 +45,7 @@
     margin: 0 11px 11px 0;
     font-size: 0;
 
-    @include desktop {
+    @include laptop {
       margin: 0 28px 11px 0;
     }
   }
@@ -73,7 +73,7 @@
     line-height: 18px;
     color: $color-gray;
 
-    @include desktop {
+    @include laptop {
       font-size: 16px;
       line-height: 19px;
     }
@@ -82,7 +82,7 @@
       text-decoration: underline;
       color: $color-gray;
 
-      @include desktop {
+      @include laptop {
         &:hover {
           color: $color-primary;
         }
@@ -92,6 +92,7 @@
 
   p {
     color: $color-gray;
+    margin-bottom: 0;
   }
 
   .button {
@@ -99,11 +100,11 @@
     min-width: 0;
     margin-top: 36px;
 
-    @include desktop {
+    @include laptop {
       display: inline-block;
     }
 
-    @include desktop-l {
+    @include desktop {
       min-width: 260px;
     }
   }

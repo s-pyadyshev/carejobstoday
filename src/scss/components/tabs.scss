@@ -2,40 +2,89 @@ $tab-active-background-color: $color-primary;
 $tab-active-color: $color-white;
 $tab-border-color: $color-secondary;
 
-.tabs {
-  display: flex;
-  gap: 2px;
-  list-style-type: none;
+.tabs-wrap {
+  position: relative;
+  margin-top: -40px;
 
-  @include desktop-l {
-    gap: 16px;
-  }
-
-  li:not(:last-child) {
-    button {
-      border-right: 0;
-    }
+  @include desktop {
+    margin-top: -50px;
   }
 }
 
-a.tab-button {
+.tabs {
+  padding-right: $container-padding-x / 2;
+  padding-left: $container-padding-x / 2;
+}
+
+.tabs__list {
+  display: flex;
+  gap: 2px;
+  list-style-type: none;
+  overflow: hidden;
+  margin-right: -($container-padding-x / 2);
+  margin-left: -($container-padding-x / 2);
+
+  @include tablet {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  @include desktop {
+    gap: 16px;
+  }
+}
+
+.tabs__prev,
+.tabs__next {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: none;
+  border: 0;
+  stroke: $color-white;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    stroke: $color-white;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.tabs__prev {
+  top: 0;
+  left: 0;
+}
+
+.tabs__next {
+  top: 0;
+  right: 0;
+}
+
+.tab-button.button {
   min-width: auto;
   height: 40px;
+  line-height: 1;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  white-space: nowrap;
 
-  @include desktop-l {
+  @include desktop {
     min-width: 260px;
     height: 50px;
     font-size: 16px;
   }
 
-  &:focus,
-  &:hover,
-  &:active,
   &.is-active {
-    background-color: $color-white;
-    border-color: $color-white;
+    background-color: $color-muted;
+    border-color: $color-muted;
     color: $color-secondary;
   }
 }

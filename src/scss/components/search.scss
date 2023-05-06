@@ -3,7 +3,7 @@
   padding: 13px 0;
   position: relative;
 
-  @include desktop {
+  @include laptop {
     padding: 20px 0;
   }
 
@@ -50,7 +50,7 @@
       z-index: 1;
     }
 
-    @include desktop {
+    @include laptop {
       max-width: 1800px;
     }
   }
@@ -67,7 +67,7 @@
   label {
     margin-bottom: 10px;
 
-    @include desktop {
+    @include laptop {
       margin-bottom: 5px;
     }
   }
@@ -82,7 +82,7 @@
       margin: 0 16px 0 0;
     }
 
-    @include desktop {
+    @include laptop {
       flex: 1 0 calc(58% - 146px);
     }
 
@@ -109,7 +109,7 @@
       margin-bottom: 0;
     }
 
-    @include desktop {
+    @include laptop {
       flex: 1 0 calc(42% - 146px);
     }
   }
@@ -124,7 +124,7 @@
       margin-left: 16px;
     }
 
-    @include desktop {
+    @include laptop {
       width: 260px;
     }
   }
@@ -148,7 +148,7 @@
       padding: 20px 0 30px;
     }
 
-    @include desktop {
+    @include laptop {
       padding: 40px 0;
     }
 
@@ -165,7 +165,7 @@
       &:first-child {
         margin-bottom: 13px;
 
-        @include desktop {
+        @include laptop {
           margin-bottom: 40px;
         }
 
@@ -174,7 +174,7 @@
             max-width: calc(50% - 8px);
           }
 
-          @include desktop {
+          @include laptop {
             flex: 1 0 calc(50% - 284px);
             max-width: calc(50% - 284px);
           }
@@ -183,7 +183,7 @@
         .button--primary {
           display: none;
 
-          @include desktop {
+          @include laptop {
             display: block;
           }
         }
@@ -202,7 +202,7 @@
       &:nth-child(2) {
         margin-bottom: 13px;
 
-        @include desktop {
+        @include laptop {
           margin-bottom: 0;
         }
 
@@ -211,7 +211,7 @@
           flex-direction: row;
           align-items: center;
 
-          @include desktop {
+          @include laptop {
             flex: 1 0 calc(58% - 146px);
           }
         }
@@ -219,7 +219,7 @@
         .toggle {
           display: none;
 
-          @include desktop {
+          @include laptop {
             display: block;
           }
         }
@@ -229,20 +229,20 @@
           flex-direction: row;
           align-items: center;
 
-          @include desktop {
+          @include laptop {
             flex: 1 0 calc(42% + 114px);
           }
 
           .fsb-select {
             width: 100%;
 
-            @include desktop {
+            @include laptop {
               width: 260px;
             }
           }
 
           .toggle {
-            @include desktop {
+            @include laptop {
               width: calc(100% - 276px);
             }
           }
@@ -254,7 +254,7 @@
       }
 
       &:nth-child(3) {
-        @include desktop {
+        @include laptop {
           display: none;
         }
 

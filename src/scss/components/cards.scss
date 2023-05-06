@@ -12,7 +12,7 @@
 .card-care__background {
   height: 175px;
   width: 100%;
-  @include desktop {
+  @include laptop {
     height: auto;
   }
 }
@@ -34,14 +34,14 @@
   color: $color-secondary;
   text-align: center;
   margin-bottom: 14px;
-  @include desktop {
+  @include laptop {
     text-align: left;
   }
 }
 
 .card-care__text {
   padding: 20px;
-  @include desktop {
+  @include laptop {
     padding: 36px 16px 30px 16px;
   }
 }
@@ -49,7 +49,7 @@
 .card-care__text p {
   margin-bottom: 20px;
 
-  @include desktop {
+  @include laptop {
     margin-bottom: 30px;
   }
 }
@@ -60,14 +60,14 @@
   color: $color-white;
   font-size: 16px;
 
-  @include desktop {
+  @include laptop {
     min-width: auto;
   }
 }
 
 .card-care__button-wrap a:not(:last-child) {
   margin-bottom: 8px;
-  @include desktop {
+  @include laptop {
     margin-bottom: 0;
     margin-right: 16px;
   }
@@ -77,7 +77,7 @@
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  @include desktop {
+  @include laptop {
     flex-direction: row;
   }
 }
@@ -88,7 +88,7 @@
 
 .section-businesses .row {
   row-gap: 20px;
-  @include desktop {
+  @include laptop {
     row-gap: 16px;
   }
 }

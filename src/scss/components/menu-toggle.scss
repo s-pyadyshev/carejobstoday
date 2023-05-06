@@ -4,7 +4,7 @@
   background: none;
   border: 0;
 
-  @include desktop {
+  @include laptop {
     display: none !important;
   }
 
@@ -19,7 +19,7 @@
   background: none;
   border: 0;
 
-  @include desktop {
+  @include laptop {
     display: none;
   }
 
