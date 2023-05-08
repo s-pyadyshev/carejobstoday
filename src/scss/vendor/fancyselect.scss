@@ -1,7 +1,7 @@
 :root {
   --fsb-border: 1px solid #ccc;
   --fsb-radius: 5px;
-  --fsb-color: inherit;
+  --fsb-color: #10273a;
   --fsb-background: #ededed;
   --fsb-font-size: 1em;
   --fsb-padding: 8px;
@@ -44,6 +44,7 @@ select::-ms-expand {
 .fsb-select {
   display: inline-block;
   position: relative;
+  width: inherit;
 }
 
 select[disabled] + .fsb-select {
@@ -103,6 +104,7 @@ select[disabled] + .fsb-select {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  text-transform: uppercase;
 }
 
 .fsb-button > span {
@@ -220,6 +222,7 @@ select[disabled] + .fsb-select .fsb-list {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color: $color-secondary;
 }
 
 .fsb-option:focus {

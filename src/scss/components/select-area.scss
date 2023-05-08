@@ -18,8 +18,7 @@
   }
 
   input {
-    flex: 1 0 calc(100% - 136px);
-    max-width: calc(100% - 136px);
+    width: 100%;
     border-radius: 5px 0 0 5px;
     border-right: none;
     margin: 0;
@@ -37,7 +36,7 @@
   }
 
   .select ~ .fsb-select {
-    flex: 0 0 136px;
+    min-width: 136px;
     background-color: $color-white;
     border-radius: 0 5px 5px 0;
     border: 1px solid $color-muted;
@@ -49,6 +48,7 @@
       color: $color-gray !important;
       padding-left: 24px !important;
       transition: 0s;
+      text-transform: none;
 
       &::after {
         width: 0;

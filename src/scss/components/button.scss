@@ -32,8 +32,9 @@ $button-color-active: $color-white;
   &:focus,
   &:hover,
   &:active {
-    background-color: $button-background-color-hover;
-    color: $button-color-hover;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: $color-white;
 
     svg {
       stroke: $color-white;

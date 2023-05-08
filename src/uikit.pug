@@ -117,11 +117,12 @@ block content
                 br
                 div(id="accordion")
                   h2.h2 Accordion
-                  +accordion("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ")
-                  +accordion("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ")
-                  //- h3 Native accordions
-                  //- +accordion-native("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ")
-                  //- +accordion-native("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ", true)
+                  .section.background-secondary
+                    ul.accordion-list
+                      +accordion("Q: What made you choose a career in care?", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur fugiat repellendus suscipit saepe maiores, eligendi ipsum, quisquam asperiores, facilis facere vitae tempore. Sint, temporibus iure minima voluptatibus explicabo harum dignissimos illum corporis cupiditate eveniet sequi excepturi maiores quam maxime culpa quis illo ipsam ab! Sapiente sed fugiat veritatis suscipit!")
+                    //- h3 Native accordions
+                    //- +accordion-native("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ")
+                    //- +accordion-native("Accordion title", "Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content Accordion content ", true)
                 br
                 div(id="background")
                   h2.h2 Background
@@ -176,10 +177,10 @@ block content
                 div(id="sliders")
                   .container
                     h2.h2 Slider
-                    +slider
+                    //- +slider
 
-                    h2.h2 Slider with pagination
-                    +slider-pagination
+                    //- h2.h2 Slider with pagination
+                    //- +slider-pagination
 
                     //- h1 Slider with thumbnails (works as multiple instances)
                     //- +slider-thumbs
@@ -228,14 +229,15 @@ block content
                         option DDDDD
                         option EEEEE
                   h3 Checkbox
-                  .background-secondary
+                  .section-sm.background-secondary
                     .form-group
                       +checkbox('Checkbox text')
                   h3 Radio
-                  .form-group
-                    +radio('Radio text')
-                  .form-group
-                    +radio('Radio text')
+                  .section-sm.background-secondary
+                    .form-group
+                      +radio('Radio text')
+                    .form-group
+                      +radio('Radio text')
 
                   //- h3 Switch
                   //- .form-group
@@ -261,15 +263,21 @@ block content
                           input#upload2.visually-hidden(type="file" name="upload")
                       br
                   h3 Buttons
-                  .form-group
-                    button.button(type="button") Default
+                    .background-primary
+                      .form-group
+                        br
+                        button.button(type="button") Default
+                        br
                     br
                     .background-primary
-                      p
+                      br
                       button.button.button--inverse(type="button") Inverse
-                      p
+                      br
+                      br
+                    br
                     br
                     button.button.button--primary(type="button") Primary
+                    br
                     br
                     button.button.button--secondary(type="button") Secondary
                     br
@@ -317,7 +325,7 @@ block content
                      span Disabled
                       +svg('chevron-right')
                 div(id="toggle")
-                  h2 Toggle
+                  h2.h2 Toggle
                   button.toggle.button(data-collapse-target="content1")
                     span Is caring right for me?
                     +svg('chevron-down')
@@ -364,7 +372,7 @@ block content
                 div(id="scrollto")
                   h2.h2 Scroll To anchors
 
-                  button.button(data-scrollto="#section1") Anchor to section1
+                  button.button.button--primary(data-scrollto="#section1") Anchor to section1
                   div(style="height:100vh")
                   #section1.background-primary(style="height:100vh") #section1
 

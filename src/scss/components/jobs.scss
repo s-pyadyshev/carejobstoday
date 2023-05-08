@@ -15,12 +15,12 @@
       flex-direction: row;
       align-items: flex-start;
       width: calc(100% + 16px);
-      max-width: 800px;
-      margin: 0 auto;
+      margin-right: auto;
     }
 
     @include laptop {
       max-width: 1800px;
+      margin: 0 auto;
     }
   }
 

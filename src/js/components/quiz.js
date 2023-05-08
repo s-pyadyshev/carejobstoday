@@ -14,6 +14,7 @@ export const quiz = (function () {
     const quizResult = document.querySelector(".quiz__result");
     const quizProgressLine = document.querySelector(".progress__line");
     const quizProgressDividers = document.querySelector(".progress__dividers");
+    let quizProgressDividersDividers;
     const quizProgressCurrent = document.querySelector(
       ".progress__questions-current"
     );
@@ -45,6 +46,11 @@ export const quiz = (function () {
         const dividerDiv = document.createElement("div");
         quizProgressDividers.insertAdjacentElement("beforeend", dividerDiv);
       }
+      quizProgressDividersDividers = document.querySelectorAll(
+        ".progress__dividers div"
+      );
+
+      quizProgressDividersDividers[currentQuestionNumber - 1].style.opacity = 0;
     });
 
     nextQuestions.forEach((button, index) => {
@@ -62,6 +68,13 @@ export const quiz = (function () {
         quizQuestions[index + 1].querySelectorAll(
           ".quiz__question-number"
         )[0].textContent = `${currentQuestionNumber}. `;
+
+        quizProgressDividersDividers[
+          currentQuestionNumber - 2
+        ].style.opacity = 1;
+        quizProgressDividersDividers[
+          currentQuestionNumber - 1
+        ].style.opacity = 0;
       });
     });
 
@@ -81,6 +94,11 @@ export const quiz = (function () {
         quizQuestions[prevIndex - 1].querySelectorAll(
           ".quiz__question-number"
         )[0].textContent = `${currentQuestionNumber}. `;
+
+        quizProgressDividersDividers[
+          currentQuestionNumber - 1
+        ].style.opacity = 0;
+        quizProgressDividersDividers[currentQuestionNumber].style.opacity = 1;
       });
     });
 

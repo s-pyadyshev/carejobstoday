@@ -27,7 +27,7 @@
   &__wrap {
     padding: 40px 36px 20px;
 
-    @include laptop {
+    @include desktop {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
@@ -81,7 +81,7 @@
     color: $color-white;
     margin-top: 10px;
 
-    @include laptop {
+    @include desktop {
       text-align: right;
       margin-top: 20px;
     }

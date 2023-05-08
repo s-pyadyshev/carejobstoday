@@ -17,7 +17,7 @@
 <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" href="./css/main.css?v=1683557663030">
+		<link rel="stylesheet" href="./css/main.css?v=1683577883314">
 	</head>
 	<body>
 		<div class="page-wrapper">
@@ -70,64 +70,57 @@
 				</div>
 			</header>
 			<main class="main">
-				<section class="search js-search background-secondary advanced" id="search">
+				<section class="section-sm search js-search background-secondary advanced" id="search">
 					<div class="container">
-						<button class="search__select button button--primary js-search-select" type="button">Search jobs</button>
 						<form class="search__form" action="#" method="post">
-							<div class="search__row">
-								<div class="search__info">
-									<label class="label text-white" for="search-job">What?</label>
-									<input class="input" id="search-job" name="search-job" placeholder="Job title"/>
-								</div>
-								<div class="search__aside">
-									<label class="label text-white" for="search-area">Where?</label>
-									<div class="select-area">
-										<input class="input" id="search-area" name="search-area" placeholder="Town, city or postcode"/>
-										<select class="select" name="select-area">
-											<option value="10 miles">10 miles</option>
-											<option value="20 miles">20 miles</option>
-											<option value="30 miles">30 miles</option>
-										</select>
-									</div>
-								</div>
-								<button class="button button--primary" type="submit">Search jobs</button>
+							<div class="search__job-title">
+								<label class="label text-white" for="search-job">What?</label>
+								<input class="input full-width" id="search-job" name="search-job" placeholder="Job title"/>
 							</div>
-							<div class="search__row">
-								<div class="search__info search__info">
-									<select name="select-locations">
-										<option value="" disabled="disabled" selected="selected">Locations</option>
-										<option value="Location 1">Location 1</option>
-										<option value="Location 2">Location 2</option>
-										<option value="Location 3">Location 3</option>
+							<div class="search__area">
+								<label class="label text-white" for="search-area">Where?</label>
+								<div class="select-area">
+									<input class="input" id="search-area" name="search-area" placeholder="Town, city or postcode"/>
+									<select class="select" name="select-area">
+										<option value="10 miles">10 miles</option>
+										<option value="20 miles">20 miles</option>
+										<option value="30 miles">30 miles</option>
 									</select>
-									<select name="select-job-type">
-										<option value="" disabled="disabled" selected="selected">Job type</option>
-										<option value="Type 1">Type 1</option>
-										<option value="Type 2">Type 2</option>
-										<option value="Type 3">Type 3</option>
-									</select>
-								</div>
-								<div class="search__aside">
-									<select name="select-company">
-										<option value="" disabled="disabled" selected="selected">Company</option>
-										<option value="Company 1">Beyound Limits</option>
-										<option value="Company 2">Dimensions Care</option>
-										<option value="Company 3">Juventas</option>
-										<option value="Company 4">Premier Care Management</option>
-										<option value="Company 5">Procare Wales</option>
-										<option value="Company 6">Seaside Care</option>
-										<option value="Company 7">Sportfit</option>
-									</select>
-									<button class="toggle button" type="button" data-collapse-target="quiz"><span>Is caring right for me?</span>
-										<svg>
-											<use xlink:href="./images/sprites.svg#chevron-down"></use>
-										</svg>
-									</button>
 								</div>
 							</div>
-							<div class="search__row">
-								<button class="button button--primary" type="submit">Search jobs</button>
-								<button class="toggle button" type="button" data-collapse-target="quiz"><span>Is caring right for me?</span>
+							<div class="search__location full-width">
+								<select name="select-locations">
+									<option value="" disabled="disabled" selected="selected">Locations</option>
+									<option value="Location 1">Location 1</option>
+									<option value="Location 2">Location 2</option>
+									<option value="Location 3">Location 3</option>
+								</select>
+							</div>
+							<div class="search__job-type full-width">
+								<select name="select-job-type">
+									<option value="" disabled="disabled" selected="selected">Job type</option>
+									<option value="Type 1">Type 1</option>
+									<option value="Type 2">Type 2</option>
+									<option value="Type 3">Type 3</option>
+								</select>
+							</div>
+							<div class="search__company full-width">
+								<select name="select-company">
+									<option value="" disabled="disabled" selected="selected">Company</option>
+									<option value="Company 1">Beyound Limits</option>
+									<option value="Company 2">Dimensions Care</option>
+									<option value="Company 3">Juventas</option>
+									<option value="Company 4">Premier Care Management</option>
+									<option value="Company 5">Procare Wales</option>
+									<option value="Company 6">Seaside Care</option>
+									<option value="Company 7">Sportfit</option>
+								</select>
+							</div>
+							<div class="search__submit">
+								<button class="button button--primary full-width" type="submit">Search jobs</button>
+							</div>
+							<div class="search__quiz">
+								<button class="full-width toggle button text-left" type="button" data-collapse-target="quiz"><span>Is caring right for me?</span>
 									<svg>
 										<use xlink:href="./images/sprites.svg#chevron-down"></use>
 									</svg>
@@ -696,7 +689,7 @@
 		</div>
 		<script src="https://player.vimeo.com/api/player.js"></script>
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-		<script src="./js/vendor.js?v=1683557663032"></script>
-		<script src="./js/main.js?v=1683557663032"></script>
+		<script src="./js/vendor.js?v=1683577883316"></script>
+		<script src="./js/main.js?v=1683577883316"></script>
 	</body>
 </html>

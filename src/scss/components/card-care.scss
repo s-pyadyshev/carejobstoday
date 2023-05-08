@@ -88,18 +88,6 @@
   }
 }
 
-.section-businesses {
-  background-color: $color-muted;
-}
-
-.section-businesses .row {
-  row-gap: 20px;
-
-  @include laptop {
-    row-gap: 16px;
-  }
-}
-
 .card-care__image::before {
   content: "";
   background-color: $overlay;
@@ -112,5 +100,36 @@
   left: 0;
   bottom: 0;
   margin: auto;
-  border-radius: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-care-list {
+  row-gap: 20px;
+
+  @include laptop {
+    row-gap: 16px;
+  }
+
+  > * {
+    &:nth-child(3n + 1) {
+      animation: fadeInUp;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+
+    &:nth-child(3n + 2) {
+      animation: fadeInUp;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3n + 3) {
+      animation: fadeInUp;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-delay: 0.4s;
+    }
+  }
 }
