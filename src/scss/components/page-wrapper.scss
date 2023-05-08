@@ -1,7 +1,10 @@
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh; // fallback
+  // stylelint-disable-next-line
+  min-height: var(--vh);
+  height: 100%;
 }
 
 .header,

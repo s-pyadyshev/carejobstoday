@@ -6,16 +6,26 @@
     padding: 40px 0;
   }
 
-  @media (min-width: 768px) {
-    padding: 40px 110px;
+  @include laptop {
+    padding: 65px 8px 90px;
   }
 
   @include laptop {
-    padding: 65px 110px 90px;
+    padding: 65px 0 90px;
   }
 
-  @include desktop {
-    padding: 65px 200px 90px;
+  .container {
+    @include tablet {
+      max-width: 860px;
+    }
+
+    @include laptop {
+      max-width: 1520px;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 1520px;
+    }
   }
 
   .h2 {
@@ -49,13 +59,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 175px;
+    height: 60vw;
     background-color: $color-white;
     position: relative;
     padding: 20px;
 
+    @media (min-width: 360px) {
+      height: 40vw;
+    }
+
+    @media (min-width: 620px) {
+      height: 25vw;
+    }
+
+    @include tablet {
+      height: 20vw;
+    }
+
     @include laptop {
-      height: 260px;
+      height: 13vw;
+      max-height: 260px;
       padding: 22px;
     }
 

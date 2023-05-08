@@ -53,6 +53,10 @@
     z-index: 2;
   }
 
+  h1 {
+    margin-bottom: 16px;
+  }
+
   h1 span:nth-child(1) {
     display: block;
   }
@@ -116,47 +120,36 @@
   }
 
   .swiper-pagination {
-    text-align: right;
-    bottom: 30px;
-    padding: 0 20px;
     z-index: 3;
+    justify-content: flex-end;
+    bottom: 50px;
+    gap: 10px;
+  }
 
-    @include tablet {
-      padding: 0 112px;
-    }
-
-    @include laptop {
-      bottom: 40px;
-      padding: 0 136px;
-    }
+  .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0;
   }
 
   .swiper-pagination-bullet {
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    font-size: 14px;
-    line-height: 28px;
-    color: $color-white;
-    background-color: transparent;
     border: 1px solid transparent;
-    border-radius: 0;
-    margin: 0 5px 10px !important;
     opacity: 1;
-    cursor: pointer;
-    transition: $transition-duration;
+    transition-property: border-color;
+    transition-duration: $transition-duration;
 
-    &.swiper-pagination-bullet-active {
+    &:focus,
+    &:hover,
+    &:active {
       border-color: $color-white;
+      transition-property: border-color;
+      transition-duration: $transition-duration;
     }
+  }
 
-    @include laptop {
-      &:focus,
-      &:hover,
-      &:active {
-        border-color: $color-white;
-      }
-    }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    border: 1px solid $color-white;
   }
 }
 
@@ -181,7 +174,7 @@
       animation: fadeIn;
       animation-duration: 1s;
       animation-fill-mode: both;
-      animation-delay: 2.5s;
+      animation-delay: 2s;
     }
   }
 }

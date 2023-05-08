@@ -184,7 +184,7 @@ var accordion = function () {
       var isExpanded = accordionButton.getAttribute("aria-expanded") === "true";
       var target = accordionButton.parentElement.nextElementSibling;
       accordionButton.setAttribute("aria-expanded", !isExpanded);
-      target.hidden = isExpanded;
+      target.classList.toggle("is-open");
     }
   };
 
@@ -266,6 +266,43 @@ var mobileMenu = function () {
 
 /***/ }),
 
+/***/ "./src/js/components/navSlider.js":
+/*!****************************************!*\
+  !*** ./src/js/components/navSlider.js ***!
+  \****************************************/
+/*! exports provided: navSlider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "navSlider", function() { return navSlider; });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
+var navSlider = function () {
+  var init = function init() {
+    var swiperNavSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".js-tabs-slider", {
+      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"]],
+      slidesPerView: "auto",
+      spaceBetween: 2,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      breakpoints: {
+        1024: {
+          spaceBetween: 16
+        }
+      }
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/***/ }),
+
 /***/ "./src/js/components/providers-slider.js":
 /*!***********************************************!*\
   !*** ./src/js/components/providers-slider.js ***!
@@ -293,7 +330,7 @@ var providersSlider = function () {
           slidesPerView: 2,
           spaceBetween: 11
         },
-        430: {
+        620: {
           slidesPerView: 3,
           spaceBetween: 10
         },
@@ -301,7 +338,7 @@ var providersSlider = function () {
           slidesPerView: 4,
           spaceBetween: 10
         },
-        1024: {
+        1025: {
           slidesPerView: 5,
           spaceBetween: 16
         }
@@ -340,17 +377,18 @@ var quiz = function () {
   var init = function init() {
     var quizForm = document.getElementById("quiz-form");
 
-    if (!quizForm !== null) {
+    if (quizForm === null) {
       return;
     }
 
-    var quickStart = document.querySelector(".js-quiz-start");
+    var quizStart = document.querySelector(".js-quiz-start");
     var quizQuestionIntro = document.querySelector(".quiz__intro");
     var quizQuestionWrap = document.querySelector(".quiz__question-wrap");
     var quizQuestions = document.querySelectorAll(".quiz__question");
     var nextQuestions = document.querySelectorAll(".quiz__next");
     var prevQuestions = document.querySelectorAll(".quiz__prev");
     var quizSubmitButton = document.querySelector(".quiz__submit");
+    var quizResult = document.querySelector(".quiz__result");
     var quizProgressLine = document.querySelector(".progress__line"); // const quizProgressDividers = document.querySelector(".progress__dividers");
 
     var quizProgressCurrent = document.querySelector(".progress__questions-current");
@@ -360,7 +398,7 @@ var quiz = function () {
     var questionsAmount = quizQuestions.length;
     var progressLineRatio = 100 / questionsAmount;
     quizProgressTotal.textContent = questionsAmount;
-    quickStart.addEventListener("click", function () {
+    quizStart.addEventListener("click", function () {
       quizQuestionWrap.classList.toggle("active");
       quizQuestionIntro.classList.toggle("hidden");
       quizQuestions[0].classList.add("active");
@@ -397,7 +435,7 @@ var quiz = function () {
     });
     quizSubmitButton.addEventListener("click", function (event) {
       event.preventDefault();
-      var formData = new FormData(quizForm);
+      var formData = new FormData(quizForm); // getFormData to send to server
 
       var _iterator = _createForOfIteratorHelper(formData),
           _step;
@@ -415,6 +453,10 @@ var quiz = function () {
       } finally {
         _iterator.f();
       }
+
+      quizQuestionWrap.classList.remove("active");
+      quizResult.classList.add("active");
+      quizProgressStats.innerText = "Complete";
     });
   };
 
@@ -555,20 +597,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toggle", function() { return toggle; });
 var toggle = function () {
   var init = function init() {
-    var collapseLinks = document.querySelectorAll("[data-collapse-target]");
+    var collapseLinks = document.querySelectorAll('[data-collapse-target]');
 
     if (!collapseLinks.length) {
       return;
     }
 
     collapseLinks.forEach(function (link) {
-      link.addEventListener("click", function (event) {
+      link.addEventListener('click', function (event) {
         var collapseTarget = event.target.dataset.collapseTarget;
         var collapseTargets = document.querySelectorAll("[data-collapse-target=\"".concat(collapseTarget, "\"]"));
         var target = document.querySelector("[data-collapse-content=\"".concat(collapseTarget, "\"]"));
-        target.classList.toggle("active");
+        target.classList.toggle('active');
         collapseTargets.forEach(function (target) {
-          return target.classList.toggle("active");
+          return target.classList.toggle('active');
         });
       });
     });
@@ -593,24 +635,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "videoVimeo", function() { return videoVimeo; });
 var videoVimeo = function () {
   var init = function init() {
-    if ($(".js-play-video").length) {
-      $(".js-play-video").on("click", function () {
+    if ($('.js-play-video').length) {
+      $('.js-play-video').on('click', function () {
         var _this = this;
 
         var $this = $(this);
-        var iframe = document.querySelector("iframe");
+        var iframe = document.querySelector('iframe');
         var player = new Vimeo.Player(iframe);
-        $(this).prev(".video__overlay").css("pointer-events", "all");
+        $(this).prev('.video__overlay').css('pointer-events', 'all');
         player.play();
-        player.on("play", function () {
-          $(_this).prev().css("opacity", 1);
+        player.on('play', function () {
+          $(_this).prev().css('opacity', 1);
           $this.fadeOut(300);
           $(_this).prev().prev().fadeOut(300);
         });
-        player.on("pause", function () {
+        player.on('pause', function () {
           $this.fadeIn(300);
           $(_this).prev().prev().fadeIn(300);
-          $(_this).trigger("focus");
+          $(_this).trigger('focus');
         });
       });
     }
@@ -637,14 +679,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var welcomeSlider = function () {
   var init = function init() {
-    var welcomeSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".js-welcome-slider", {
+    var welcomeSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-welcome-slider', {
       modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]],
       pagination: {
-        el: ".js-welcome-slider-pagination",
-        clickable: "true",
-        bulletElement: "button",
+        el: '.swiper-pagination',
+        clickable: 'true',
+        bulletElement: 'button',
         renderBullet: function renderBullet(index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
+          return "<button class=\"pagination__link ".concat(className, "\">").concat(index + 1, "</button>");
         }
       }
     });
@@ -672,22 +714,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_mobile_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/mobile-menu */ "./src/js/components/mobile-menu.js");
 /* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
 /* harmony import */ var _components_sliderPagination__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/sliderPagination */ "./src/js/components/sliderPagination.js");
-/* harmony import */ var _components_scrollto__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/scrollto */ "./src/js/components/scrollto.js");
-/* harmony import */ var _components_welcome_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/welcome-slider */ "./src/js/components/welcome-slider.js");
-/* harmony import */ var _components_providers_slider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/providers-slider */ "./src/js/components/providers-slider.js");
-/* harmony import */ var _components_explore_slider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/explore-slider */ "./src/js/components/explore-slider.js");
-/* harmony import */ var _components_toggle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/toggle */ "./src/js/components/toggle.js");
-/* harmony import */ var _components_search_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/search-select */ "./src/js/components/search-select.js");
-/* harmony import */ var _components_video_vimeo__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/video-vimeo */ "./src/js/components/video-vimeo.js");
-/* harmony import */ var _components_quiz__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/quiz */ "./src/js/components/quiz.js");
+/* harmony import */ var _components_welcome_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/welcome-slider */ "./src/js/components/welcome-slider.js");
+/* harmony import */ var _components_providers_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/providers-slider */ "./src/js/components/providers-slider.js");
+/* harmony import */ var _components_explore_slider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/explore-slider */ "./src/js/components/explore-slider.js");
+/* harmony import */ var _components_toggle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/toggle */ "./src/js/components/toggle.js");
+/* harmony import */ var _components_search_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/search-select */ "./src/js/components/search-select.js");
+/* harmony import */ var _components_video_vimeo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/video-vimeo */ "./src/js/components/video-vimeo.js");
+/* harmony import */ var _components_quiz__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/quiz */ "./src/js/components/quiz.js");
+/* harmony import */ var _components_navSlider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/navSlider */ "./src/js/components/navSlider.js");
+/* harmony import */ var _components_scrollto__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/scrollto */ "./src/js/components/scrollto.js");
  // import { vhFix } from "./vendor/vh-fix";
 
 
 
 
- // import { sliderThumbs } from "./components/sliderThumbs";
-
- // import "./components/gsap-animations";
 
 
 
@@ -695,22 +735,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import { togglePassword } from "./components/toggle-password";
-// import { barChart } from "./components/bar-chart";
-// import { pieChart } from "./components/pie-chart";
+
+
 
 window.addEventListener("load", function () {
   _components_accordion__WEBPACK_IMPORTED_MODULE_1__["accordion"].init();
   _components_mobile_menu__WEBPACK_IMPORTED_MODULE_2__["mobileMenu"].init();
   _components_slider__WEBPACK_IMPORTED_MODULE_3__["slider"].init();
   _components_sliderPagination__WEBPACK_IMPORTED_MODULE_4__["sliderPagination"].init();
-  _components_welcome_slider__WEBPACK_IMPORTED_MODULE_6__["welcomeSlider"].init();
-  _components_providers_slider__WEBPACK_IMPORTED_MODULE_7__["providersSlider"].init();
-  _components_explore_slider__WEBPACK_IMPORTED_MODULE_8__["exploreSlider"].init();
-  _components_toggle__WEBPACK_IMPORTED_MODULE_9__["toggle"].init();
-  _components_search_select__WEBPACK_IMPORTED_MODULE_10__["searchSelect"].init();
-  _components_video_vimeo__WEBPACK_IMPORTED_MODULE_11__["videoVimeo"].init();
-  _components_quiz__WEBPACK_IMPORTED_MODULE_12__["quiz"].init();
+  _components_welcome_slider__WEBPACK_IMPORTED_MODULE_5__["welcomeSlider"].init();
+  _components_providers_slider__WEBPACK_IMPORTED_MODULE_6__["providersSlider"].init();
+  _components_explore_slider__WEBPACK_IMPORTED_MODULE_7__["exploreSlider"].init();
+  _components_toggle__WEBPACK_IMPORTED_MODULE_8__["toggle"].init();
+  _components_search_select__WEBPACK_IMPORTED_MODULE_9__["searchSelect"].init();
+  _components_video_vimeo__WEBPACK_IMPORTED_MODULE_10__["videoVimeo"].init();
+  _components_quiz__WEBPACK_IMPORTED_MODULE_11__["quiz"].init();
+  _components_navSlider__WEBPACK_IMPORTED_MODULE_12__["navSlider"].init();
   document.querySelector("body").classList.add("page-loaded");
 }, false);
 

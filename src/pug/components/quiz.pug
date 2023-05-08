@@ -1,5 +1,5 @@
-section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8), rgba(16,39,58,0.8)), url(./images/procare-wales.jpg)`)
-  form#quiz-form(name="quiz-form" action="" method="post") 
+section.section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8), rgba(16,39,58,0.8)), url(./images/procare-wales.jpg)`)
+  form#quiz-form(name="quiz-form" action="#" method="post") 
     .quiz__intro
       .container
         .row 
@@ -95,11 +95,20 @@ section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8), rgba(1
                   span Submit
                   +svg("chevron-right")
 
-  .quiz__end 
-    .container 
-      h3.h3 Great!
+  .quiz__result
+    .container
+      .row
+        .col-md-4.offset-md-4
+          .text-center
+            h3.h3.text-primary Great! It sounds like you've got what it takes for a career in care.
+            p Here are some current roles you might be interested 
+        .quiz__result-actions
+          button.button View answers
+          button.button.button--inverse.text-left(type="button")
+            span Clear answers
+            +svg('reset')
   .quiz__progress
-    .container 
+    .container
       .progress
         .progress__questions Question&nbsp;
           span.progress__questions-current

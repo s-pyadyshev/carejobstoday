@@ -1,7 +1,7 @@
 .quiz-offer {
   overflow: hidden;
 
-  @include desktop {
+  @include laptop {
     overflow: visible;
   }
 }
@@ -13,6 +13,10 @@
   height: 100%;
 
   @include tablet {
+    max-width: 536px;
+  }
+
+  @media (min-width: 1500px) {
     max-width: 596px;
   }
 
@@ -42,7 +46,7 @@
     width: 100%;
   }
 
-  @include desktop {
+  @include laptop {
     position: absolute;
     bottom: 0;
     left: -16px;
@@ -63,7 +67,7 @@
   transition-timing-function: ease-in-out;
   transform: scale(1.2);
 
-  @include desktop {
+  @include laptop {
     top: auto;
     bottom: 50px;
     left: -42px;
@@ -84,7 +88,7 @@
     text-align: right;
   }
 
-  @include desktop {
+  @include laptop {
     padding-top: 130px;
     padding-right: 64px;
     padding-bottom: 120px;

@@ -1,0 +1,39 @@
+extends pug/base
+
+prepend vars
+  - title = 'ProCare Wales - Blog'
+
+append vars
+  //-
+
+block content
+  +page-header-logo('../images/procare-wales.jpg', 'images/procare-wales-logo.svg')
+  .tabs-wrap
+    .container
+      +tabs-custom-slider(
+        [
+          {
+            name: 'Overview',
+            id: 'tab1',
+            href: 'procare-wales-overview.html'
+          },
+          {
+            name: 'Jobs',
+            id: 'tab2',
+            href: 'procare-wales-jobs.html'
+          },
+          {
+            name: 'Interview Process',
+            id: 'tab3',
+            href: 'procare-wales-interview.html'
+          },
+          {
+            name: 'Blog',
+            active: true,
+            id: 'tab4',
+            href: 'procare-wales-blog.html'
+          }
+        ]
+      )
+  .container 
+    h2.h2 Blog

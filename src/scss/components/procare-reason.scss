@@ -1,5 +1,6 @@
 .procare-reason {
   padding: 0;
+  overflow: hidden;
 
   .col-6 {
     display: flex;
@@ -20,7 +21,7 @@
         align-items: flex-end;
       }
 
-      @include laptop {
+      @include desktop {
         padding: 167px 80px 164px;
       }
 
@@ -52,7 +53,7 @@
         padding: 20px 51px;
       }
 
-      @include laptop {
+      @include desktop {
         margin: 52px 0;
         padding: 92px 61px 94px;
       }

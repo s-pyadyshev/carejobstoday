@@ -23,6 +23,9 @@ $input-padding: $input-padding-x $input-padding-y;
 $input-hint-font-size: 14px;
 $input-padding-icon-x: $input-icon-width + $input-padding-x;
 
+// OVERLAYS
+$overlay: rgba(0, 0, 0, 0.2);
+
 // FONTS
 // stylelint-disable-next-line
 $font-primary: "Montserrat", tahoma, sans-serif;

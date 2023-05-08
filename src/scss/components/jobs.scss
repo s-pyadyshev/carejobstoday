@@ -36,8 +36,6 @@
   }
 
   .job-info {
-    display: none;
-
     @include tablet {
       display: block;
       width: calc(50% - 16px);
@@ -46,6 +44,16 @@
 
     @include laptop {
       width: calc(59% - 16px);
+    }
+  }
+
+  &--selected {
+    .job-list {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
     }
   }
 }

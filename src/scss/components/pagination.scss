@@ -1,6 +1,6 @@
-$pagination-color-current: $color-black;
-$pagination-color-hover: $color-primary;
-$pagination-gap: 12px;
+$pagination-color-current: $color-secondary;
+$pagination-color-hover: $color-secondary;
+$pagination-gap: 10px;
 
 .pagination {
   display: flex;
@@ -11,16 +11,47 @@ $pagination-gap: 12px;
     color: $pagination-color-current;
   }
 
+  &__item {
+    &.is-active {
+      .pagination__link {
+        border-color: $color-secondary;
+
+        .pagination--inverse & {
+          border-color: $color-white;
+        }
+      }
+    }
+  }
+
   &__link {
     display: block;
+    width: 30px;
+    height: 30px;
     padding-right: 8px;
     padding-left: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    color: $color-secondary;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0;
     text-align: center;
+
+    .pagination--inverse & {
+      color: $color-white;
+    }
 
     &:focus,
     &:hover,
     &:active {
+      border-color: $pagination-color-hover;
       color: $pagination-color-hover;
+
+      .pagination--inverse & {
+        border-color: $color-white;
+        color: $color-white;
+      }
     }
   }
 

@@ -1,15 +1,17 @@
-import Swiper, { Pagination } from "swiper";
+import Swiper, {Pagination} from 'swiper';
 
 export const welcomeSlider = (function () {
   const init = function () {
-    const welcomeSwiper = new Swiper(".js-welcome-slider", {
+    const welcomeSwiper = new Swiper('.js-welcome-slider', {
       modules: [Pagination],
       pagination: {
-        el: ".js-welcome-slider-pagination",
-        clickable: "true",
-        bulletElement: "button",
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
+        el: '.swiper-pagination',
+        clickable: 'true',
+        bulletElement: 'button',
+        renderBullet(index, className) {
+          return `<button class="pagination__link ${className}">${
+            index + 1
+          }</button>`;
         },
       },
     });

@@ -1,12 +1,12 @@
 .container {
-  @include desktop {
+  @include laptop {
     padding-right: 80px;
     padding-left: 80px;
   }
 }
 
 .container-md {
-  @include desktop {
+  @include laptop {
     max-width: 1440px;
   }
 }

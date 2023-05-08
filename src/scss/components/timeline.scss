@@ -71,7 +71,7 @@ $timeline: (
       // height: map-get($timeline, "dot-size") / 2;
       height: calc(100% - 8px);
 
-      @include desktop {
+      @include laptop {
         min-height: 50px;
       }
     }
@@ -125,11 +125,11 @@ $timeline: (
     font-family: $font-secondary;
     font-size: 20px;
     font-weight: 700;
-    letter-spacing: -1.5px;
 
     @include laptop {
       margin-top: -12px;
       font-size: 30px;
+      letter-spacing: -1.5px;
     }
   }
 }

@@ -150,7 +150,7 @@ block content
                   h2.h2 Pagination
                   +pagination(4)
                   .background-primary 
-                    +pagination(4)
+                    +pagination(4, 0, 0, 0, false, true)
                 br
                 div(id="tabs")
                   h2.h2 Tabs
@@ -198,7 +198,7 @@ block content
                   .form-group
                     label.label(for="text") Label disabled
                     .form-control
-                      input.input#text(type="text" name="text" disabled)
+                      input.input#text(type="text" name="text" value="Disabled" disabled)
 
                   //- h3 Password
                   //- .form-group
@@ -228,8 +228,9 @@ block content
                         option DDDDD
                         option EEEEE
                   h3 Checkbox
-                  .form-group
-                    +checkbox('Checkbox text')
+                  .background-secondary
+                    .form-group
+                      +checkbox('Checkbox text')
                   h3 Radio
                   .form-group
                     +radio('Radio text')
@@ -249,7 +250,7 @@ block content
                     label.input.input-file(for="upload1")
                       +svg('upload')
                       span Upload CV
-                      input#upload1(type="file" name="upload")
+                      input#upload1.visually-hidden(type="file" name="upload")
                   .background-secondary
                     .container
                       br
@@ -257,7 +258,7 @@ block content
                         label.input.input-file(for="upload2")
                           +svg('upload')
                           span Upload CV
-                          input#upload2(type="file" name="upload")
+                          input#upload2.visually-hidden(type="file" name="upload")
                       br
                   h3 Buttons
                   .form-group
@@ -275,7 +276,7 @@ block content
                     button.button(type="button" disabled) Disabled
                   h3 Buttons with icons
                   .form-group
-                    button.button.icon-start(type="button")
+                    button.button.icon-left(type="button")
                       span Default
                       +svg('chevron-right')
                     br
@@ -290,7 +291,7 @@ block content
                       span Primary
                       +svg('chevron-right')
                     br
-                    button.button.button--secondary.text-right.icon-start(type="button")
+                    button.button.button--secondary.text-right.icon-left(type="button")
                      span Secondary
                       +svg('chevron-right')
                     br
@@ -369,10 +370,25 @@ block content
 
                 div(id="cards")
                   h2.h2 Cards
+
+                  h3.h3 Card Care
                   +cardCare({
                     image: "images/card-image.jpg",
                     logo: "images/procare-wales-logo.svg",
                     title: "Beyond Limits",
                     text: "We provide tailor-made support to people with learning disabilities, mental health issues and other support needs. We specialise in helping people move back home from ‘out of area’ placements and encourage independent living.",
+                  })
+
+                  h3.h3 Card Job
+                  +cardJob({
+                    "src": "images/providers/dimensions-care-logo.png",
+                    "title": "Health Care Supporter",
+                    "luggage": "Dimensions",
+                    "destination": "Reading, Berkshire",
+                    "time": "Full-time (45 hours)",
+                    "money": "£10.42 an hour",
+                    "people": "Hiring multiple candidates",
+                    "text": "A typical day in the life of a Care Assistant will help support our customers in a variety of ways depending on their needs, this could include, providing personal care, medication management, light domestic duties, meal preparation, shopping and companionship.",
+                    "button": "DISCOVER MORE & APPLY",
                   })
 

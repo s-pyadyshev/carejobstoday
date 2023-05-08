@@ -50,21 +50,5 @@
     @include laptop {
       margin-top: 40px;
     }
-
-    &__link {
-      width: 28px;
-      height: 28px;
-      line-height: 28px;
-      color: $color-secondary;
-      border: 1px solid transparent;
-      padding: 0;
-
-      &:focus, 
-      &:hover, 
-      &:active {
-        color: $color-secondary;
-        border-color: $color-secondary;
-      }
-    }
   }
 }

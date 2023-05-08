@@ -1,4 +1,12 @@
 .section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include laptop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
   &--procare-overview h2 {
     margin-bottom: 20px;
 
@@ -6,4 +14,9 @@
       margin-bottom: 27px;
     }
   }
+}
+
+.section-sm {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

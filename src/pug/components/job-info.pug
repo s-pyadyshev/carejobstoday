@@ -95,33 +95,60 @@
       li
         | Aligned to our company values
   .job-info__footer.background-secondary
-    form(action="").job-info__form#job-apply
+    form(action="#").job-info__form#job-apply
       h2.h2.text-white
         | Apply Now
       p
         | Please fill in your details below.
-      .job-info__form-wrap
-        input.input#job-apply-first-name(type="text" name="job-apply-first-name" placeholder="First Name")
-        input.input#job-apply-last-name(type="text" name="job-apply-last-name" placeholder="Last Name")
-        input.input#job-apply-email(type="text" name="job-apply-email" placeholder="Email Address")
-        label.input.input-file(for="job-apply-file")
-          +svg('upload')
-          span Upload CV
-          input#job-apply-file(type="file" name="job-apply-file")
-      +checkbox("I acknowledge and give permission for my data to be held by Care Jobs Today and WeLove9am in accordance with the General Data Protection Regulation")
-      +checkbox("I have read and agree to the privacy policy")
-      button(type="submit").button.button--primary
-        | Submit
-    form(action="").job-info__form#job-callback
+      .row
+        .col-lg-6
+          .form-group
+            input.input.full-width#job-apply-first-name(type="text" name="job-apply-first-name" placeholder="First Name")
+        .col-lg-6
+          .form-group
+            input.input.full-width#job-apply-last-name(type="text" name="job-apply-last-name" placeholder="Last Name")
+        .col-lg-6
+          .form-group
+            input.input.full-width#job-apply-email(type="text" name="job-apply-email" placeholder="Email Address")
+        .col-lg-6
+          .form-group
+            label.input.input-file.full-width(for="job-apply-file")
+              +svg('upload')
+              span Upload CV
+              input.visually-hidden#job-apply-file(type="file" name="job-apply-file")
+        .job-info__checkbox
+          .form-group
+            +checkbox("I acknowledge and give permission for my data to be held by Care Jobs Today and WeLove9am in accordance with the General Data Protection Regulation")
+          .form-group
+            +checkbox("I have read and agree to the privacy policy")
+        .col-12
+          button(type="submit").button.button--primary
+            | Submit
+    form(action="#").job-info__form#job-callback
       h2.h2.text-white
         | Request a callback
       p
         | If you’d like to find out more, simply request a call back using the form below.
-      .job-info__form-wrap
-        input.input#job-callback-first-name(type="text" name="job-callback-first-name" placeholder="First Name")
-        input.input#job-callback-last-name(type="text" name="job-callback-last-name" placeholder="Last Name")
-        input.input#job-callback-email(type="text" name="job-callback-email" placeholder="Email Address")
-      +checkbox("I acknowledge and give permission for my data to be held by Care Jobs Today and WeLove9am in accordance with the General Data Protection Regulation")
-      +checkbox("I have read and agree to the privacy policy")
-      button(type="submit").button.button--primary
-        | Request a callback
+      .row
+        .col-lg-6
+          .form-group
+            input.input.full-width#job-callback-first-name(type="text" name="job-callback-first-name" placeholder="First Name")
+        .col-lg-6
+          .form-group
+            input.input.full-width#job-callback-last-name(type="text" name="job-callback-last-name" placeholder="Last Name")
+        .col-lg-6
+          .form-group
+            input.input.full-width#job-callback-email(type="text" name="job-callback-email" placeholder="Email Address")
+        .job-info__checkbox
+          .form-group
+            +checkbox("I acknowledge and give permission for my data to be held by Care Jobs Today and WeLove9am in accordance with the General Data Protection Regulation")
+          .form-group
+            +checkbox("I have read and agree to the privacy policy")
+        .col-12
+          button(type="submit").button.button--primary
+            | Request a callback
+    .job-info__form.job-info__form--result
+      h2.h2.text-white
+        | Thank you for your request
+      p
+        | One of the team will be in touch with you soon to answer any questions you may have.

@@ -27,6 +27,13 @@
     &::placeholder {
       color: $color-gray;
     }
+
+    &:focus,
+    &:active {
+      & ~ .select ~ .fsb-select {
+        border-color: $color-primary;
+      }
+    }
   }
 
   .select ~ .fsb-select {
@@ -41,6 +48,7 @@
       font-weight: 400;
       color: $color-gray !important;
       padding-left: 24px !important;
+      transition: 0s;
 
       &::after {
         width: 0;
@@ -62,6 +70,15 @@
     .fsb-option {
       font-weight: 400;
       color: $color-gray;
+    }
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    input,
+    .select ~ .fsb-select {
+      border-color: $color-primary;
     }
   }
 }

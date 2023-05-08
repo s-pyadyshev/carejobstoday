@@ -1,9 +1,9 @@
 mixin search(advanced)
-  section.search#search.js-search(class!= advanced)
+  section.search#search.js-search.background-secondary(class!= advanced)
     .container
       button(type="button").search__select.button.button--primary.js-search-select
         | Search jobs
-      form.search__form
+      form.search__form(action="#" method="post")
         .search__row
           .search__info
             if advanced

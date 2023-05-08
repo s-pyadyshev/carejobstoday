@@ -1,6 +1,6 @@
-$button-background-color: transparent;
-$button-background-color-hover: $color-black;
-$button-border-color: $color-black;
+$button-background-color: $color-white;
+$button-background-color-hover: transparent;
+$button-border-color: $color-white;
 $button-color: $color-black;
 $button-color-hover: $color-white;
 $button-color-active: $color-white;
@@ -70,7 +70,13 @@ $button-color-active: $color-white;
     &:focus,
     &:hover,
     &:active {
-      border-color: $color-secondary;
+      background-color: $color-white;
+      border-color: $color-white;
+      color: $color-secondary;
+
+      svg {
+        stroke: $color-secondary;
+      }
     }
 
     svg {
@@ -86,7 +92,12 @@ $button-color-active: $color-white;
     &:focus,
     &:hover,
     &:active {
+      background-color: $color-secondary;
       border-color: $color-secondary;
+
+      .background-secondary & {
+        border-color: $color-white;
+      }
     }
 
     svg {
@@ -95,6 +106,7 @@ $button-color-active: $color-white;
   }
 
   &--secondary {
+    border-color: $color-secondary;
     background-color: $color-secondary;
     color: $color-white;
 

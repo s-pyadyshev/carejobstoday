@@ -18,7 +18,7 @@ export const accordion = (() => {
         accordionButton.getAttribute("aria-expanded") === "true";
       const target = accordionButton.parentElement.nextElementSibling;
       accordionButton.setAttribute("aria-expanded", !isExpanded);
-      target.hidden = isExpanded;
+      target.classList.toggle("is-open");
     }
   };
 

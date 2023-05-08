@@ -8,3 +8,42 @@ append vars
 
 block content
   +page-header('Life as a carer', false, '../images/life-as-a-carer.jpg')
+  
+  section.section.text-center
+    .container
+      .row 
+        .col-lg-8.offset-lg-2
+          p Working as a carer is one of the most important and rewarding jobs you can do. You’ll be supporting some of society’s most vulnerable adults and children to live fulfilling, meaningful lives. You’ll get back as much as you give, including building relationships that last a lifetime.
+          p.mb-0 Life as a carer can also be mentally, physically and emotionally challenging, and no two days are the same. That’s why all our partner businesses provide the training and support carers need to help them make a big difference.
+  
+  section.section.procare-reason
+    .row
+      .col-6
+        .procare-reason__image
+          img(src="images/role.jpg" title="" alt="")
+      .col-6
+        h2.h2.text-primary
+          | “No day is ever the same and my daily plan doesn’t often run completely as expected. I am led by the young person’s wishes and needs on each day which is what makes my role exciting and rewarding.”
+        h3.h3.text-secondary Samantha, Transitions Support Advisor
+  +quiz-offer("Is caring right for me?", "It’s important to consider carefully whether caring is the right career for you. The rewards you’ll get from making a difference are huge, but in return you’ll need to be compassionate, capable, resilient and patient. Find out if you’ve got what it takes by answering our short quiz.")
+  
+  section.section.procare-video
+    .container
+      h2.h2
+        | What’s it like to work in one of our care homes?
+      p
+        | Don’t take our word for it – here’s support worker Fran describing what she gets out of working in care.
+      +videoVimeo
+  
+  section.section.section-faq
+    .container
+      .section-faq__wrap 
+        .section-faq__title 
+          h2 Q&A
+          p We asked some of our carers to describe what their day-to-day role entails.
+        ul.accordion-list
+          +accordion("Q: What made you choose a career in care?", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur fugiat repellendus suscipit saepe maiores, eligendi ipsum, quisquam asperiores, facilis facere vitae tempore. Sint, temporibus iure minima voluptatibus explicabo harum dignissimos illum corporis cupiditate eveniet sequi excepturi maiores quam maxime culpa quis illo ipsam ab! Sapiente sed fugiat veritatis suscipit!")
+          +accordion("What made you choose a career in care?", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur fugiat repellendus suscipit saepe maiores, eligendi ipsum, quisquam asperiores, facilis facere vitae tempore. Sint, temporibus iure minima voluptatibus explicabo harum dignissimos illum corporis cupiditate eveniet sequi excepturi maiores quam maxime culpa quis illo ipsam ab! Sapiente sed fugiat veritatis suscipit!")
+          +accordion("What made you choose a career in care?", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur fugiat repellendus suscipit saepe maiores, eligendi ipsum, quisquam asperiores, facilis facere vitae tempore. Sint, temporibus iure minima voluptatibus explicabo harum dignissimos illum corporis cupiditate eveniet sequi excepturi maiores quam maxime culpa quis illo ipsam ab! Sapiente sed fugiat veritatis suscipit!")
+          +accordion("What made you choose a career in care?", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur fugiat repellendus suscipit saepe maiores, eligendi ipsum, quisquam asperiores, facilis facere vitae tempore. Sint, temporibus iure minima voluptatibus explicabo harum dignissimos illum corporis cupiditate eveniet sequi excepturi maiores quam maxime culpa quis illo ipsam ab! Sapiente sed fugiat veritatis suscipit!")
+        

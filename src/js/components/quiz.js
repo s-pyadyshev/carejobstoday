@@ -1,16 +1,17 @@
 export const quiz = (function () {
   const init = function () {
     const quizForm = document.getElementById("quiz-form");
-    if (!quizForm !== null) {
+    if (quizForm === null) {
       return;
     }
-    const quickStart = document.querySelector(".js-quiz-start");
+    const quizStart = document.querySelector(".js-quiz-start");
     const quizQuestionIntro = document.querySelector(".quiz__intro");
     const quizQuestionWrap = document.querySelector(".quiz__question-wrap");
     const quizQuestions = document.querySelectorAll(".quiz__question");
     const nextQuestions = document.querySelectorAll(".quiz__next");
     const prevQuestions = document.querySelectorAll(".quiz__prev");
     const quizSubmitButton = document.querySelector(".quiz__submit");
+    const quizResult = document.querySelector(".quiz__result");
     const quizProgressLine = document.querySelector(".progress__line");
     // const quizProgressDividers = document.querySelector(".progress__dividers");
     const quizProgressCurrent = document.querySelector(
@@ -26,7 +27,7 @@ export const quiz = (function () {
 
     quizProgressTotal.textContent = questionsAmount;
 
-    quickStart.addEventListener("click", () => {
+    quizStart.addEventListener("click", () => {
       quizQuestionWrap.classList.toggle("active");
       quizQuestionIntro.classList.toggle("hidden");
       quizQuestions[0].classList.add("active");
@@ -78,12 +79,17 @@ export const quiz = (function () {
       });
     });
 
-    quizSubmitButton.addEventListener("click", function (event) {
+    quizSubmitButton.addEventListener("click", (event) => {
       event.preventDefault();
       const formData = new FormData(quizForm);
+      // getFormData to send to server
       for (let [key, value] of formData) {
         console.log(`${key} - ${value}`);
       }
+
+      quizQuestionWrap.classList.remove("active");
+      quizResult.classList.add("active");
+      quizProgressStats.innerText = "Complete";
     });
   };
 

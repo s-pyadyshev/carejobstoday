@@ -1,0 +1,15 @@
+extends pug/base
+
+prepend vars
+  - title = 'Jobs'
+
+append vars
+  //-
+
+block content
+  +search("advanced")
+  section.section.jobs.jobs--selected.background-muted
+    .container
+      .jobs__wrap
+        include ./pug/components/job-list
+        include ./pug/components/job-info

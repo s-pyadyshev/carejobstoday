@@ -1,0 +1,15 @@
+mixin quiz-offer(title, text)
+  .quiz-offer.background-secondary
+    .container
+      .row 
+        .col-md-6
+          .quiz-offer__text
+            h2.h2= title
+            p= text
+
+            a.button.button--primary(href="#") Take the quiz
+        .col-md-6
+          .quiz-offer__image-wrap
+            img.quiz-offer__logo-spin(src="images/logo-spin.svg" alt="logo spin." width="596" height="578")
+            img.quiz-offer__image(src="images/mobile-quiz-preview.png" alt="mobile quiz preview." width="596" height="578")
+

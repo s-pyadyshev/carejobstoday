@@ -1,7 +1,7 @@
 extends pug/base
 
 prepend vars
-  - title = 'ProCare Wales Overview'
+  - title = 'ProCare Wales - Overview'
 
 append vars
   //-
@@ -10,7 +10,7 @@ block content
   +page-header-logo('../images/procare-wales.jpg', 'images/procare-wales-logo.svg')
   .tabs-wrap
     .container
-      +tabs-custom(
+      +tabs-custom-slider(
         [
           {
             name: 'Overview',

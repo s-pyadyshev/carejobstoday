@@ -1,10 +1,10 @@
-mixin pagination(amount, active, ellipsis, last, arrows = false)
+mixin pagination(amount, active, ellipsis, last, arrows = false, inverse)
   //- amount - amount of displayed numbers +1 prior ellipsis
   //- active - active number
   //- ellipsis - number to be replaced by ellipsis
   //- last - number after ellipsis
   //- .icon-pagination-prev and .icon-pagination-next
-  nav.pagination(role="navigation" aria-label="pagination")
+  nav.pagination(aria-label="pagination" class!= inverse ? 'pagination--inverse' : '')
     //- prev arrow
     if (arrows === true)
       a(href="#" title="Prev page").pagination__prev.icon-pagination-prev ◀

@@ -15,7 +15,7 @@ export const providersSlider = (function () {
           slidesPerView: 2,
           spaceBetween: 11,
         },
-        430: {
+        620: {
           slidesPerView: 3,
           spaceBetween: 10,
         },
@@ -23,7 +23,7 @@ export const providersSlider = (function () {
           slidesPerView: 4,
           spaceBetween: 10,
         },
-        1024: {
+        1025: {
           slidesPerView: 5,
           spaceBetween: 16,
         }

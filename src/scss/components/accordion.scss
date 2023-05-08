@@ -1,29 +1,140 @@
 .accordion-list {
   list-style-type: none;
+  margin: 0 -12px;
+
+  @include laptop {
+    width: 50%;
+    margin: 0;
+  }
+
+  @include desktop {
+    width: 100%;
+    max-width: 950px;
+  }
 }
 
-.accordion {
+.accordion__content {
+  display: none;
+  color: $color-white;
+  font-family: $font-secondary;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0 5% 0 1%;
+  margin-bottom: 16px;
+  animation: fadeInDown;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+
+  @include laptop {
+    padding: 0 6% 0 0;
+    line-height: 24px;
+  }
+
+  @include desktop {
+    font-size: 22px;
+    margin-bottom: 55px;
+    line-height: 28px;
+    padding: 0 14% 0 0;
+  }
+
   &.is-open {
-    .accordion__content {
-      display: block;
-    }
+    display: block;
+    animation: fadeInDown;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  }
+}
+
+.accordion__header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include laptop {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
 .accordion__toggle {
   display: flex;
   background: none;
-  border: 1px solid $color-black;
+  border: none;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+
+  @include laptop {
+    width: 94%;
+  }
 
   &[aria-expanded="false"] {
-    .accordion__toggle-opened {
-      display: none;
+    .accordion__toggle-icon {
+      transform: rotate(0);
+      transition-property: transform;
+      transition-duration: $transition-duration * 2;
     }
   }
 
   &[aria-expanded="true"] {
-    .accordion__toggle-closed {
-      display: none;
+    .accordion__toggle-icon {
+      transform: rotate(-180deg);
+      transition-property: transform;
+      transition-duration: $transition-duration * 2;
     }
   }
+}
+
+.accordion__title {
+  color: $color-primary;
+  font-family: $font-secondary;
+  font-size: 20px;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 26px;
+  padding-right: 16px;
+
+  @include desktop {
+    letter-spacing: -1.5px;
+    font-size: 30px;
+  }
+}
+
+.accordion-list__item:last-child::after {
+  content: " ";
+  border-bottom: 1px solid $color-white;
+  width: 100%;
+  display: block;
+
+  @include laptop {
+    width: 93%;
+  }
+
+  @include desktop {
+    width: 100%;
+    margin-left: -28px;
+  }
+}
+
+.accordion-list__item::before {
+  content: " ";
+  border-bottom: 1px solid $color-white;
+  width: 100%;
+  display: block;
+
+  @include laptop {
+    width: 93%;
+  }
+
+  @include desktop {
+    width: 100%;
+    margin-left: -28px;
+  }
+}
+
+.accordion__toggle-icon svg {
+  fill: $color-white;
+  height: 14px;
+  width: 14px;
 }

@@ -3,7 +3,7 @@
   line-height: 0;
   height: 430px;
 
-  @include desktop {
+  @include laptop {
     height: 545px;
   }
 
@@ -46,7 +46,7 @@
       width: 78px;
       height: 80px;
 
-      @include desktop {
+      @include laptop {
         width: 98px;
         height: 100px;
       }

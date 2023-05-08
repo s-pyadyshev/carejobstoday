@@ -41,7 +41,7 @@
       margin: 0 24px;
     }
 
-    @include desktop {
+    @include laptop {
       margin: 0 80px;
     }
 
@@ -51,7 +51,6 @@
 
     p {
       margin-bottom: 0;
-      color: $color-gray;
     }
   }
 }

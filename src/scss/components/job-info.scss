@@ -1,6 +1,6 @@
 .job-info {
   &__header {
-    border-radius: 10px 10px 0 0;
+    border-radius: 12px 12px 0 0;
   }
 
   &__image {
@@ -19,7 +19,7 @@
       border-radius: 10px 10px 0 0;
 
       @include laptop {
-        object-position: center -67px;
+        object-position: center -50px;
       }
     }
   }
@@ -102,6 +102,10 @@
     }
   }
 
+  &__checkbox {
+    margin-top: 10px;
+  }
+
   &__content {
     max-height: 1954px;
     background-color: $color-white;
@@ -112,12 +116,6 @@
     @include laptop {
       max-height: 809px;
       padding: 40px 36px;
-    }
-
-    h4,
-    p,
-    li {
-      color: $color-gray;
     }
 
     h4 {
@@ -147,7 +145,7 @@
     }
 
     h2 {
-      margin-bottom: 10px;
+      margin-bottom: 4px;
 
       @include laptop {
         font-size: 30px;
@@ -156,7 +154,17 @@
     }
 
     p {
-      margin-bottom: 20px;
+      margin-bottom: 26px;
+    }
+  }
+
+  .button {
+    width: 100%;
+    min-width: 0;
+
+    @media (min-width: 404px) {
+      width: auto;
+      min-width: 260px;
     }
   }
 
@@ -168,6 +176,14 @@
       padding-bottom: 42px;
     }
 
+    &:nth-child(2) {
+      padding: 36px 0 44px;
+
+      @include laptop {
+        padding: 32px 0 42px;
+      }
+    }
+
     &:last-child {
       border-bottom: none;
       padding: 36px 0 0;
@@ -177,37 +193,21 @@
       }
     }
 
-    .input-file {
-      margin: 10px 0 20px;
-
-      @include laptop {
-        display: inline-flex;
-        vertical-align: top;
-        width: calc(50% - 20px);
-        margin: 0 10px 20px;
-      }
-
-      input {
-        @include laptop {
-          display: none;
-        }
-      }
-    }
-
-    .checkbox-box {
-      margin-bottom: 20px;
-
-      @include laptop {
-        margin-bottom: 16px;
-      }
-    }
-
     .button {
       width: 100%;
 
+      @media (min-width: 404px) {
+        width: 100%;
+      }
+
       @include laptop {
         width: auto;
-        margin-top: 4px;
+      }
+    }
+
+    &--result {
+      p {
+        margin-bottom: 0;
       }
     }
   }
@@ -223,6 +223,10 @@
     input {
       width: 100%;
       margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 20px;
+      }
 
       @include laptop {
         display: inline-block;

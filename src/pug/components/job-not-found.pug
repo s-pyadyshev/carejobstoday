@@ -1,0 +1,32 @@
+section.section-sm.background-secondary 
+  .container 
+    .row 
+      .col-lg-6
+        h2.h2 Not found the role you were looking for?
+        p If you’d like to be kept up-to-date on future job opportunities at ProCare Wales please fill out the form below.
+        form(action="#" method="post")
+          .row 
+            .col-lg-6
+              .form-group
+                input.input.full-width#job-apply-first-name(type="text" name="job-apply-first-name" placeholder="First Name")
+            .col-lg-6
+              .form-group
+                input.input.full-width#job-apply-last-name(type="text" name="job-apply-last-name" placeholder="Last Name")
+            .col-12
+              .form-group
+                input.input.full-width#job-apply-email(type="text" name="job-apply-email" placeholder="Email Address")
+            .col-lg-6
+              .form-group
+                input.input.full-width#job-apply-email(type="tel" name="job-apply-email" placeholder="Contact Number (optional)")
+            .col-lg-6
+              .form-group
+                label.input.input-file.full-width(for="job-apply-file")
+                  +svg('upload')
+                  span Upload CV (Optional)
+                  input#job-apply-file.visually-hidden(type="file" name="job-apply-file")
+          .form-group
+            +checkbox("I acknowledge and give permission for my data to be held by Care Jobs Today and WeLove9am in accordance with the General Data Protection Regulation")
+          .form-group
+            +checkbox("I have read and agree to the privacy policy")
+          button(type="submit").button.button--primary
+            | Submit

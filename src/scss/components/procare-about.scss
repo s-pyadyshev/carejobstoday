@@ -1,16 +1,7 @@
 .procare-about {
-  padding: 0 0 40px;
+  padding: 40px 0;
 
   @include laptop {
-    padding: 5px 0 80px;
-  }
-
-  p {
-    max-width: 788px;
-    margin: 0 auto;
-
-    @include laptop {
-      max-width: 1364px;
-    }
+    padding: 80px 0;
   }
 }

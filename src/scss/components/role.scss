@@ -6,17 +6,16 @@
     padding: 40px 0 80px;
   }
 
-  @media (min-width: 768px) {
-    padding: 40px 80px 80px;
+  @include tablet {
     text-align: left;
   }
 
   @include laptop {
-    padding: 68px 110px 136px;
+    padding: 68px 0 136px;
   }
 
-  @include desktop {
-    padding: 68px 200px 136px;
+  @include laptop {
+    padding: 68px 0 136px;
   }
 
   &__wrap {
@@ -24,8 +23,18 @@
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: 768px) {
+    @include tablet {
       flex-direction: row;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    @include laptop {
+      max-width: 1520px;
+    }
+
+    @media (min-width: 1440px) {
+      max-width: 1520px;
     }
   }
 
@@ -33,7 +42,7 @@
     display: block;
     margin-bottom: 40px;
 
-    @media (min-width: 768px) {
+    @include tablet {
       width: 240px;
       margin-bottom: 0;
     }
@@ -46,7 +55,7 @@
       width: 420px;
     }
 
-    @include desktop {
+    @include laptop {
       width: 500px;
     }
 
@@ -60,7 +69,7 @@
   }
 
   &__info {
-    @media (min-width: 768px) {
+    @include tablet {
       width: calc(100% - 240px);
       padding-left: 24px;
     }
@@ -74,7 +83,7 @@
       width: calc(100% - 420px);
     }
 
-    @include desktop {
+    @include laptop {
       width: calc(100% - 500px);
       padding-left: 40px;
     }
@@ -95,7 +104,7 @@
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: 768px) {
+    @include tablet {
       display: block;
     }
   }
@@ -107,7 +116,7 @@
       margin: 0;
     }
 
-    @media (min-width: 768px) {
+    @include tablet {
       min-width: 185px;
       margin: 0 16px 16px 0;
 

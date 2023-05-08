@@ -86,15 +86,12 @@
     }
 
     h2 {
+      text-align: center;
       margin-bottom: 0;
     }
 
     p {
       margin-bottom: 0;
-
-      @include laptop {
-        color: $color-gray;
-      }
     }
   }
 

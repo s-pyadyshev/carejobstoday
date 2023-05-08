@@ -26,3 +26,15 @@ mixin tabs-custom(tabs)
     button.tabs__next
       +svg("chevron-right")
 
+mixin tabs-custom-slider(tabs)
+  .swiper.tabs.js-tabs-slider
+    .swiper-wrapper
+      each data in tabs
+        if data.active 
+          .swiper-slide
+            a(href=data.href).button.button--secondary.tab-button.is-active= data.name
+        else
+          .swiper-slide
+            a(href=data.href).button.button--secondary.tab-button= data.name
+  button.swiper-button-prev
+  button.swiper-button-next
