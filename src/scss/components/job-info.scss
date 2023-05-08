@@ -112,6 +112,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     padding: 20px 36px;
+    color: $color-gray;
 
     @include laptop {
       max-height: 809px;

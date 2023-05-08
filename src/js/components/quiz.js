@@ -13,7 +13,7 @@ export const quiz = (function () {
     const quizSubmitButton = document.querySelector(".quiz__submit");
     const quizResult = document.querySelector(".quiz__result");
     const quizProgressLine = document.querySelector(".progress__line");
-    // const quizProgressDividers = document.querySelector(".progress__dividers");
+    const quizProgressDividers = document.querySelector(".progress__dividers");
     const quizProgressCurrent = document.querySelector(
       ".progress__questions-current"
     );
@@ -40,6 +40,11 @@ export const quiz = (function () {
       quizQuestions[0].querySelectorAll(
         ".quiz__question-number"
       )[0].textContent = `${currentQuestionNumber}. `;
+
+      for (let i = 0; i < quizQuestions.length; i += 1) {
+        const dividerDiv = document.createElement("div");
+        quizProgressDividers.insertAdjacentElement("beforeend", dividerDiv);
+      }
     });
 
     nextQuestions.forEach((button, index) => {

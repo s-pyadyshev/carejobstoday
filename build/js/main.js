@@ -389,8 +389,8 @@ var quiz = function () {
     var prevQuestions = document.querySelectorAll(".quiz__prev");
     var quizSubmitButton = document.querySelector(".quiz__submit");
     var quizResult = document.querySelector(".quiz__result");
-    var quizProgressLine = document.querySelector(".progress__line"); // const quizProgressDividers = document.querySelector(".progress__dividers");
-
+    var quizProgressLine = document.querySelector(".progress__line");
+    var quizProgressDividers = document.querySelector(".progress__dividers");
     var quizProgressCurrent = document.querySelector(".progress__questions-current");
     var quizProgressTotal = document.querySelector(".progress__questions-total");
     var quizProgressStats = document.querySelector(".progress__questions");
@@ -406,6 +406,11 @@ var quiz = function () {
       quizProgressLine.setAttribute("value", currentQuestionNumber * progressLineRatio);
       quizProgressCurrent.textContent = currentQuestionNumber;
       quizQuestions[0].querySelectorAll(".quiz__question-number")[0].textContent = "".concat(currentQuestionNumber, ". ");
+
+      for (var i = 0; i < quizQuestions.length; i += 1) {
+        var dividerDiv = document.createElement("div");
+        quizProgressDividers.insertAdjacentElement("beforeend", dividerDiv);
+      }
     });
     nextQuestions.forEach(function (button, index) {
       button.addEventListener("click", function () {

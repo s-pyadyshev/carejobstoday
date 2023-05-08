@@ -13,6 +13,8 @@
   height: 175px;
   width: 100%;
   object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
   @include laptop {
     height: auto;
@@ -70,22 +72,19 @@
   }
 }
 
-.card-care__button-wrap a:not(:last-child) {
-  margin-bottom: 8px;
-
-  @include laptop {
-    margin-bottom: 0;
-    margin-right: 16px;
-  }
-}
-
 .card-care__button-wrap {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  gap: 8px;
 
   @include laptop {
     flex-direction: row;
+    gap: 16px;
+  }
+
+  .button {
+    min-width: auto;
   }
 }
 
@@ -95,6 +94,7 @@
 
 .section-businesses .row {
   row-gap: 20px;
+
   @include laptop {
     row-gap: 16px;
   }
@@ -112,4 +112,5 @@
   left: 0;
   bottom: 0;
   margin: auto;
+  border-radius: 10px;
 }
