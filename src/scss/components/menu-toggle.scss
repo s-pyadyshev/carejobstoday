@@ -1,8 +1,11 @@
 .menu-toggle-close {
+  width: inherit;
+  height: inherit;
   display: none;
   padding: 0;
   background: none;
   border: 0;
+  stroke: $color-secondary;
 
   @include laptop {
     display: none !important;
@@ -15,6 +18,8 @@
 }
 
 .menu-toggle-open {
+  width: inherit;
+  height: inherit;
   padding: 0;
   background: none;
   border: 0;

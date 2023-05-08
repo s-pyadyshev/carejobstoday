@@ -3,4 +3,4 @@ mixin navbar(links)
     ul.navbar__list
       each link in links
         li
-          a.navbar__link(href="#")= link.text
+          a.navbar__link(href=link.href)= link.text

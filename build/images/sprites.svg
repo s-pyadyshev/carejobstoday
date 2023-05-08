@@ -31,6 +31,15 @@
 <symbol id="chevron-right" viewBox="0 0 9.9 9.899">
   <path data-name="Path 2423" d="M4.243 9.192 8.485 4.95 4.243.707" fill="none"/>
 </symbol>
+<symbol id="close" viewBox="0 0 24.056 23.435">
+  <g data-name="Group 718" fill="none" stroke-width="2">
+    <path data-name="Line 54" d="m.696.717 22.664 22"/>
+    <path data-name="Line 55" d="m23.36.717-22.664 22"/>
+  </g>
+</symbol>
+<symbol id="menu" viewBox="0 0 27.472 18.316">
+  <path data-name="Path 2623" d="M0 18.316h27.472v-2.29H0Zm0-8.015h27.472V8.014H0ZM0 2.29h27.472V.001H0Z"/>
+</symbol>
 <symbol id="money" viewBox="0 0 18.795 13.669">
   <path data-name="payments_FILL0_wght400_GRAD0_opsz48 (1)" d="M10.679 8.116a2.552 2.552 0 1 1 1.815-.748 2.472 2.472 0 0 1-1.815.748Zm-6.835 2.99a1.285 1.285 0 0 1-1.281-1.281V1.282A1.285 1.285 0 0 1 3.844 0h13.669a1.285 1.285 0 0 1 1.281 1.281v8.543a1.285 1.285 0 0 1-1.281 1.281ZM5.98 9.825h9.4a2.115 2.115 0 0 1 2.136-2.136V3.417a2.115 2.115 0 0 1-2.136-2.136h-9.4a2.115 2.115 0 0 1-2.136 2.136v4.272A2.115 2.115 0 0 1 5.98 9.825Zm10.252 3.844H1.281A1.285 1.285 0 0 1 0 12.388V2.563h1.281v9.825h14.951ZM3.844 9.825Z"/>
 </symbol>

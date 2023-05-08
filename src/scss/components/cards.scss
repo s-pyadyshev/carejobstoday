@@ -12,11 +12,13 @@
 .card-care__background {
   height: 175px;
   width: 100%;
+  object-fit: cover;
 
   @include laptop {
     height: auto;
   }
 }
+
 .card-care__logo {
   position: absolute;
   z-index: 10;

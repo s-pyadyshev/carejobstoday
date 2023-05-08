@@ -52,7 +52,8 @@ $mobile-menu-background-color: #ccc;
 }
 
 .header__menu-toggle {
-  height: 40px;
+  width: 27px;
+  height: 18px;
 
   @include laptop {
     display: none;

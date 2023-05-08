@@ -126,7 +126,11 @@
 }
 
 .mb-0 {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
 }
 
 .full-width {

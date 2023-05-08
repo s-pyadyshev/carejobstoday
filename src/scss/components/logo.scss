@@ -1,8 +1,11 @@
 .logo {
   position: relative;
+  flex-shrink: 0;
+  width: 177px;
   height: 40px;
 
   @include laptop {
+    width: auto;
     height: 60px;
   }
 

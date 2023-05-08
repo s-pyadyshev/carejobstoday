@@ -2,6 +2,7 @@
   padding: 40px 0;
   text-align: center;
   position: relative;
+  color: $color-white;
 
   @include tablet {
     padding: 255px 0 40px;
@@ -93,6 +94,10 @@
     p {
       margin-bottom: 0;
     }
+  }
+
+  &__caption {
+    color: $color-gray;
   }
 
   &__image {

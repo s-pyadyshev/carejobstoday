@@ -26,30 +26,25 @@ header.header
           <path data-name="Path 2028" d="M58.783 29.391A29.387 29.387 0 0 0 29.397 0c-2.335-.014-2.338 3.614 0 3.629A25.763 25.763 0 0 1 55.16 29.392c.014 2.334 3.643 2.339 3.629 0" fill="#10273a"/>
           <path data-name="Path 2029" d="M46.069 12.714a23.587 23.587 0 0 0-33.355 0c-1.667 1.641.9 4.206 2.566 2.566a20.166 20.166 0 0 1 28.224 0c1.666 1.64 4.233-.925 2.566-2.566" fill="#65c7b4"/>
         </svg>
-      button.menu-toggle-close.js-toggle-menu(type="button")
-        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <path fill="none" stroke="#000" stroke-width="2" d="M32,32 L8,8"></path>
-          <path fill="none" stroke="#000" stroke-width="2" d="M32,8 L8,32"></path>
-        </svg>
-
       +navbar(
         [
           {
             text: "Jobs",
-            active: true
+            active: true,
+            href: "/jobs.html"
           },
           {
-            text: "Our businesses"
+            text: "Our businesses",
+             href: "/our-businesses.html"
           },
           {
-            text: "Life as a carer"
+            text: "Life as a carer",
+             href: "/life-carer.html"
           }
         ]
       )
       .header__menu-toggle
         button.menu-toggle-open.js-toggle-menu(type="button")
-          <svg class="" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <rect x="4" y="8" width="32" height="2"></rect>
-            <rect x="4" y="18" width="32" height="2"></rect>
-            <rect x="4" y="28" width="32" height="2"></rect>
-          </svg>
+          +svg("menu")
+        button.menu-toggle-close.js-toggle-menu(type="button")
+          +svg("close")

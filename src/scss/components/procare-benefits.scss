@@ -30,14 +30,13 @@
 
   li {
     break-inside: avoid-column;
-    color: $color-primary;
+    color: $color-gray;
 
     @include tablet {
       margin: 0 18px;
     }
 
     @include laptop {
-      color: $color-secondary;
       margin: 0 24px;
     }
 
@@ -47,6 +46,10 @@
 
     @media (min-width: 1600px) {
       margin: 0 136px;
+    }
+
+    &::marker {
+      color: $color-secondary;
     }
 
     p {
