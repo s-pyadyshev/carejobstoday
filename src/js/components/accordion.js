@@ -19,6 +19,13 @@ export const accordion = (() => {
       const target = accordionButton.parentElement.nextElementSibling;
       accordionButton.setAttribute("aria-expanded", !isExpanded);
       target.classList.toggle("is-open");
+
+      // let scrollOffset = accordionButton.parentElement.offsetTop;
+      event.target.closest(".accordion__toggle").scroll({
+        top: 500,
+        left: 0,
+        behavior: "smooth",
+      });
     }
   };
 

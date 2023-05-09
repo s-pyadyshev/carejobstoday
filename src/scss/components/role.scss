@@ -14,7 +14,7 @@
     padding: 68px 0 136px;
   }
 
-  @include laptop {
+  @include desktop {
     padding: 68px 0 136px;
   }
 
@@ -55,7 +55,7 @@
       width: 420px;
     }
 
-    @include laptop {
+    @include desktop {
       width: 500px;
     }
 
@@ -83,7 +83,7 @@
       width: calc(100% - 420px);
     }
 
-    @include laptop {
+    @include desktop {
       width: calc(100% - 500px);
       padding-left: 40px;
     }

@@ -2460,7 +2460,7 @@ p {
   font-family: "Baloo2", tahoma, sans-serif;
   font-size: 14px;
   border: 1px solid #fff;
-  padding: 15px 20px;
+  padding: 12px 20px;
   outline: none;
   border-radius: 5px;
   -webkit-appearance: none;
@@ -4123,11 +4123,10 @@ p {
   .providers .button {
     margin-top: 40px; }
 
-.quiz-offer {
+.quiz-offer-wrap {
+  padding-top: 90px;
+  margin-top: -40px;
   overflow: hidden; }
-  @media (min-width: 1025px) {
-    .quiz-offer {
-      overflow: visible; } }
 
 .quiz-offer__image-wrap {
   display: -webkit-box;
@@ -4143,7 +4142,7 @@ p {
       max-width: 536px; } }
   @media (min-width: 1500px) {
     .quiz-offer__image-wrap {
-      max-width: 596px; } }
+      max-width: 580px; } }
   .quiz-offer__image-wrap:hover .quiz-offer__logo-spin {
     -webkit-transform: scale(1.2) rotate(-165deg);
         -ms-transform: scale(1.2) rotate(-165deg);
@@ -4174,7 +4173,7 @@ p {
   @media (min-width: 768px) {
     .quiz-offer__image {
       max-height: 100%;
-      width: 100%; } }
+      width: 94%; } }
   @media (min-width: 1025px) {
     .quiz-offer__image {
       position: absolute;
@@ -4188,8 +4187,8 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 98%;
+  height: 98%;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   -o-transition-property: transform;
@@ -4206,7 +4205,7 @@ p {
           transform: scale(1.2); }
   @media (min-width: 1025px) {
     .quiz-offer__logo-spin {
-      top: auto;
+      width: 100%;
       bottom: 50px;
       left: -42px; } }
 
@@ -4642,7 +4641,7 @@ p {
   @media (min-width: 1025px) {
     .role {
       padding: 68px 0 136px; } }
-  @media (min-width: 1025px) {
+  @media (min-width: 1366px) {
     .role {
       padding: 68px 0 136px; } }
   .role__wrap {
@@ -4683,7 +4682,7 @@ p {
     @media (min-width: 1025px) {
       .role__image {
         width: 420px; } }
-    @media (min-width: 1025px) {
+    @media (min-width: 1366px) {
       .role__image {
         width: 500px; } }
     @media (min-width: 1800px) {
@@ -4702,7 +4701,7 @@ p {
   @media (min-width: 1025px) {
     .role__info {
       width: calc(100% - 420px); } }
-  @media (min-width: 1025px) {
+  @media (min-width: 1366px) {
     .role__info {
       width: calc(100% - 500px);
       padding-left: 40px; } }
