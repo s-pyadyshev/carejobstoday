@@ -45,8 +45,22 @@
   .button {
     margin-top: 40px;
 
+    @include tablet {
+      min-width: auto;
+    }
+
     @include laptop {
       margin-top: 64px;
+    }
+  }
+}
+
+.explore-slider {
+  .swiper-slide {
+    height: auto;
+
+    > * {
+      height: 100%;
     }
   }
 }

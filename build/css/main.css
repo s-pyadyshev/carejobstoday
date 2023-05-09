@@ -2495,13 +2495,25 @@ p {
   background-color: #fff;
   text-align: left;
   color: #808080; }
+  .card-job__actions {
+    margin-top: auto;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .card-job__actions {
+        text-align: left; } }
   .card-job__content {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     height: 100%;
     text-decoration: none;
     padding: 30px 20px; }
-    @media (min-width: 1025px) {
+    @media (min-width: 1366px) {
       .card-job__content {
         padding: 40px; } }
   .card-job__logo {
@@ -2513,14 +2525,18 @@ p {
       height: 100%; }
   .card-job h3 {
     margin-bottom: 22px; }
-    @media (min-width: 1025px) {
+    @media (min-width: 768px) {
       .card-job h3 {
-        margin-bottom: 10px; } }
+        font-size: 20px;
+        line-height: 1.2; } }
+    @media (min-width: 1366px) {
+      .card-job h3 {
+        font-size: 30px; } }
   .card-job__list {
-    margin-bottom: 12px; }
-    @media (min-width: 1025px) {
+    margin-bottom: 16px; }
+    @media (min-width: 1366px) {
       .card-job__list {
-        margin-bottom: 6px; } }
+        margin-bottom: 24px; } }
   .card-job__item {
     display: inline-block;
     vertical-align: top;
@@ -2558,14 +2574,10 @@ p {
         .card-job__info span:hover {
           color: #63aab0; } }
   .card-job p {
-    margin-bottom: 0; }
+    margin-bottom: 16px; }
   .card-job .button {
-    display: none;
-    min-width: 0;
+    min-width: auto;
     margin-top: 36px; }
-    @media (min-width: 1025px) {
-      .card-job .button {
-        display: inline-block; } }
     @media (min-width: 1025px) {
       .card-job .button {
         min-width: 260px; } }
@@ -2828,9 +2840,17 @@ p {
         padding: 0 32px; } }
   .explore .button {
     margin-top: 40px; }
+    @media (min-width: 768px) {
+      .explore .button {
+        min-width: auto; } }
     @media (min-width: 1025px) {
       .explore .button {
         margin-top: 64px; } }
+
+.explore-slider .swiper-slide {
+  height: auto; }
+  .explore-slider .swiper-slide > * {
+    height: 100%; }
 
 .footer__links a {
   color: #fff;
@@ -5437,22 +5457,6 @@ p {
             align-items: center;
     text-align: center;
     z-index: 2; }
-  .welcome h1 {
-    margin-bottom: 16px; }
-  .welcome h1 span:nth-child(1) {
-    display: block; }
-  .welcome h1 span:nth-child(2) {
-    display: block;
-    max-width: 520px;
-    font-size: 30px;
-    line-height: 36px;
-    margin-bottom: 26px; }
-    @media (min-width: 1025px) {
-      .welcome h1 span:nth-child(2) {
-        max-width: 980px;
-        font-size: 40px;
-        line-height: 48px;
-        margin: 0 0 65px; } }
   .welcome__mouse {
     display: none;
     position: absolute;
@@ -5476,7 +5480,10 @@ p {
       height: 100%;
       fill: #fff;
       color: #fff; }
-  .welcome .swiper-slide {
+
+.welcome-slider {
+  height: calc(100vh - 230px); }
+  .welcome-slider .swiper-slide {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5485,26 +5492,44 @@ p {
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
-    height: 733px; }
-    @media (min-width: 768px) {
-      .welcome .swiper-slide {
-        height: 640px; } }
-    @media (min-width: 1025px) {
-      .welcome .swiper-slide {
-        height: 889px; } }
-  .welcome .swiper-pagination {
+            justify-content: center; }
+    .welcome-slider .swiper-slide h1 {
+      margin-bottom: 16px; }
+    .welcome-slider .swiper-slide h1 span:nth-child(1) {
+      display: block;
+      font-size: 50px;
+      line-height: 1; }
+      @media (min-width: 430px) {
+        .welcome-slider .swiper-slide h1 span:nth-child(1) {
+          font-size: 60px; } }
+      @media (min-width: 1025px) {
+        .welcome-slider .swiper-slide h1 span:nth-child(1) {
+          font-size: 120px; } }
+    .welcome-slider .swiper-slide h1 span:nth-child(2) {
+      display: block;
+      max-width: 520px;
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 26px; }
+      @media (min-width: 1025px) {
+        .welcome-slider .swiper-slide h1 span:nth-child(2) {
+          max-width: 980px;
+          font-size: 40px;
+          line-height: 48px;
+          margin: 0 0 65px; } }
+  .welcome-slider .swiper-pagination {
     z-index: 3;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    right: 0;
     bottom: 50px;
     gap: 10px; }
-  .welcome .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-  .welcome .swiper-pagination-horizontal.swiper-pagination-bullets
+  .welcome-slider .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+  .welcome-slider .swiper-pagination-horizontal.swiper-pagination-bullets
 .swiper-pagination-bullet {
     margin: 0; }
-  .welcome .swiper-pagination-bullet {
+  .welcome-slider .swiper-pagination-bullet {
     border: 1px solid transparent;
     opacity: 1;
     -webkit-transition-property: border-color;
@@ -5513,7 +5538,7 @@ p {
     -webkit-transition-duration: 0.2s;
          -o-transition-duration: 0.2s;
             transition-duration: 0.2s; }
-    .welcome .swiper-pagination-bullet:focus, .welcome .swiper-pagination-bullet:hover, .welcome .swiper-pagination-bullet:active {
+    .welcome-slider .swiper-pagination-bullet:focus, .welcome-slider .swiper-pagination-bullet:hover, .welcome-slider .swiper-pagination-bullet:active {
       border-color: #fff;
       -webkit-transition-property: border-color;
       -o-transition-property: border-color;
@@ -5521,7 +5546,7 @@ p {
       -webkit-transition-duration: 0.2s;
            -o-transition-duration: 0.2s;
               transition-duration: 0.2s; }
-  .welcome .swiper-pagination-bullet-active {
+  .welcome-slider .swiper-pagination-bullet-active {
     opacity: 1;
     border: 1px solid #fff; }
 

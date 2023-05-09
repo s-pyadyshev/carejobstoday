@@ -222,6 +222,10 @@ var exploreSlider = function () {
       },
       breakpoints: {
         768: {
+          slidesPerView: 2,
+          spaceBetween: 16
+        },
+        1024: {
           slidesPerView: 3,
           spaceBetween: 16
         }

@@ -36,4 +36,5 @@ mixin cardJob(data)
           .card-job__info= data.people
       p.card-job__text= data.text
       if data.button && !data.link
-        a(href="#").button.button--primary= data.button
+        .card-job__actions
+          a(href="#").button.button--primary= data.button
