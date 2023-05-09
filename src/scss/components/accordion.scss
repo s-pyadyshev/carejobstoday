@@ -13,6 +13,13 @@
   }
 }
 
+.accordion {
+  @include tablet {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
 .accordion__content {
   display: none;
   color: $color-white;
@@ -36,7 +43,7 @@
     font-size: 22px;
     margin-bottom: 55px;
     line-height: 28px;
-    padding: 0 14% 0 0;
+    padding: 0 24px 0 0;
   }
 
   &.is-open {
@@ -48,10 +55,10 @@
 }
 
 .accordion__header {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
-  @include laptop {
+  @include desktop {
     padding-top: 30px;
     padding-bottom: 30px;
   }
@@ -64,10 +71,6 @@
   align-items: baseline;
   justify-content: space-between;
   width: 100%;
-
-  @include laptop {
-    width: 94%;
-  }
 
   &[aria-expanded="false"] {
     .accordion__toggle-icon {
@@ -107,13 +110,8 @@
   width: 100%;
   display: block;
 
-  @include laptop {
-    width: 93%;
-  }
-
   @include desktop {
     width: 100%;
-    margin-left: -28px;
   }
 }
 
@@ -123,13 +121,8 @@
   width: 100%;
   display: block;
 
-  @include laptop {
-    width: 93%;
-  }
-
   @include desktop {
     width: 100%;
-    margin-left: -28px;
   }
 }
 

@@ -10,7 +10,7 @@
 @import "../../node_modules/bootstrap/scss/grid";
 
 // Swiper
-@import "../../node_modules/swiper/swiper";
-@import "../../node_modules/swiper/modules/navigation/navigation";
-@import "../../node_modules/swiper/modules/pagination/pagination";
-@import "../../node_modules/swiper/modules/thumbs/thumbs";
+@import "../../node_modules/swiper/swiper.scss";
+@import "../../node_modules/swiper/modules/navigation/navigation.scss";
+@import "../../node_modules/swiper/modules/pagination/pagination.scss";
+@import "../../node_modules/swiper/modules/thumbs/thumbs.scss";
