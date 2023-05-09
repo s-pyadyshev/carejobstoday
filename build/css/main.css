@@ -4669,47 +4669,81 @@ p {
       .role .button {
         min-width: 260px; } }
 
-.search__job-title {
+.search.show .search__select::after {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg); }
+
+.search.show .search__form {
+  opacity: 1;
+  display: -ms-grid;
+  display: grid;
+  z-index: 3; }
+
+.search.show .search__select {
+  margin-bottom: 16px; }
+
+.search__form {
+  display: none;
+  gap: 16px;
+  opacity: 0;
+  display: none;
+  z-index: -1; }
+  @media (min-width: 768px) {
+    .search__form {
+      opacity: 1;
+      display: -ms-grid;
+      display: grid;
+      z-index: 1;
+      -ms-grid-columns: 2fr 3fr auto;
+      grid-template-columns: 2fr 3fr auto; } }
+  @media (min-width: 1025px) {
+    .search__form {
+      -ms-grid-columns: 1fr 1fr auto;
+      grid-template-columns: 1fr 1fr auto; } }
+
+.search.advanced .search__job-title {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: job-title; }
 
-.search__area {
+.search.advanced .search__area {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: job-area; }
 
-.search__submit {
+.search.advanced .search__submit {
   -ms-grid-row: 9;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: submit; }
 
-.search__location {
+.search.advanced .search__location {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: location; }
 
-.search__job-type {
+.search.advanced .search__job-type {
   -ms-grid-row: 5;
   -ms-grid-column: 3;
   grid-area: job-type; }
 
-.search__company {
+.search.advanced .search__company {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: company; }
 
-.search__quiz {
+.search.advanced .search__quiz {
   -ms-grid-row: 11;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: quiz; }
 
-.search__form {
+.search.advanced .search__form {
+  opacity: 1;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 20px auto 20px auto 20px auto 20px auto 20px auto;
@@ -4721,69 +4755,92 @@ p {
       -ms-flex-align: end;
           align-items: end; }
   @media (min-width: 768px) {
-    .search__form {
+    .search.advanced .search__form {
           grid-template-areas: "job-title job-title job-area job-area" "location job-type company company" "quiz quiz submit submit";
       -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr; }
-    .search__job-title {
+    .search.advanced .search__job-title {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2; }
-    .search__area {
+    .search.advanced .search__area {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
     -ms-grid-column-span: 2; }
-    .search__submit {
+    .search.advanced .search__submit {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
     -ms-grid-column-span: 2; }
-    .search__location {
+    .search.advanced .search__location {
     -ms-grid-row: 2;
     -ms-grid-column: 1; }
-    .search__job-type {
+    .search.advanced .search__job-type {
     -ms-grid-row: 2;
     -ms-grid-column: 2; }
-    .search__company {
+    .search.advanced .search__company {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
     -ms-grid-column-span: 2; }
-    .search__quiz {
+    .search.advanced .search__quiz {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2; } }
   @media (min-width: 1366px) {
-    .search__form {
+    .search.advanced .search__form {
       -ms-grid-rows: auto 40px auto;
           grid-template-areas: "job-title job-title job-area job-area submit" "location job-type company quiz quiz";
       -ms-grid-columns: [job-title] 16px 25% 16px [job-title] 16px 25% 16px [job-area] 16px 1fr 16px [job-area] 16px 1fr 16px [submit] 16px 260px;
       grid-template-columns: [job-title] 25% [job-title] 25% [job-area] 1fr [job-area] 1fr [submit] 260px;
       gap: 40px 16px; }
-    .search__job-title {
+    .search.advanced .search__job-title {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3; }
-    .search__area {
+    .search.advanced .search__area {
     -ms-grid-row: 1;
     -ms-grid-column: 5;
     -ms-grid-column-span: 3; }
-    .search__submit {
+    .search.advanced .search__submit {
     -ms-grid-row: 1;
     -ms-grid-column: 9;
     -ms-grid-column-span: 1; }
-    .search__location {
+    .search.advanced .search__location {
     -ms-grid-row: 3;
     -ms-grid-column: 1; }
-    .search__job-type {
+    .search.advanced .search__job-type {
     -ms-grid-row: 3;
     -ms-grid-column: 3; }
-    .search__company {
+    .search.advanced .search__company {
     -ms-grid-row: 3;
     -ms-grid-column: 5;
     -ms-grid-column-span: 1; }
-    .search__quiz {
+    .search.advanced .search__quiz {
     -ms-grid-row: 3;
     -ms-grid-column: 7;
     -ms-grid-column-span: 3; } }
+
+.search__select {
+  width: 100%; }
+  .search__select::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 29px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 11px 8px 0;
+    border-color: #fff transparent transparent transparent;
+    margin: auto 0;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    z-index: 1; }
+  @media (min-width: 768px) {
+    .search__select {
+      display: none; } }
 
 .section-faq {
   background-color: #10273a; }

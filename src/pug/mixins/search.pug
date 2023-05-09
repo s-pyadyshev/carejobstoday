@@ -1,6 +1,9 @@
 mixin search(advanced)
   section.section-sm.search#search.js-search.background-secondary(class!= advanced)
     .container
+      if !advanced
+        button(type="button").search__select.button.button--primary.js-search-select
+          | Search jobs
       form.search__form(action="#" method="post")
         .search__job-title
           if advanced
@@ -47,5 +50,8 @@ mixin search(advanced)
             button.full-width.toggle.button.text-left(type="button" data-collapse-target="quiz")
               span Is caring right for me?
               +svg('chevron-down')
+        if !advanced
+          button(type="submit").button.button--primary.full-width
+            | Search jobs
   .search__quiz-form(data-collapse-content="quiz")
     include ../components/quiz.pug
