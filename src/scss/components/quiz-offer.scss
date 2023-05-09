@@ -1,7 +1,11 @@
 .quiz-offer-wrap {
-  padding-top: 90px;
+  padding-top: 40px;
   margin-top: -40px;
   overflow: hidden;
+
+  @include tablet {
+    padding-top: 90px;
+  }
 }
 
 .quiz-offer__image-wrap {

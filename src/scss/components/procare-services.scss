@@ -97,7 +97,11 @@
   }
 
   &__caption {
-    color: $color-gray;
+    color: $color-white;
+
+    @include laptop {
+      color: $color-gray;
+    }
   }
 
   &__image {

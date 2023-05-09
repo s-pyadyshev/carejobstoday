@@ -24,29 +24,6 @@
     }
   }
 
-  .job-list {
-    @include tablet {
-      width: calc(50% - 16px);
-      margin: 0 8px;
-    }
-
-    @include laptop {
-      width: calc(41% - 16px);
-    }
-  }
-
-  .job-info {
-    @include tablet {
-      display: block;
-      width: calc(50% - 16px);
-      margin: 0 8px;
-    }
-
-    @include laptop {
-      width: calc(59% - 16px);
-    }
-  }
-
   &--selected {
     .job-list {
       display: none;

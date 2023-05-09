@@ -6,6 +6,7 @@ $label-font-size-desktop: 30px;
   display: block;
   font-family: $font-secondary;
   font-size: $label-font-size;
+  line-height: 1.7;
   color: $label-color;
 
   &.text-white {

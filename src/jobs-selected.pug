@@ -10,6 +10,8 @@ block content
   +search("advanced")
   section.section.jobs.jobs--selected.background-muted
     .container
-      .jobs__wrap
-        include ./pug/components/job-list
-        include ./pug/components/job-info
+      .row
+        .col-md-6.col-xl-5
+          include ./pug/components/job-list
+        .col-md-6.col-xl-7
+          include ./pug/components/job-info

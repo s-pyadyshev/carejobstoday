@@ -10,14 +10,6 @@
     text-align: left;
   }
 
-  @include laptop {
-    padding: 68px 0 136px;
-  }
-
-  @include desktop {
-    padding: 68px 0 136px;
-  }
-
   &__wrap {
     display: flex;
     flex-direction: column;
@@ -25,16 +17,7 @@
 
     @include tablet {
       flex-direction: row;
-      max-width: 860px;
       margin: 0 auto;
-    }
-
-    @include laptop {
-      max-width: 1520px;
-    }
-
-    @media (min-width: 1440px) {
-      max-width: 1520px;
     }
   }
 
@@ -43,7 +26,7 @@
     margin-bottom: 40px;
 
     @include tablet {
-      width: 240px;
+      width: 50%;
       margin-bottom: 0;
     }
 
@@ -70,7 +53,7 @@
 
   &__info {
     @include tablet {
-      width: calc(100% - 240px);
+      width: 50%;
       padding-left: 24px;
     }
 

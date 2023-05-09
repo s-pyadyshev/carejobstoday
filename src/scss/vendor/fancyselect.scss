@@ -1,30 +1,28 @@
-:root {
-  --fsb-border: 1px solid #ccc;
-  --fsb-radius: 5px;
-  --fsb-color: #10273a;
-  --fsb-background: #ededed;
-  --fsb-font-size: 1em;
-  --fsb-padding: 8px;
-  --fsb-padding-right: var(--fsb-padding);
-  --fsb-arrow-size: 6px;
-  --fsb-arrow-padding: var(--fsb-padding);
-  --fsb-arrow-color: currentColor;
-  --fsb-icon-color: currentColor;
-  --fsb-list-height: 300px;
-  --fsb-list-border: var(--fsb-border);
-  --fsb-list-radius: 3px;
-  --fsb-list-color: var(--fsb-color);
-  --fsb-list-background: var(--fsb-background);
-  --fsb-hover-color: var(--fsb-color);
-  --fsb-hover-background: #ddd;
-}
+$fsb-border: 1px solid #ccc;
+$fsb-radius: 5px;
+$fsb-color: #10273a;
+$fsb-background: #ededed;
+$fsb-font-size: 1em;
+$fsb-padding: 8px;
+$fsb-padding-right: $fsb-padding;
+$fsb-arrow-size: 6px;
+$fsb-arrow-padding: $fsb-padding;
+$fsb-arrow-color: currentColor;
+$fsb-icon-color: currentColor;
+$fsb-list-height: 300px;
+$fsb-list-border: $fsb-border;
+$fsb-list-radius: 3px;
+$fsb-list-color: $fsb-color;
+$fsb-list-background: $fsb-background;
+$fsb-hover-color: $fsb-color;
+$fsb-hover-background: #ddd;
 
 .fsb-original-select {
   display: inline-block;
   margin: 0;
   padding: 8px 22px 8px 8px;
-  padding: var(--fsb-padding);
-  padding-right: calc(var(--fsb-arrow-padding) * 2 + var(--fsb-arrow-size));
+  padding: $fsb-padding;
+  padding-right: calc($fsb-arrow-padding * 2 + $fsb-arrow-size);
   font-family: inherit;
   line-height: inherit;
   -webkit-appearance: none;
@@ -55,14 +53,14 @@ select[disabled] + .fsb-select {
 .fsb-original-select {
   min-width: 0;
   border-radius: 5px;
-  border-radius: var(--fsb-radius);
+  border-radius: $fsb-radius;
   box-sizing: border-box;
   color: inherit;
-  color: var(--fsb-color);
+  color: $fsb-color;
   background-color: #fff;
-  background-color: var(--fsb-background);
+  background-color: $fsb-background;
   font-size: 1em;
-  font-size: var(--fsb-font-size);
+  font-size: $fsb-font-size;
   box-shadow: none;
 }
 
@@ -70,9 +68,9 @@ select[disabled] + .fsb-select {
   width: 1em;
   height: 1em;
   margin-right: 8px;
-  margin-right: var(--fsb-padding-right);
+  margin-right: $fsb-padding-right;
   fill: currentColor;
-  fill: var(--fsb-icon-color);
+  fill: $fsb-icon-color;
   pointer-events: none;
 }
 
@@ -89,9 +87,9 @@ select[disabled] + .fsb-select {
   width: 100% !important;
   height: 100% !important;
   padding: 8px 22px 8px 8px !important;
-  padding: var(--fsb-padding) !important;
+  padding: $fsb-padding !important;
   padding-right: calc(
-    var(--fsb-arrow-size) + var(--fsb-arrow-padding) + var(--fsb-padding-right)
+    $fsb-arrow-size + $fsb-arrow-padding + $fsb-padding-right
   ) !important;
   border: 0 !important;
   border-radius: inherit !important;
@@ -129,15 +127,15 @@ select[disabled] + .fsb-select .fsb-button[aria-expanded="true"]:after {
   display: block;
   position: absolute;
   width: 6px;
-  width: var(--fsb-arrow-size);
+  width: $fsb-arrow-size;
   height: 6px;
-  height: var(--fsb-arrow-size);
+  height: $fsb-arrow-size;
   right: 8px;
-  right: var(--fsb-arrow-padding);
+  right: $fsb-arrow-padding;
   top: 50%;
   transform: translateY(-65%) rotateZ(45deg);
   border: solid currentColor;
-  border: solid var(--fsb-arrow-color);
+  border: solid $fsb-arrow-color;
   border-width: 0 1.5px 1.5px 0;
   box-sizing: border-box;
   transition: transform 0.3s ease-in-out;
@@ -189,12 +187,12 @@ select[disabled] + .fsb-select .fsb-list {
   border: inherit;
   border: 0;
   border-radius: inherit;
-  border-radius: var(--fsb-list-radius);
+  border-radius: $fsb-list-radius;
   box-sizing: border-box;
   color: inherit;
-  color: var(--fsb-list-color);
+  color: $fsb-list-color;
   background-color: inherit;
-  background-color: var(--fsb-list-background);
+  background-color: $fsb-list-background;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   overflow: auto;
@@ -207,7 +205,7 @@ select[disabled] + .fsb-select .fsb-list {
 
 .fsb-button[aria-expanded="true"] + .fsb-list {
   height: auto;
-  max-height: var(--fsb-list-height);
+  max-height: $fsb-list-height;
   visibility: visible;
   opacity: 1;
 }
@@ -215,7 +213,7 @@ select[disabled] + .fsb-select .fsb-list {
 .fsb-option {
   display: flex;
   align-items: center;
-  padding: var(--fsb-padding);
+  padding: $fsb-padding;
   padding-left: 20px;
   font-family: "Baloo2", tahoma, sans-serif;
   font-weight: 600;
@@ -227,8 +225,8 @@ select[disabled] + .fsb-select .fsb-list {
 
 .fsb-option:focus {
   outline: none;
-  color: var(--fsb-hover-color);
-  background-color: var(--fsb-hover-background);
+  color: $fsb-hover-color;
+  background-color: $fsb-hover-background;
 }
 
 .fsb-resize {
@@ -236,8 +234,7 @@ select[disabled] + .fsb-select .fsb-list {
   height: 0;
   padding-right: 14px;
   padding-right: calc(
-    var(--fsb-arrow-padding) * 2 + var(--fsb-arrow-size) -
-      var(--fsb-padding-right)
+    $fsb-arrow-padding * 2 + $fsb-arrow-size - $fsb-padding-right
   );
   box-sizing: border-box;
 }

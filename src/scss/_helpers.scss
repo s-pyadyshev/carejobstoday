@@ -46,6 +46,7 @@
 
 .background-default {
   background-color: $color-white;
+  color: $color-gray;
 }
 
 .background-muted {
@@ -127,6 +128,10 @@
 
 .mb-0 {
   margin-bottom: 0 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
 }
 
 .pb-0 {

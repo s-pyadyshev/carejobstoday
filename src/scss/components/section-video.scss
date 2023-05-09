@@ -36,7 +36,9 @@ $video-height-desktop: 544px;
 }
 
 .section-video--overlap {
-  margin-bottom: -($video-height / 2);
+  @include tablet {
+    margin-bottom: -($video-height / 2);
+  }
 
   @include desktop {
     margin-bottom: -($video-height-desktop / 2);

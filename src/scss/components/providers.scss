@@ -14,20 +14,6 @@
     padding: 65px 0 90px;
   }
 
-  .container {
-    @include tablet {
-      max-width: 860px;
-    }
-
-    @include laptop {
-      max-width: 1520px;
-    }
-
-    @media (min-width: 1440px) {
-      max-width: 1520px;
-    }
-  }
-
   .h2 {
     @include laptop {
       margin-bottom: 10px;

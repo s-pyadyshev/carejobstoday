@@ -6,6 +6,7 @@
   border-style: solid;
   border-color: $input-border-color;
   border-radius: $input-border-radius;
+  background-color: $color-white;
 
   @include tablet {
     font-size: $input-font-size-desktop;

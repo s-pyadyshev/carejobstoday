@@ -44,13 +44,16 @@ $section-padding-vertical-desktop: 80px;
 $transition-duration: 0.2s;
 
 // Settings
-$desktop: 1366;
-$laptop: 1025;
-$tablet: 768;
+
+$desktop: 1366; // Desktops = 1366px to higher resolution desktops
+$laptop: 1025; // Laptops, Desktops - from 1025px to higher
+$tablet: 768; // Tablets, Ipads (portrait) - from 768px to higher
 
 // Bootstrap overrides
 // scss-docs-end grid-breakpoints
 $grid-gutter-width: 16px;
+
+$container-padding-x: 72px;
 
 $grid-breakpoints: (
   xs: 0,
@@ -59,12 +62,3 @@ $grid-breakpoints: (
   lg: 1024px,
   xl: 1440px,
 ) !default;
-
-$container-padding-x: 72px;
-
-$container-max-widths: (
-  sm: 768px,
-  md: 1024px,
-  lg: 1366px,
-  xl: 1800px,
-);
