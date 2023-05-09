@@ -3,10 +3,6 @@
   "version": "3.0.4",
   "description": "Frontend boilerplate",
   "repository": "ninelines-team/ninelines-template",
-  "scripts": {
-    "prepare": "husky install",
-    "pre-commit": "lint-staged"
-  },
   "author": "Ninelines Agency <info@ninelines.agency>",
   "license": "ISC",
   "private": true,
@@ -88,15 +84,5 @@
     "object-fit-videos": "1.0.4",
     "scrolltosmooth": "3.0.2",
     "swiper": "8.4.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.(js|jsx|ts|tsx)": "eslint --color --fix",
-    "*.(css|scss|sass|less)": "stylelint --color --fix",
-    "*.pug": "pug-lint"
   }
 }
