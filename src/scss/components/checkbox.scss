@@ -34,6 +34,17 @@ $checkbox-color-focus: $color-black;
     background-color: $color-white;
     border: $checkbox-border-width solid $checkbox-color;
     border-radius: $checkbox-border-radius;
+
+    .background-secondary & {
+      background-color: $color-secondary;
+      border: 1px solid $color-white;
+    }
+  }
+
+  .checkbox-box__label {
+    .background-secondary & {
+      color: $color-white;
+    }
   }
 
   svg {
@@ -48,6 +59,11 @@ $checkbox-color-focus: $color-black;
     visibility: hidden;
     transition: $transition-duration;
     z-index: 1;
+
+    .background-secondary & {
+      fill: $color-white;
+      color: $color-white;
+    }
   }
 }
 

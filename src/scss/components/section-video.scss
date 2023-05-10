@@ -26,8 +26,8 @@ $video-height-desktop: 544px;
 .section-video__wrap {
   z-index: 2;
   position: relative;
-  margin-right: -($container-padding-x / 2);
-  margin-left: -($container-padding-x / 2);
+  margin-right: -(calc($container-padding-x / 2));
+  margin-left: -(calc($container-padding-x / 2));
 
   @include tablet {
     margin-right: 0;
@@ -37,21 +37,22 @@ $video-height-desktop: 544px;
 
 .section-video--overlap {
   @include tablet {
-    margin-bottom: -($video-height / 2);
+    margin-bottom: -(calc($video-height / 2));
   }
 
   @include desktop {
-    margin-bottom: -($video-height-desktop / 2);
+    margin-bottom: -(calc($video-height-desktop / 2));
   }
 
   + section {
     @include tablet {
-      padding-top: $video-height / 2 + $section-padding-vertical +
+      padding-top: calc($video-height / 2) + $section-padding-vertical +
         $section-padding-vertical;
     }
 
     @include desktop {
-      padding-top: $video-height-desktop / 2 + $section-padding-vertical-desktop;
+      padding-top: calc($video-height-desktop / 2) +
+        $section-padding-vertical-desktop;
     }
   }
 }

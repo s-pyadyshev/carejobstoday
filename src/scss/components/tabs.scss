@@ -35,8 +35,8 @@ $tab-border-color: $color-secondary;
   gap: 2px;
   list-style-type: none;
   overflow: hidden;
-  margin-right: -($container-padding-x / 2);
-  margin-left: -($container-padding-x / 2);
+  margin-right: -(calc($container-padding-x / 2));
+  margin-left: -(calc($container-padding-x / 2));
 
   @include tablet {
     margin-right: 0;

@@ -37,6 +37,10 @@
     opacity: 0.3;
     pointer-events: none;
   }
+
+  .background-secondary & {
+    color: $color-black;
+  }
 }
 
 .input-hint {

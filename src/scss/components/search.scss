@@ -37,11 +37,11 @@
 
 .search.advanced {
   .search__job-title {
-    grid-area: job-title;
+    grid-area: title;
   }
 
   .search__area {
-    grid-area: job-area;
+    grid-area: area;
   }
 
   .search__submit {
@@ -53,7 +53,7 @@
   }
 
   .search__job-type {
-    grid-area: job-type;
+    grid-area: type;
   }
 
   .search__company {
@@ -68,9 +68,9 @@
     opacity: 1;
     display: grid;
     grid-template-areas:
-      "job-title job-title"
-      "job-area job-area"
-      "location job-type"
+      "title title"
+      "area area"
+      "location type"
       "company company"
       "submit submit"
       "quiz quiz ";
@@ -80,17 +80,19 @@
 
     @include tablet {
       grid-template-areas:
-        "job-title job-title job-area job-area"
-        "location job-type company company"
+        "title title area area"
+        "location type company company"
         "quiz quiz submit submit";
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     @include desktop {
       grid-template-areas:
-        "job-title job-title job-area job-area submit"
-        "location job-type company quiz quiz";
-      grid-template-columns: [job-title] 25% [job-title] 25% [job-area] 1fr [job-area] 1fr [submit] 260px;
+        "title title area area submit"
+        "location type company quiz quiz";
+      grid-template-columns:
+        [title] calc(25% - 8px) [title] calc(25% - 8px) [area] 1fr [area] 1fr
+        [submit] auto;
       gap: 40px 16px;
     }
   }

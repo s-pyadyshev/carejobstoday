@@ -80,26 +80,6 @@
 .background-secondary {
   background-color: $color-secondary;
   color: $color-white;
-
-  .checkbox-input ~ .checkbox-box {
-    &:before {
-      background-color: $color-secondary;
-      border: 1px solid $color-white;
-    }
-
-    .checkbox-box__label {
-      color: $color-white;
-    }
-
-    svg {
-      fill: $color-white;
-      color: $color-white;
-    }
-  }
-
-  input {
-    color: $color-black;
-  }
 }
 
 .text-primary {

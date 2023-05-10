@@ -18,8 +18,8 @@ $timeline: (
   li {
     position: relative;
     padding: (
-        map-get($timeline, "dot-border-width") + map-get($timeline, "dot-size") /
-          5
+        map-get($timeline, "dot-border-width") +
+          calc(map-get($timeline, "dot-size") / 5)
       )
       0 map-get($timeline, "spacing-vertical")
       (
@@ -57,14 +57,14 @@ $timeline: (
       background-color: map-get($timeline, "color-lines");
       position: absolute;
       top: 0;
-      left: map-get($timeline, "dot-size") / 2;
+      left: calc(map-get($timeline, "dot-size") / 2);
       height: 100%;
       z-index: 1;
       box-shadow: 0 0 0 1px #fff;
     }
 
     &:first-child::after {
-      top: map-get($timeline, "dot-size") / 2;
+      top: calc(map-get($timeline, "dot-size") / 2);
     }
 
     &:last-child::after {
@@ -99,7 +99,7 @@ $timeline: (
         text-align: right;
         padding-left: 0;
         padding-right: calc(
-          50% + #{(map-get($timeline, "dot-size") / 2) + 4px + map-get(
+          50% + #{(calc(map-get($timeline, "dot-size") / 2)) + 4px + map-get(
               $timeline,
               "spacing-horizontal"
             )}
@@ -111,7 +111,7 @@ $timeline: (
       }
 
       &::before {
-        left: calc(50% - #{map-get($timeline, "dot-size") / 2});
+        left: calc(50% - #{calc(map-get($timeline, "dot-size") / 2)});
       }
 
       &::after {

@@ -177,6 +177,11 @@
     @include tablet {
       width: 2px;
       height: 100%;
+      left: -8px;
+    }
+
+    @include desktop {
+      left: 0;
     }
   }
 }
