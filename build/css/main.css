@@ -2561,22 +2561,32 @@ p {
 }
 
 .input::-webkit-input-placeholder {
+  font-weight: 600;
+  font-size: 16px;
   color: #808080;
 }
 
 .input::-moz-placeholder {
+  font-weight: 600;
+  font-size: 16px;
   color: #808080;
 }
 
 .input:-ms-input-placeholder {
+  font-weight: 600;
+  font-size: 16px;
   color: #808080;
 }
 
 .input::-ms-input-placeholder {
+  font-weight: 600;
+  font-size: 16px;
   color: #808080;
 }
 
 .input::placeholder {
+  font-weight: 600;
+  font-size: 16px;
   color: #808080;
 }
 
@@ -6578,7 +6588,7 @@ p {
   }
 
   .providers__item {
-    height: 13vw;
+    height: 15vw;
     max-height: 260px;
     padding: 22px;
   }
@@ -6715,8 +6725,8 @@ p {
   }
 
   .search__form {
-    -ms-grid-columns: 1fr 1fr auto;
-    grid-template-columns: 1fr 1fr auto;
+    -ms-grid-columns: 3fr 2fr auto;
+    grid-template-columns: 3fr 2fr auto;
   }
 
   .section-faq__wrap {

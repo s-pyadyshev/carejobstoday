@@ -34,14 +34,14 @@
   }
 
   @include laptop {
-    grid-template-columns: 1fr 1fr auto;
+    grid-template-columns: 3fr 2fr auto;
   }
 }
 
 .search.advanced {
   padding-top: 40px;
   padding-bottom: 40px;
-  
+
   .search__job-title {
     grid-area: title;
   }
@@ -97,8 +97,7 @@
         "title title area area submit"
         "location type company quiz quiz";
       grid-template-columns:
-        [title] calc(25% - 8px) [title] calc(25% - 8px) [area] 1fr [area] 1fr
-        [submit] auto;
+        [title] calc(25% - 8px) [title] calc(25% - 8px) [area] 1fr [area] 1fr [submit] auto;
       gap: 40px 16px;
     }
   }
