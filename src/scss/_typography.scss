@@ -41,8 +41,8 @@ $h6-font-size-desktop: 10px;
   @include laptop {
     font-size: $h2-font-size-desktop;
     line-height: 64px;
-    letter-spacing: -3px;
-    margin-bottom: 24px;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
   }
 }
 

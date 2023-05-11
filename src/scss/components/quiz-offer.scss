@@ -1,10 +1,10 @@
 .quiz-offer-wrap {
   padding-top: 40px;
-  margin-top: -40px;
+  margin-top: -50px;
   overflow: hidden;
 
   @include tablet {
-    padding-top: 90px;
+    padding-top: 100px;
   }
 }
 
@@ -73,6 +73,11 @@
     width: 100%;
     bottom: 50px;
     left: -42px;
+  }
+
+  @include desktop {
+    height: 100%;
+    top: -50px;
   }
 }
 

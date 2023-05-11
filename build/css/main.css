@@ -3607,7 +3607,7 @@ p {
 
 .quiz-offer-wrap {
   padding-top: 40px;
-  margin-top: -40px;
+  margin-top: -50px;
   overflow: hidden;
 }
 
@@ -5740,7 +5740,7 @@ p {
   }
 
   .quiz-offer-wrap {
-    padding-top: 90px;
+    padding-top: 100px;
   }
 
   .quiz-offer__image-wrap {
@@ -6251,8 +6251,8 @@ p {
   .h2 {
     font-size: 40px;
     line-height: 64px;
-    letter-spacing: -3px;
-    margin-bottom: 24px;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
   }
 
   .h3 {
@@ -7023,6 +7023,11 @@ p {
   .procare-reason .col-6:nth-child(2) {
     margin: 52px 0;
     padding: 92px 61px 94px;
+  }
+
+  .quiz-offer__logo-spin {
+    height: 100%;
+    top: -50px;
   }
 
   .quiz__question-form:before {
