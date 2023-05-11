@@ -26,16 +26,17 @@ section.section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8)
                 h3.h3 Question
                 p
                   b How confident are you speaking up in meetings and appointments?
-                .form-group
-                  +radio("Speaking to people in authority is my worst nightmare", "radio1", "value1", true)
-                .form-group
-                  +radio("Very. I’m always happy to make myself heard", "radio1", "value2")
-                .form-group
-                  +radio("Not too bad, but I know I need to be more confident", "radio1", "value3")
-                
-                button.button.button--primary.text-left.quiz__next(type="button")
-                  span Next question
-                  +svg("chevron-right")
+                .quiz__controls
+                  .form-group
+                    +radio("Speaking to people in authority is my worst nightmare", "radio1", "value1", true)
+                  .form-group
+                    +radio("Very. I’m always happy to make myself heard", "radio1", "value2")
+                  .form-group
+                    +radio("Not too bad, but I know I need to be more confident", "radio1", "value3")
+                .quiz__buttons
+                  button.button.button--primary.text-left.quiz__next(type="button")
+                    span Next question
+                    +svg("chevron-right")
 
       li.quiz__question
         .container
@@ -52,19 +53,20 @@ section.section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8)
                 h3.h3 Question
                 p
                   b How confident are you speaking up in meetings and appointments?
-                .form-group
-                  +radio("Speaking to people in authority is my worst nightmare", "radio2", "value1", true)
-                .form-group
-                  +radio("Very. I’m always happy to make myself heard", "radio2", "value2")
-                .form-group
-                  +radio("Not too bad, but I know I need to be more confident", "radio2", "value3")
-
-                button.button.button--primary.text-right.icon-left.quiz__prev(type="button")
-                  +svg("chevron-right")
-                  span Previous question
-                button.button.button--primary.text-left.quiz__next(type="button")
-                  span Next question
-                  +svg("chevron-right")
+                .quiz__controls
+                  .form-group
+                    +radio("Speaking to people in authority is my worst nightmare", "radio2", "value1", true)
+                  .form-group
+                    +radio("Very. I’m always happy to make myself heard", "radio2", "value2")
+                  .form-group
+                    +radio("Not too bad, but I know I need to be more confident", "radio2", "value3")
+                .quiz__buttons
+                  button.button.button--primary.text-right.icon-left.quiz__prev(type="button")
+                    +svg("chevron-right")
+                    span Previous question
+                  button.button.button--primary.text-left.quiz__next(type="button")
+                    span Next question
+                    +svg("chevron-right")
 
       li.quiz__question
         .container
@@ -81,19 +83,20 @@ section.section.quiz(style=`background-image: linear-gradient(rgba(16,39,58,0.8)
                 h3.h3 Question
                 p
                   b How confident are you speaking up in meetings and appointments?
-                .form-group
-                  +radio("Speaking to people in authority is my worst nightmare", "radio3", "value1", true)
-                .form-group
-                  +radio("Very. I’m always happy to make myself heard", "radio3", "value2")
-                .form-group
-                  +radio("Not too bad, but I know I need to be more confident", "radio3", "value3")
-
-                button.button.button--primary.text-right.icon-left.quiz__prev(type="button")
-                  +svg("chevron-right")
-                  span Previous question
-                button.button.button--primary.text-left.quiz__submit(type="submit")
-                  span Submit
-                  +svg("chevron-right")
+                .quiz__controls
+                  .form-group
+                    +radio("Speaking to people in authority is my worst nightmare", "radio3", "value1", true)
+                  .form-group
+                    +radio("Very. I’m always happy to make myself heard", "radio3", "value2")
+                  .form-group
+                    +radio("Not too bad, but I know I need to be more confident", "radio3", "value3")
+                .quiz__buttons
+                  button.button.button--primary.text-right.icon-left.quiz__prev(type="button")
+                    +svg("chevron-right")
+                    span Previous question
+                  button.button.button--primary.text-left.quiz__submit(type="submit")
+                    span Submit
+                    +svg("chevron-right")
 
   .quiz__result
     .container

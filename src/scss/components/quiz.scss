@@ -8,10 +8,21 @@
   padding-top: 40px;
   padding-bottom: 40px;
   color: $color-white;
+}
 
-  .button {
-    display: inline-block;
+.quiz__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  @include tablet {
+    justify-content: flex-start;
   }
+}
+
+.quiz__controls {
+  margin-bottom: 4px;
 }
 
 .quiz__result {
@@ -36,7 +47,7 @@
   gap: 16px;
   margin-bottom: 30px;
 
-  @include tablet {
+  @include desktop {
     justify-content: flex-end;
   }
 }
@@ -73,28 +84,6 @@
     @include laptop {
       margin-bottom: 80px;
     }
-  }
-}
-
-.quiz__prev {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 20px;
-
-  @include laptop {
-    display: inline-block;
-    margin-right: 16px;
-  }
-}
-
-.quiz__next {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-
-  @include laptop {
-    display: inline-block;
   }
 }
 
@@ -184,10 +173,4 @@
       left: 0;
     }
   }
-}
-
-.quiz__submit {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
 }
