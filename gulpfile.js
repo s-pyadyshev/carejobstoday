@@ -352,11 +352,11 @@ gulp.task("scss", () => {
       })
     )
     .pipe($.if(argv.debug, $.debug()))
-    .pipe($.sourcemaps.init())
+    // .pipe($.sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
     .pipe($.postcss(postcssPlugins))
     .pipe(gcmq())
-    .pipe($.sourcemaps.write("."))
+    // .pipe($.sourcemaps.write("."))
     .pipe(gulp.dest("build/css"));
 });
 
