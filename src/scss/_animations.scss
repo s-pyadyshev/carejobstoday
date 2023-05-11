@@ -43,3 +43,17 @@
 .fadeInDown {
   animation-name: fadeInDown;
 }
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1.3);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.scaleOut {
+  animation-name: scaleOut;
+}
