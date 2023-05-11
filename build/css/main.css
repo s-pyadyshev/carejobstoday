@@ -6398,7 +6398,7 @@ p {
   }
 
   .navbar__link {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 25px;
     color: #10273a;
     border-bottom: none;
@@ -6410,7 +6410,7 @@ p {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    gap: 55px;
+    gap: 60px;
   }
 
   .navbar__list li {
