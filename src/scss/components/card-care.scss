@@ -55,6 +55,7 @@
 
 .card-care__text p {
   margin-bottom: 20px;
+  color: $color-gray;
 
   @include laptop {
     margin-bottom: 30px;
