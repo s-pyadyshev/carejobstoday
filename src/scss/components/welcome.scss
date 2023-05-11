@@ -83,6 +83,7 @@
 }
 
 .welcome-slider {
+  min-height: 500px;
   height: calc(100vh - 190px);
 
   .swiper-slide {
@@ -120,7 +121,7 @@
         max-width: 980px;
         font-size: 40px;
         line-height: 48px;
-        margin: 0 0 65px;
+        margin: 0 0 55px;
       }
     }
   }

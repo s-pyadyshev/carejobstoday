@@ -2,8 +2,8 @@ import "./vendor";
 // import { vhFix } from "./vendor/vh-fix";
 import { accordion } from "./components/accordion";
 import { mobileMenu } from "./components/mobile-menu";
-import { slider } from "./components/slider";
-import { sliderPagination } from "./components/sliderPagination";
+// import { slider } from "./components/slider";
+// import { sliderPagination } from "./components/sliderPagination";
 import { welcomeSlider } from "./components/welcome-slider";
 import { providersSlider } from "./components/providers-slider";
 import { exploreSlider } from "./components/explore-slider";
@@ -19,8 +19,8 @@ window.addEventListener(
   () => {
     accordion.init();
     mobileMenu.init();
-    slider.init();
-    sliderPagination.init();
+    // slider.init();
+    // sliderPagination.init();
     welcomeSlider.init();
     providersSlider.init();
     exploreSlider.init();

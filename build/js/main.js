@@ -516,73 +516,6 @@ var searchSelect = function () {
 
 /***/ }),
 
-/***/ "./src/js/components/slider.js":
-/*!*************************************!*\
-  !*** ./src/js/components/slider.js ***!
-  \*************************************/
-/*! exports provided: slider */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "slider", function() { return slider; });
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-
-var slider = function () {
-  var init = function init() {
-    var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".slider", {
-      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]],
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: "true",
-        type: "bullets",
-        bulletElement: "button"
-      }
-    });
-  };
-  return {
-    init: init
-  };
-}();
-
-/***/ }),
-
-/***/ "./src/js/components/sliderPagination.js":
-/*!***********************************************!*\
-  !*** ./src/js/components/sliderPagination.js ***!
-  \***********************************************/
-/*! exports provided: sliderPagination */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sliderPagination", function() { return sliderPagination; });
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-
-var sliderPagination = function () {
-  var init = function init() {
-    var swiperPagination = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".slider-pagination", {
-      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]],
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: "true",
-        renderBullet: function renderBullet(index, className) {
-          return '<button class="' + className + '">' + (index + 1) + "</button>";
-        }
-      }
-    });
-  };
-  return {
-    init: init
-  };
-}();
-
-/***/ }),
-
 /***/ "./src/js/components/toggle.js":
 /*!*************************************!*\
   !*** ./src/js/components/toggle.js ***!
@@ -672,15 +605,19 @@ __webpack_require__.r(__webpack_exports__);
 
 var welcomeSlider = function () {
   var init = function init() {
-    var welcomeSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.js-welcome-slider', {
-      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]],
+    var welcomeSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".js-welcome-slider", {
+      modules: [swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_0__["EffectFade"]],
       pagination: {
-        el: '.swiper-pagination',
-        clickable: 'true',
-        bulletElement: 'button',
+        el: ".swiper-pagination",
+        clickable: "true",
+        bulletElement: "button",
         renderBullet: function renderBullet(index, className) {
           return "<button class=\"pagination__link ".concat(className, "\">").concat(index + 1, "</button>");
         }
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
       }
     });
   };
@@ -704,23 +641,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/accordion */ "./src/js/components/accordion.js");
 /* harmony import */ var _components_mobile_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/mobile-menu */ "./src/js/components/mobile-menu.js");
-/* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
-/* harmony import */ var _components_sliderPagination__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/sliderPagination */ "./src/js/components/sliderPagination.js");
-/* harmony import */ var _components_welcome_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/welcome-slider */ "./src/js/components/welcome-slider.js");
-/* harmony import */ var _components_providers_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/providers-slider */ "./src/js/components/providers-slider.js");
-/* harmony import */ var _components_explore_slider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/explore-slider */ "./src/js/components/explore-slider.js");
-/* harmony import */ var _components_toggle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/toggle */ "./src/js/components/toggle.js");
-/* harmony import */ var _components_search_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/search-select */ "./src/js/components/search-select.js");
-/* harmony import */ var _components_video_vimeo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/video-vimeo */ "./src/js/components/video-vimeo.js");
-/* harmony import */ var _components_quiz__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/quiz */ "./src/js/components/quiz.js");
-/* harmony import */ var _components_navSlider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/navSlider */ "./src/js/components/navSlider.js");
-/* harmony import */ var _components_scrollto__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/scrollto */ "./src/js/components/scrollto.js");
+/* harmony import */ var _components_welcome_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/welcome-slider */ "./src/js/components/welcome-slider.js");
+/* harmony import */ var _components_providers_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/providers-slider */ "./src/js/components/providers-slider.js");
+/* harmony import */ var _components_explore_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/explore-slider */ "./src/js/components/explore-slider.js");
+/* harmony import */ var _components_toggle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/toggle */ "./src/js/components/toggle.js");
+/* harmony import */ var _components_search_select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/search-select */ "./src/js/components/search-select.js");
+/* harmony import */ var _components_video_vimeo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/video-vimeo */ "./src/js/components/video-vimeo.js");
+/* harmony import */ var _components_quiz__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/quiz */ "./src/js/components/quiz.js");
+/* harmony import */ var _components_navSlider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/navSlider */ "./src/js/components/navSlider.js");
+/* harmony import */ var _components_scrollto__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/scrollto */ "./src/js/components/scrollto.js");
 
 // import { vhFix } from "./vendor/vh-fix";
 
 
-
-
+// import { slider } from "./components/slider";
+// import { sliderPagination } from "./components/sliderPagination";
 
 
 
@@ -733,16 +668,16 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener("load", function () {
   _components_accordion__WEBPACK_IMPORTED_MODULE_1__["accordion"].init();
   _components_mobile_menu__WEBPACK_IMPORTED_MODULE_2__["mobileMenu"].init();
-  _components_slider__WEBPACK_IMPORTED_MODULE_3__["slider"].init();
-  _components_sliderPagination__WEBPACK_IMPORTED_MODULE_4__["sliderPagination"].init();
-  _components_welcome_slider__WEBPACK_IMPORTED_MODULE_5__["welcomeSlider"].init();
-  _components_providers_slider__WEBPACK_IMPORTED_MODULE_6__["providersSlider"].init();
-  _components_explore_slider__WEBPACK_IMPORTED_MODULE_7__["exploreSlider"].init();
-  _components_toggle__WEBPACK_IMPORTED_MODULE_8__["toggle"].init();
-  _components_search_select__WEBPACK_IMPORTED_MODULE_9__["searchSelect"].init();
-  _components_video_vimeo__WEBPACK_IMPORTED_MODULE_10__["videoVimeo"].init();
-  _components_quiz__WEBPACK_IMPORTED_MODULE_11__["quiz"].init();
-  _components_navSlider__WEBPACK_IMPORTED_MODULE_12__["navSlider"].init();
+  // slider.init();
+  // sliderPagination.init();
+  _components_welcome_slider__WEBPACK_IMPORTED_MODULE_3__["welcomeSlider"].init();
+  _components_providers_slider__WEBPACK_IMPORTED_MODULE_4__["providersSlider"].init();
+  _components_explore_slider__WEBPACK_IMPORTED_MODULE_5__["exploreSlider"].init();
+  _components_toggle__WEBPACK_IMPORTED_MODULE_6__["toggle"].init();
+  _components_search_select__WEBPACK_IMPORTED_MODULE_7__["searchSelect"].init();
+  _components_video_vimeo__WEBPACK_IMPORTED_MODULE_8__["videoVimeo"].init();
+  _components_quiz__WEBPACK_IMPORTED_MODULE_9__["quiz"].init();
+  _components_navSlider__WEBPACK_IMPORTED_MODULE_10__["navSlider"].init();
   document.querySelector("body").classList.add("page-loaded");
 }, false);
 

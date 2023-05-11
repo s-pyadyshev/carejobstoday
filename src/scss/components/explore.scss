@@ -29,6 +29,14 @@
     }
   }
 
+  &__actions {
+    margin-top: 40px;
+
+    @include laptop {
+      margin-top: 64px;
+    }
+  }
+
   &__list {
     width: calc(100% + 40px);
     margin: 0 -20px;
@@ -42,18 +50,9 @@
     }
 
     .button {
-
       @include tablet {
         min-width: auto;
       }
-    }
-  }
-
-  .button {
-    margin-top: 40px;
-
-    @include laptop {
-      margin-top: 64px;
     }
   }
 }
@@ -62,7 +61,7 @@
   .swiper-slide {
     height: auto;
 
-    >* {
+    > * {
       height: 100%;
     }
   }
