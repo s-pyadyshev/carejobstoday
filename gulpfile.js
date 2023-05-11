@@ -4,7 +4,7 @@ let yargs = require("yargs");
 let path = require("path");
 let del = require("del");
 let webpackConfig = require("./webpack.config");
-let sass = require("gulp-sass")(require("node-sass"));
+let sass = require("gulp-sass")(require("sass"));
 let gcmq = require("gulp-group-css-media-queries");
 
 let emittyPug;
@@ -344,20 +344,22 @@ gulp.task("scss", () => {
     );
   }
 
-  return gulp
-    .src(["src/scss/*.scss", "!src/scss/_*.scss"])
-    .pipe(
-      $.plumber({
-        errorHandler,
-      })
-    )
-    .pipe($.if(argv.debug, $.debug()))
-    // .pipe($.sourcemaps.init())
-    .pipe(sass().on("error", sass.logError))
-    .pipe($.postcss(postcssPlugins))
-    .pipe(gcmq())
-    // .pipe($.sourcemaps.write("."))
-    .pipe(gulp.dest("build/css"));
+  return (
+    gulp
+      .src(["src/scss/*.scss", "!src/scss/_*.scss"])
+      .pipe(
+        $.plumber({
+          errorHandler,
+        })
+      )
+      .pipe($.if(argv.debug, $.debug()))
+      // .pipe($.sourcemaps.init())
+      .pipe(sass().on("error", sass.logError))
+      .pipe($.postcss(postcssPlugins))
+      .pipe(gcmq())
+      // .pipe($.sourcemaps.write("."))
+      .pipe(gulp.dest("build/css"))
+  );
 });
 
 gulp.task("js", () => {
