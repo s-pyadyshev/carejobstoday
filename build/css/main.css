@@ -4147,8 +4147,12 @@ p {
 .section-video__wrap {
   z-index: 2;
   position: relative;
-  margin-right: -calc($container-padding-x / 2);
-  margin-left: -calc($container-padding-x / 2);
+  margin-right: -36px;
+  margin-left: -36px;
+}
+
+.section-video--overlap {
+  margin-bottom: -215px;
 }
 
 .section {
@@ -4344,8 +4348,8 @@ p {
   gap: 2px;
   list-style-type: none;
   overflow: hidden;
-  margin-right: -calc($container-padding-x / 2);
-  margin-left: -calc($container-padding-x / 2);
+  margin-right: -36px;
+  margin-left: -36px;
 }
 
 .tabs__prev,
@@ -5796,12 +5800,8 @@ p {
     margin-left: 0;
   }
 
-  .section-video--overlap {
-    margin-bottom: -calc($video-height / 2);
-  }
-
   .section-video--overlap + section {
-    padding-top: calc($video-height / 2)40px40px;
+    padding-top: 295px;
   }
 
   .tabs__list {
@@ -6992,11 +6992,11 @@ p {
   }
 
   .section-video--overlap {
-    margin-bottom: -calc($video-height-desktop / 2);
+    margin-bottom: -272px;
   }
 
   .section-video--overlap + section {
-    padding-top: calc($video-height-desktop / 2)80px;
+    padding-top: 352px;
   }
 }
 
