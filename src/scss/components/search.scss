@@ -1,4 +1,7 @@
 .search {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   &.show {
     .search__select::after {
       transform: rotate(-180deg);
@@ -36,6 +39,9 @@
 }
 
 .search.advanced {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
   .search__job-title {
     grid-area: title;
   }

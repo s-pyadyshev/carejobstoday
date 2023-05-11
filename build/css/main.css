@@ -3955,6 +3955,11 @@ p {
   margin: 0;
 }
 
+.search {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .search.show .search__select::after {
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
@@ -3978,6 +3983,11 @@ p {
   opacity: 0;
   display: none;
   z-index: -1;
+}
+
+.search.advanced {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .search.advanced .search__job-title {
