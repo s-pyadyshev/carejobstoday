@@ -2183,6 +2183,12 @@ p {
 }
 
 .card-job__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0 22px;
   margin-bottom: 16px;
 }
 
@@ -2680,31 +2686,31 @@ p {
 }
 
 .input::-webkit-input-placeholder {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: #808080;
 }
 
 .input::-moz-placeholder {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: #808080;
 }
 
 .input:-ms-input-placeholder {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: #808080;
 }
 
 .input::-ms-input-placeholder {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: #808080;
 }
 
 .input::placeholder {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   color: #808080;
 }
@@ -2723,7 +2729,7 @@ p {
   font-size: 14px;
 }
 
-.input-file {
+.input.input-file {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2740,6 +2746,8 @@ p {
   font-weight: 600;
   border-color: #10273a;
   text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
   -webkit-transition-property: background-color color border-color;
   -o-transition-property: background-color color border-color;
   transition-property: background-color color border-color;
@@ -2748,9 +2756,9 @@ p {
   transition-duration: 0.2s;
 }
 
-.input-file:focus,
-.input-file:hover,
-.input-file:active {
+.input.input-file:focus,
+.input.input-file:hover,
+.input.input-file:active {
   background-color: #10273a;
   color: #fff;
   border-color: #10273a;
@@ -2762,20 +2770,21 @@ p {
   transition-duration: 0.2s;
 }
 
-.background-secondary .input-file:focus,
-.background-secondary .input-file:hover,
-.background-secondary .input-file:active {
+.background-secondary .input.input-file:focus,
+.background-secondary .input.input-file:hover,
+.background-secondary .input.input-file:active {
   background-color: #63aab0;
   color: #fff;
   border-color: #63aab0;
 }
 
-.input-file svg {
+.input.input-file svg {
   width: 24px;
   height: 30px;
+  fill: #fff;
 }
 
-.background-secondary .input-file {
+.background-secondary .input.input-file {
   border-color: #fff;
 }
 
@@ -2823,6 +2832,10 @@ p {
   margin-bottom: 29px;
 }
 
+.job-info__inner .card-job__list {
+  max-width: 420px;
+}
+
 .job-info__callback {
   display: block;
   font-size: 14px;
@@ -2840,6 +2853,7 @@ p {
   -o-transition: 0.2s;
   transition: 0.2s;
   padding: 0;
+  letter-spacing: 1px;
 }
 
 .job-info__checkbox {
@@ -2856,20 +2870,17 @@ p {
 }
 
 .job-info__content h4 {
-  margin-bottom: 20px;
+  line-height: 1.4;
+  margin-bottom: 24px;
 }
 
 .job-info__content p {
-  white-space: pre-line;
+  margin-bottom: 24px;
 }
 
 .job-info__content ul {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   padding-left: 16px;
-}
-
-.job-info__content li {
-  padding-left: 14px;
 }
 
 .job-info__footer {
@@ -2924,6 +2935,24 @@ p {
   margin-bottom: 20px;
 }
 
+.job-info .card-job__logo {
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.job-info .job-info__wrap h3 {
+  margin-bottom: 16px;
+  letter-spacing: -1.5px;
+}
+
+.job-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .job-list__sort {
   margin-bottom: 20px;
 }
@@ -2956,8 +2985,20 @@ p {
   justify-content: space-between;
 }
 
-.job-list .card-job {
-  margin-bottom: 20px;
+.job-list .card-job__logo {
+  margin-bottom: 16px;
+}
+
+.job-list .card-job h3 {
+  margin-bottom: 15px;
+}
+
+.job-list .card-job p {
+  margin-bottom: 0;
+}
+
+.job-list .card-job__list {
+  margin-bottom: 6px;
 }
 
 .job-list .pagination {
@@ -5693,7 +5734,9 @@ p {
   }
 
   .jobs--selected .job-list {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .procare-benefits ul {
@@ -6478,7 +6521,7 @@ p {
 
   .job-info__content {
     max-height: 809px;
-    padding: 40px 36px;
+    padding: 40px 36px 20px;
   }
 
   .job-info__footer {
@@ -6489,6 +6532,10 @@ p {
   .job-info__footer h2 {
     font-size: 30px;
     line-height: 55px;
+  }
+
+  .job-info .button {
+    min-width: 260px;
   }
 
   .job-info__form {
@@ -6505,6 +6552,7 @@ p {
 
   .job-info__form .button {
     width: auto;
+    min-width: 260px;
   }
 
   .job-info__form-wrap {
@@ -7048,7 +7096,7 @@ p {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 40px;
+    padding: 40px 40px 30px 40px;
   }
 
   .job-info__callback {

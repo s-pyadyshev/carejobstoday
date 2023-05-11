@@ -29,7 +29,7 @@
       display: none;
 
       @include tablet {
-        display: block;
+        display: flex;
       }
     }
   }

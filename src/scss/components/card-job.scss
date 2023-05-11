@@ -56,6 +56,9 @@
   }
 
   &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 22px;
     margin-bottom: 16px;
 
     @include desktop {

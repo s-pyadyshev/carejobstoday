@@ -1,4 +1,7 @@
 .job-list {
+  flex-direction: column;
+  gap: 20px;
+
   &__sort {
     margin-bottom: 20px;
 
@@ -36,8 +39,20 @@
     justify-content: space-between;
   }
 
-  .card-job {
-    margin-bottom: 20px;
+  .card-job__logo {
+    margin-bottom: 16px;
+  }
+
+  .card-job h3 {
+    margin-bottom: 15px;
+  }
+
+  .card-job p {
+    margin-bottom: 0;
+  }
+
+  .card-job__list {
+    margin-bottom: 6px;
   }
 
   .pagination {
