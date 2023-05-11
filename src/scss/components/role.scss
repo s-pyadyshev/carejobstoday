@@ -39,11 +39,7 @@
     }
 
     @include desktop {
-      width: 500px;
-    }
-
-    @media (min-width: 1800px) {
-      width: 621px;
+      width: 53%;
     }
 
     img {
@@ -68,12 +64,11 @@
 
     @include desktop {
       width: calc(100% - 500px);
-      padding-left: 40px;
+      padding-left: 120px;
     }
 
-    @media (min-width: 1800px) {
-      width: calc(100% - 621px);
-      padding-left: 120px;
+    h2 {
+      margin-bottom: 0;
     }
   }
 

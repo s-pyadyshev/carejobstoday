@@ -40,14 +40,17 @@
       margin: 0 -32px;
       padding: 0 32px;
     }
+
+    .button {
+
+      @include tablet {
+        min-width: auto;
+      }
+    }
   }
 
   .button {
     margin-top: 40px;
-
-    @include tablet {
-      min-width: auto;
-    }
 
     @include laptop {
       margin-top: 64px;
@@ -59,7 +62,7 @@
   .swiper-slide {
     height: auto;
 
-    > * {
+    >* {
       height: 100%;
     }
   }

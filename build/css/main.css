@@ -3929,6 +3929,10 @@ p {
   display: block;
 }
 
+.role__info h2 {
+  margin-bottom: 0;
+}
+
 .role p {
   white-space: pre-line;
   margin-bottom: 40px;
@@ -5455,7 +5459,7 @@ p {
     padding: 0 32px;
   }
 
-  .explore .button {
+  .explore__list .button {
     min-width: auto;
   }
 
@@ -6118,8 +6122,8 @@ p {
   .h2 {
     font-size: 40px;
     line-height: 64px;
-    letter-spacing: -2px;
-    margin-bottom: 32px;
+    letter-spacing: -3px;
+    margin-bottom: 24px;
   }
 
   .h3 {
@@ -6394,7 +6398,7 @@ p {
   }
 
   .navbar__link {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 25px;
     color: #10273a;
     border-bottom: none;
@@ -6406,7 +6410,7 @@ p {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    gap: 60px;
+    gap: 55px;
   }
 
   .navbar__list li {
@@ -6848,8 +6852,13 @@ p {
     padding: 40px;
   }
 
+  .card-job__logo {
+    margin-bottom: 40px;
+  }
+
   .card-job h3 {
     font-size: 30px;
+    margin-bottom: 40px;
   }
 
   .card-job__list {
@@ -6896,12 +6905,12 @@ p {
   }
 
   .role__image {
-    width: 500px;
+    width: 53%;
   }
 
   .role__info {
     width: calc(100% - 500px);
-    padding-left: 40px;
+    padding-left: 120px;
   }
 
   .search.advanced .search__form {
@@ -7246,17 +7255,6 @@ p {
 @media (min-width: 1600px) {
   .procare-benefits li {
     margin: 0 136px;
-  }
-}
-
-@media (min-width: 1800px) {
-  .role__image {
-    width: 621px;
-  }
-
-  .role__info {
-    width: calc(100% - 621px);
-    padding-left: 120px;
   }
 }
 
