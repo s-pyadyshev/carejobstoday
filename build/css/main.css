@@ -3432,7 +3432,11 @@ p {
 
 .procare-reason .col-6:nth-child(2) p {
   text-align: center;
-  white-space: pre-line;
+  margin-bottom: 24px;
+}
+
+.procare-reason .col-6:nth-child(2) p:last-of-type {
+  margin-bottom: 0;
 }
 
 .procare-reason__image {

@@ -68,7 +68,11 @@
 
       p {
         text-align: center;
-        white-space: pre-line;
+        margin-bottom: 24px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
 
         @include tablet {
           max-width: 368px;
