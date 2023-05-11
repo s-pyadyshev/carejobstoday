@@ -4425,7 +4425,7 @@ p {
 
 .timeline li {
   position: relative;
-  padding: 0calc(map-get($timeline, "dot-size") / 5) 0 24px 28px;
+  padding: 3.2px 0 24px 28px;
   -webkit-transition: all 100ms;
   -o-transition: all 100ms;
   transition: all 100ms;
@@ -4460,7 +4460,7 @@ p {
   background-color: #fff;
   position: absolute;
   top: 0;
-  left: calc(map-get($timeline, "dot-size") / 2);
+  left: 8px;
   height: 100%;
   z-index: 1;
   -webkit-box-shadow: 0 0 0 1px #fff;
@@ -4468,7 +4468,7 @@ p {
 }
 
 .timeline li:first-child::after {
-  top: calc(map-get($timeline, "dot-size") / 2);
+  top: 8px;
 }
 
 .timeline li:last-child::after {
@@ -5821,7 +5821,7 @@ p {
   .timeline li:nth-child(even) {
     text-align: right;
     padding-left: 0;
-    padding-right: calc( 50% + calc(map-get($timeline, "dot-size") / 2)4px12px);
+    padding-right: calc(50% + 24px);
   }
 
   .timeline li:nth-child(odd) {
@@ -5829,7 +5829,7 @@ p {
   }
 
   .timeline li::before {
-    left: calc(50% - calc(map-get($timeline, "dot-size") / 2));
+    left: calc(50% - 8px);
   }
 
   .timeline li::after {
