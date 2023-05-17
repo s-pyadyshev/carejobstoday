@@ -23,7 +23,6 @@
   display: none;
   gap: 16px;
   opacity: 0;
-  display: none;
   z-index: -1;
 
   @include tablet {
@@ -96,8 +95,7 @@
       grid-template-areas:
         "title title area area submit"
         "location type company quiz quiz";
-      grid-template-columns:
-        [title] calc(25% - 8px) [title] calc(25% - 8px) [area] 1fr [area] 1fr [submit] auto;
+      grid-template-columns: [title] calc(25% - 8px) [title] calc(25% - 8px) [area] 1fr [area] 1fr [submit] auto;
       gap: 40px 16px;
     }
   }
