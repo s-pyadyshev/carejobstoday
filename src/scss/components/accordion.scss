@@ -126,8 +126,12 @@
   }
 }
 
-.accordion__toggle-icon svg {
-  fill: $color-white;
-  height: 14px;
-  width: 14px;
+.accordion__toggle-icon {
+  flex-shrink: 0;
+
+  svg {
+    fill: $color-white;
+    height: 14px;
+    width: 14px;
+  }
 }
