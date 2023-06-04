@@ -24,6 +24,20 @@
     }
   }
 
+  .job-list {
+    .card-job {
+      animation: fadeInLeft;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+  }
+
+  .job-info {
+    animation: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
   &--selected {
     .job-list {
       display: none;
